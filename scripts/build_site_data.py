@@ -5,7 +5,7 @@ This script:
 1. optionally rebuilds a Swedish red-list lookup from data/Rodlistearbete_2025_alla_filer.xlsx
 2. scans species_sheets/*.json
 3. injects sensible defaults (including Tobias Andermann as the default name)
-4. auto-links matching images from img/ using the slug prefix
+4. auto-links matching images from img/ using the slug prefix and harvests EXIF date/GPS metadata when available
 5. rebuilds species_sheets/index.json
 
 Run it locally after adding or editing species sheets:
@@ -22,6 +22,13 @@ try:
     import openpyxl
 except Exception:
     openpyxl = None
+
+try:
+    from PIL import Image
+    from PIL.ExifTags import IFD
+except Exception:
+    Image = None
+    IFD = None
 
 ROOT = Path(__file__).resolve().parents[1]
 SPECIES_DIR = ROOT / "species_sheets"
@@ -47,6 +54,142 @@ def save_json(path: Path, payload: Dict[str, Any]) -> None:
     with path.open("w", encoding="utf-8") as handle:
         json.dump(payload, handle, ensure_ascii=False, indent=2)
         handle.write("\n")
+
+
+def is_blank(value: Any) -> bool:
+    return value is None or value == ""
+
+
+def set_if_blank(mapping: Dict[str, Any], key: str, value: Any) -> None:
+    if not is_blank(value) and is_blank(mapping.get(key)):
+        mapping[key] = value
+
+
+def to_relative_image_path(path: Path) -> str:
+    return f"img/{path.name}"
+
+
+def media_image_path(item: Dict[str, Any]) -> str | None:
+    for key in ("file", "src"):
+        value = item.get(key)
+        if isinstance(value, str) and value:
+            return value
+    filename = item.get("filename")
+    if isinstance(filename, str) and filename:
+        return f"img/{filename}"
+    return None
+
+
+def media_uses_legacy_shape(item: Dict[str, Any], sheet: Dict[str, Any]) -> bool:
+    if any(key in item for key in ("src", "filename", "capturedAtDate", "coordinates")):
+        return True
+    schema_version = str(sheet.get("schemaVersion") or "")
+    return schema_version.startswith("measure.bio/")
+
+
+def dms_to_decimal(parts: Any, ref: Any) -> float | None:
+    if not isinstance(parts, (tuple, list)) or len(parts) != 3:
+        return None
+    try:
+        degrees = float(parts[0])
+        minutes = float(parts[1])
+        seconds = float(parts[2])
+    except (TypeError, ValueError, ZeroDivisionError):
+        return None
+    decimal = degrees + (minutes / 60.0) + (seconds / 3600.0)
+    if str(ref).upper() in {"S", "W"}:
+        decimal *= -1
+    return round(decimal, 6)
+
+
+def parse_exif_datetime(raw_value: Any) -> tuple[str | None, str | None]:
+    if not isinstance(raw_value, str):
+        return None, None
+    parts = raw_value.strip().split(" ", 1)
+    date_part = parts[0].replace(":", "-") if parts else None
+    time_part = parts[1] if len(parts) > 1 else None
+    return date_part or None, time_part or None
+
+
+def parse_gps_date(gps_info: Dict[Any, Any]) -> str | None:
+    raw_value = gps_info.get(29)
+    if not isinstance(raw_value, str):
+        return None
+    return raw_value.replace(":", "-")
+
+
+def parse_gps_time(gps_info: Dict[Any, Any]) -> str | None:
+    raw_value = gps_info.get(7)
+    if not isinstance(raw_value, (tuple, list)) or len(raw_value) != 3:
+        return None
+    try:
+        hours = int(float(raw_value[0]))
+        minutes = int(float(raw_value[1]))
+        seconds = int(round(float(raw_value[2])))
+    except (TypeError, ValueError, ZeroDivisionError):
+        return None
+    if seconds == 60:
+        seconds = 59
+    return f"{hours:02d}:{minutes:02d}:{seconds:02d}"
+
+
+def extract_image_metadata(path: Path) -> Dict[str, Any]:
+    payload = {
+        "observedAtDate": None,
+        "observedAtTime": None,
+        "decimalLatitude": None,
+        "decimalLongitude": None,
+        "coordinateUncertaintyMeters": None,
+    }
+    if Image is None or IFD is None or not path.exists():
+        return payload
+
+    try:
+        with Image.open(path) as image:
+            exif = image.getexif()
+    except Exception:
+        return payload
+
+    if not exif:
+        return payload
+
+    gps_info: Dict[Any, Any] = {}
+    try:
+        gps_info = exif.get_ifd(IFD.GPSInfo) or {}
+    except Exception:
+        gps_info = {}
+
+    for tag_id in (36867, 306):
+        if tag_id in exif:
+            date_value, time_value = parse_exif_datetime(exif.get(tag_id))
+            if date_value:
+                payload["observedAtDate"] = date_value
+            if time_value:
+                payload["observedAtTime"] = time_value
+            break
+
+    gps_date = parse_gps_date(gps_info)
+    gps_time = parse_gps_time(gps_info)
+    if gps_date and payload["observedAtDate"] is None:
+        payload["observedAtDate"] = gps_date
+    if gps_time and payload["observedAtTime"] is None:
+        payload["observedAtTime"] = gps_time
+
+    latitude = dms_to_decimal(gps_info.get(2), gps_info.get(1))
+    longitude = dms_to_decimal(gps_info.get(4), gps_info.get(3))
+    if latitude is not None:
+        payload["decimalLatitude"] = latitude
+    if longitude is not None:
+        payload["decimalLongitude"] = longitude
+
+    positioning_error = gps_info.get(31)
+    if positioning_error is not None:
+        try:
+            payload["coordinateUncertaintyMeters"] = round(float(positioning_error), 2)
+        except (TypeError, ValueError, ZeroDivisionError):
+            pass
+
+    return payload
 
 
 def build_redlist_lookup() -> Dict[str, Dict[str, Any]]:
@@ -98,49 +241,209 @@ def build_redlist_lookup() -> Dict[str, Dict[str, Any]]:
     return lookup
 
 
-def match_images(slug: str) -> List[str]:
+def match_images(slug: str) -> List[Path]:
     matches = []
     for path in sorted(IMG_DIR.iterdir()):
         if path.suffix.lower() not in SUPPORTED_IMAGE_EXTS:
             continue
         if path.stem.startswith(slug):
-            matches.append(f"img/{path.name}")
+            matches.append(path)
     return matches
 
 
-def ensure_media(sheet: Dict[str, Any], slug: str) -> None:
+def ensure_field_record_defaults(field_record: Dict[str, Any], country: str) -> None:
+    field_record.setdefault("observer", None)
+    field_record.setdefault("date", "")
+    field_record.setdefault("time", "")
+    field_record.setdefault("observedAtDate", field_record.get("date") or "")
+    field_record.setdefault("observedAtTime", field_record.get("time"))
+    field_record.setdefault("siteName", field_record.get("localityName"))
+    field_record.setdefault("locationLabel", None)
+    field_record.setdefault("localityName", "")
+    field_record.setdefault("municipality", "")
+    field_record.setdefault("county", "")
+    field_record.setdefault("country", country)
+    field_record.setdefault("decimalLatitude", None)
+    field_record.setdefault("decimalLongitude", None)
+    field_record.setdefault("coordinateUncertaintyMeters", None)
+    field_record.setdefault("samplingMethod", "Field photography")
+    field_record.setdefault("habitatNote", "")
+    field_record.setdefault("notes", "")
+    field_record.setdefault("observationNote", "")
+
+    if is_blank(field_record.get("observedAtDate")) and not is_blank(field_record.get("date")):
+        field_record["observedAtDate"] = field_record.get("date")
+    if is_blank(field_record.get("date")) and not is_blank(field_record.get("observedAtDate")):
+        field_record["date"] = field_record.get("observedAtDate")
+    if is_blank(field_record.get("observedAtTime")) and not is_blank(field_record.get("time")):
+        field_record["observedAtTime"] = field_record.get("time")
+    if is_blank(field_record.get("time")) and not is_blank(field_record.get("observedAtTime")):
+        field_record["time"] = field_record.get("observedAtTime")
+
+
+def merge_media_items(target: Dict[str, Any], incoming: Dict[str, Any], sheet: Dict[str, Any], country: str) -> None:
+    legacy_shape = media_uses_legacy_shape(target, sheet)
+    if legacy_shape:
+        keys = ("src", "filename", "alt", "caption", "credit", "siteName", "locationLabel", "municipality", "county", "country", "notes")
+    else:
+        keys = ("file", "caption", "credit", "photographer", "country")
+    for key in keys:
+        set_if_blank(target, key, incoming.get(key))
+
+    if "coordinates" in incoming or "coordinates" in target:
+        coordinates = target.setdefault("coordinates", {"lat": None, "lon": None})
+        incoming_coordinates = incoming.get("coordinates")
+        if isinstance(incoming_coordinates, dict):
+            set_if_blank(coordinates, "lat", incoming_coordinates.get("lat"))
+            set_if_blank(coordinates, "lon", incoming_coordinates.get("lon"))
+
+    if not legacy_shape and ("capturedAt" in incoming or "capturedAt" in target):
+        captured_at = target.setdefault(
+            "capturedAt",
+            {
+                "date": "",
+                "time": "",
+                "localityName": "",
+                "decimalLatitude": None,
+                "decimalLongitude": None,
+            },
+        )
+        incoming_captured_at = incoming.get("capturedAt")
+        if isinstance(incoming_captured_at, dict):
+            for key in ("date", "time", "localityName", "decimalLatitude", "decimalLongitude"):
+                set_if_blank(captured_at, key, incoming_captured_at.get(key))
+
+    if "capturedAtDate" in incoming or "capturedAtDate" in target:
+        set_if_blank(target, "capturedAtDate", incoming.get("capturedAtDate"))
+        set_if_blank(target, "capturedAtTime", incoming.get("capturedAtTime"))
+
+    set_if_blank(target, "country", country)
+
+
+def make_media_item(relative_path: str, legacy_shape: bool, country: str) -> Dict[str, Any]:
+    filename = Path(relative_path).name
+    if legacy_shape:
+        return {
+            "src": relative_path,
+            "filename": filename,
+            "alt": "",
+            "caption": "",
+            "credit": "",
+            "capturedAtDate": None,
+            "capturedAtTime": None,
+            "siteName": None,
+            "locationLabel": None,
+            "municipality": None,
+            "county": None,
+            "country": country,
+            "coordinates": {
+                "lat": None,
+                "lon": None,
+            },
+            "notes": "",
+        }
+    return {
+        "file": relative_path,
+        "caption": "",
+        "credit": None,
+        "photographer": None,
+        "capturedAt": {
+            "date": "",
+            "time": "",
+            "localityName": "",
+            "decimalLatitude": None,
+            "decimalLongitude": None,
+        },
+    }
+
+
+def hydrate_media_item(item: Dict[str, Any], relative_path: str, metadata: Dict[str, Any], sheet: Dict[str, Any], country: str) -> None:
+    legacy_shape = media_uses_legacy_shape(item, sheet)
+    if legacy_shape:
+        item.pop("file", None)
+        item.pop("capturedAt", None)
+        item.setdefault("src", relative_path)
+        item.setdefault("filename", Path(relative_path).name)
+        item.setdefault("coordinates", {"lat": None, "lon": None})
+        set_if_blank(item, "country", country)
+        set_if_blank(item, "capturedAtDate", metadata.get("observedAtDate"))
+        set_if_blank(item, "capturedAtTime", metadata.get("observedAtTime"))
+        coordinates = item["coordinates"]
+        if isinstance(coordinates, dict):
+            set_if_blank(coordinates, "lat", metadata.get("decimalLatitude"))
+            set_if_blank(coordinates, "lon", metadata.get("decimalLongitude"))
+        return
+
+    for key in ("src", "filename", "capturedAtDate", "capturedAtTime", "coordinates", "siteName", "locationLabel", "municipality", "county", "notes"):
+        item.pop(key, None)
+    item.setdefault("file", relative_path)
+    captured_at = item.setdefault(
+        "capturedAt",
+        {
+            "date": "",
+            "time": "",
+            "localityName": "",
+            "decimalLatitude": None,
+            "decimalLongitude": None,
+        },
+    )
+    if isinstance(captured_at, dict):
+        set_if_blank(captured_at, "date", metadata.get("observedAtDate"))
+        set_if_blank(captured_at, "time", metadata.get("observedAtTime"))
+        set_if_blank(captured_at, "decimalLatitude", metadata.get("decimalLatitude"))
+        set_if_blank(captured_at, "decimalLongitude", metadata.get("decimalLongitude"))
+
+
+def populate_field_record_from_metadata(field_record: Dict[str, Any], metadata: Dict[str, Any]) -> None:
+    set_if_blank(field_record, "observedAtDate", metadata.get("observedAtDate"))
+    set_if_blank(field_record, "date", metadata.get("observedAtDate"))
+    set_if_blank(field_record, "observedAtTime", metadata.get("observedAtTime"))
+    set_if_blank(field_record, "time", metadata.get("observedAtTime"))
+    set_if_blank(field_record, "decimalLatitude", metadata.get("decimalLatitude"))
+    set_if_blank(field_record, "decimalLongitude", metadata.get("decimalLongitude"))
+    set_if_blank(field_record, "coordinateUncertaintyMeters", metadata.get("coordinateUncertaintyMeters"))
+
+
+def ensure_media(sheet: Dict[str, Any], slug: str, field_record: Dict[str, Any], country: str) -> None:
     media = sheet.get("media")
     matched = match_images(slug)
     if not matched:
         return
 
-    existing_files = set()
     if isinstance(media, list):
+        deduped_media: List[Dict[str, Any]] = []
+        media_lookup: Dict[str, Dict[str, Any]] = {}
         for item in media:
-            if isinstance(item, dict) and item.get("file"):
-                existing_files.add(item["file"])
+            if not isinstance(item, dict):
+                continue
+            relative_path = media_image_path(item)
+            if relative_path and relative_path in media_lookup:
+                merge_media_items(media_lookup[relative_path], item, sheet, country)
+                continue
+            deduped_media.append(item)
+            if relative_path:
+                media_lookup[relative_path] = item
+        media = deduped_media
+        sheet["media"] = media
     else:
         media = []
         sheet["media"] = media
 
+    prefer_legacy_shape = any(media_uses_legacy_shape(item, sheet) for item in media if isinstance(item, dict))
+    first_metadata = None
     for image_path in matched:
-        if image_path in existing_files:
-            continue
-        media.append(
-            {
-                "file": image_path,
-                "caption": "",
-                "credit": None,
-                "photographer": None,
-                "capturedAt": {
-                    "date": "",
-                    "time": "",
-                    "localityName": "",
-                    "decimalLatitude": None,
-                    "decimalLongitude": None,
-                },
-            }
-        )
+        relative_path = to_relative_image_path(image_path)
+        item = next((entry for entry in media if isinstance(entry, dict) and media_image_path(entry) == relative_path), None)
+        if item is None:
+            item = make_media_item(relative_path, prefer_legacy_shape, country)
+            media.append(item)
+        metadata = extract_image_metadata(image_path)
+        hydrate_media_item(item, relative_path, metadata, sheet, country)
+        if first_metadata is None and any(metadata.get(key) is not None for key in ("observedAtDate", "decimalLatitude", "decimalLongitude")):
+            first_metadata = metadata
+
+    if first_metadata:
+        populate_field_record_from_metadata(field_record, first_metadata)
 
 
 def first_common_name(names: Any) -> str | None:
@@ -180,18 +483,7 @@ def ensure_defaults(sheet: Dict[str, Any], redlist_lookup: Dict[str, Dict[str, A
     byline.setdefault("photographer", None)
 
     field_record = sheet.setdefault("fieldRecord", {})
-    field_record.setdefault("observer", None)
-    field_record.setdefault("date", "")
-    field_record.setdefault("time", "")
-    field_record.setdefault("localityName", "")
-    field_record.setdefault("municipality", "")
-    field_record.setdefault("county", "")
-    field_record.setdefault("country", defaults.get("country", "Sweden"))
-    field_record.setdefault("decimalLatitude", None)
-    field_record.setdefault("decimalLongitude", None)
-    field_record.setdefault("coordinateUncertaintyMeters", None)
-    field_record.setdefault("habitatNote", "")
-    field_record.setdefault("observationNote", "")
+    ensure_field_record_defaults(field_record, defaults.get("country", "Sweden"))
 
     if scientific_name and scientific_name in redlist_lookup:
         rl = redlist_lookup[scientific_name]
@@ -228,7 +520,7 @@ def ensure_defaults(sheet: Dict[str, Any], redlist_lookup: Dict[str, Dict[str, A
             artfakta.setdefault("citation", f"SLU Artdatabanken. Artfakta: {rl.get('swedishName') or scientific_name}.")
             artfakta.setdefault("note", "Use Artfakta as the main Swedish species-information source when refreshing this page locally.")
 
-    ensure_media(sheet, slug)
+    ensure_media(sheet, slug, field_record, defaults.get("country", "Sweden"))
 
 
 def build_index() -> Dict[str, Any]:
@@ -246,7 +538,7 @@ def build_index() -> Dict[str, Any]:
         media = sheet.get("media") or []
         hero_image = None
         if media and isinstance(media[0], dict):
-            hero_image = media[0].get("file")
+            hero_image = media_image_path(media[0])
         common_names = identity.get("commonNames", {})
         entries.append(
             {

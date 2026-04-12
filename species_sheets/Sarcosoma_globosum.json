@@ -26,17 +26,23 @@
   },
   "fieldRecord": {
     "observer": null,
-    "date": "",
-    "time": "",
+    "date": "2026-04-11",
+    "time": "13:14:53",
     "localityName": "",
     "municipality": "",
     "county": "",
     "country": "Sweden",
-    "decimalLatitude": null,
-    "decimalLongitude": null,
-    "coordinateUncertaintyMeters": null,
+    "decimalLatitude": 59.821297,
+    "decimalLongitude": 17.563386,
+    "coordinateUncertaintyMeters": 3.53,
     "habitatNote": "",
-    "observationNote": "Fill this block first when adding a new field observation. The website uses these values for the location card and the interactive locality mini-map."
+    "observationNote": "Fill this block first when adding a new field observation. The website uses these values for the location card and the interactive locality mini-map.",
+    "observedAtDate": "2026-04-11",
+    "observedAtTime": "13:14:53",
+    "siteName": "",
+    "locationLabel": null,
+    "samplingMethod": "Field photography",
+    "notes": ""
   },
   "media": [
     {
@@ -45,11 +51,11 @@
       "credit": null,
       "photographer": null,
       "capturedAt": {
-        "date": "",
-        "time": "",
+        "date": "2026-04-11",
+        "time": "13:14:53",
         "localityName": "",
-        "decimalLatitude": null,
-        "decimalLongitude": null
+        "decimalLatitude": 59.821297,
+        "decimalLongitude": 17.563386
       }
     },
     {
@@ -58,11 +64,11 @@
       "credit": null,
       "photographer": null,
       "capturedAt": {
-        "date": "",
-        "time": "",
+        "date": "2026-04-11",
+        "time": "13:32:00",
         "localityName": "",
-        "decimalLatitude": null,
-        "decimalLongitude": null
+        "decimalLatitude": 59.821258,
+        "decimalLongitude": 17.563347
       }
     }
   ],

@@ -58,7 +58,7 @@ Photos are matched by slug prefix. Example:
 - `img/Sarcosoma_globosum_1.jpeg`
 - `img/Sarcosoma_globosum_2.jpeg`
 
-If you add more photos with the same prefix, `python scripts/build_site_data.py` will auto-link them.
+If you add more photos with the same prefix, `python scripts/build_site_data.py` will auto-link them. When those images contain EXIF date and GPS metadata, the same build step also backfills `fieldRecord.observedAtDate`, `fieldRecord.decimalLatitude`, and `fieldRecord.decimalLongitude`, and copies those values into the linked `media` entries.
 
 ### 3. Species index
 A static site cannot truly list files in a folder on Netlify, so the webpage reads from `species_sheets/index.json`.
@@ -237,10 +237,10 @@ Requirements for the new species sheet:
   - `occurrenceStatus = PRESENT`
   - hex summary map style
 - Mention GBIF sampling bias explicitly
-- Fill the top-level `fieldRecord` block if I gave you date, time, locality or coordinates
+- Fill the top-level `fieldRecord` block if I gave you date, time, locality or coordinates. If matching photos already carry EXIF date/GPS metadata, `python scripts/build_site_data.py` can backfill `observedAtDate`, `decimalLatitude`, and `decimalLongitude`.
 - Link any matching images from `img/` that follow the species slug pattern, e.g.:
   `img/Sarcosoma_globosum_1.jpeg`, `img/Sarcosoma_globosum_2.jpeg`
-- If matching images exist, add them to the `media` array
+- If matching images exist, add them to the `media` array. Afterward, run `python scripts/build_site_data.py` so image EXIF metadata is copied into the JSON when present.
 - Preserve a clean, valid JSON structure that the webpage can render directly
 
 After creating the JSON file:

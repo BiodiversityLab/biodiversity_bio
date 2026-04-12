@@ -6,7 +6,7 @@
   "summary": "A long-lived spring butterfly that overwinters as an adult, breeds on buckthorns, and remains common in Sweden even though the visible GBIF footprint is strongly amplified by observer-rich countries.",
   "fieldRecord": {
     "observedAtDate": "2026-04-11",
-    "observedAtTime": null,
+    "observedAtTime": "12:38:30",
     "timezone": "Europe/Stockholm",
     "siteName": null,
     "locationLabel": null,
@@ -19,10 +19,10 @@
     "samplingMethod": "Field photography",
     "habitatNote": "The available images show an overwintered adult resting among dry leaf litter and woody vegetation in early-spring light.",
     "notes": "Photo-backed profile seeded from GBIF, the Swedish Red List dataset, and DOI-checked literature. Add exact date, place, and coordinates if you want the page to show a field-record map.",
-    "date": "",
-    "time": "",
+    "date": "2026-04-11",
+    "time": "12:38:30",
     "localityName": "",
-    "coordinateUncertaintyMeters": null,
+    "coordinateUncertaintyMeters": 4.73,
     "observationNote": ""
   },
   "taxonomy": {
@@ -108,16 +108,16 @@
       "alt": "Overwintered Gonepteryx rhamni resting closed-winged in dry leaf litter, showing the leaf-like underside and pointed forewing tip.",
       "caption": "Closed wings show why resting brimstones disappear so easily into last year’s leaves.",
       "credit": "",
-      "capturedAtDate": null,
-      "capturedAtTime": null,
+      "capturedAtDate": "2026-04-11",
+      "capturedAtTime": "12:38:30",
       "siteName": null,
       "locationLabel": null,
       "municipality": null,
       "county": null,
       "country": "Sweden",
       "coordinates": {
-        "lat": null,
-        "lon": null
+        "lat": 59.826858,
+        "lon": 17.571067
       },
       "notes": ""
     },
@@ -127,16 +127,16 @@
       "alt": "Close handheld view of Gonepteryx rhamni showing the greenish underside, fine venation, and orange discal spot.",
       "caption": "Close view of the underside pattern and the small orange discal spot on the wing.",
       "credit": "",
-      "capturedAtDate": null,
-      "capturedAtTime": null,
+      "capturedAtDate": "2026-04-11",
+      "capturedAtTime": "12:39:48",
       "siteName": null,
       "locationLabel": null,
       "municipality": null,
       "county": null,
       "country": "Sweden",
       "coordinates": {
-        "lat": null,
-        "lon": null
+        "lat": 59.826836,
+        "lon": 17.571036
       },
       "notes": ""
     },
@@ -146,57 +146,18 @@
       "alt": "Pale spring brimstone with closed wings held in the hand against a forest backdrop.",
       "caption": "The thin pale wing and leaf-tip shape remain visible even in a worn spring individual.",
       "credit": "",
-      "capturedAtDate": null,
-      "capturedAtTime": null,
+      "capturedAtDate": "2026-04-11",
+      "capturedAtTime": "12:39:02",
       "siteName": null,
       "locationLabel": null,
       "municipality": null,
       "county": null,
       "country": "Sweden",
       "coordinates": {
-        "lat": null,
-        "lon": null
+        "lat": 59.827064,
+        "lon": 17.570669
       },
       "notes": ""
-    },
-    {
-      "file": "img/Gonepteryx_rhamni_1.jpeg",
-      "caption": "",
-      "credit": null,
-      "photographer": null,
-      "capturedAt": {
-        "date": "",
-        "time": "",
-        "localityName": "",
-        "decimalLatitude": null,
-        "decimalLongitude": null
-      }
-    },
-    {
-      "file": "img/Gonepteryx_rhamni_2.jpeg",
-      "caption": "",
-      "credit": null,
-      "photographer": null,
-      "capturedAt": {
-        "date": "",
-        "time": "",
-        "localityName": "",
-        "decimalLatitude": null,
-        "decimalLongitude": null
-      }
-    },
-    {
-      "file": "img/Gonepteryx_rhamni_3.jpeg",
-      "caption": "",
-      "credit": null,
-      "photographer": null,
-      "capturedAt": {
-        "date": "",
-        "time": "",
-        "localityName": "",
-        "decimalLatitude": null,
-        "decimalLongitude": null
-      }
     }
   ],
   "ecologyHighlights": [

@@ -1,6 +1,6 @@
 {
   "generatedBy": "scripts/build_site_data.py",
-  "generatedAt": "2026-04-12T16:25:58.120834+00:00",
+  "generatedAt": "2026-04-12T17:36:16.802190+00:00",
   "count": 2,
   "species": [
     {
@@ -9,7 +9,7 @@
       "mainName": "Gonepteryx rhamni",
       "scientificName": "Gonepteryx rhamni",
       "swedishName": "citronfjäril",
-      "heroImage": null,
+      "heroImage": "img/Gonepteryx_rhamni_1.jpeg",
       "defaultPersonName": "Tobias Andermann",
       "group": "Animalia"
     },

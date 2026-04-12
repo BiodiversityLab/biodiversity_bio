@@ -45,10 +45,13 @@ def main():
 
     if args.date is not None:
         field["date"] = args.date
+        field["observedAtDate"] = args.date
     if args.time is not None:
         field["time"] = args.time
+        field["observedAtTime"] = args.time
     if args.locality_name is not None:
         field["localityName"] = args.locality_name
+        field["siteName"] = args.locality_name
     if args.municipality is not None:
         field["municipality"] = args.municipality
     if args.county is not None:
