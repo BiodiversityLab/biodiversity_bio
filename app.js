@@ -61,16 +61,100 @@ function getDisplayPerson(sheet, key) {
 }
 
 function getEnglishName(sheet) {
+  const legacyCommonNames = Array.isArray(sheet?.commonNames)
+    ? sheet.commonNames
+        .filter(item => item?.lang === "en")
+        .sort((a, b) => Number(Boolean(b?.preferred)) - Number(Boolean(a?.preferred)))
+        .map(item => item?.name)
+        .filter(Boolean)
+    : [];
   return (
+    sheet?.hero?.headline ||
     sheet?.identity?.mainName ||
     sheet?.identity?.commonNames?.en?.[0] ||
+    legacyCommonNames[0] ||
+    sheet?.commonName ||
+    sheet?.scientificName ||
     sheet?.identity?.scientificName ||
     "Unknown species"
   );
 }
 
 function getSwedishName(sheet) {
-  return sheet?.identity?.commonNames?.sv?.[0] || sheet?.swedishContext?.commonName || "—";
+  const legacySwedishNames = Array.isArray(sheet?.commonNames)
+    ? sheet.commonNames
+        .filter(item => item?.lang === "sv")
+        .sort((a, b) => Number(Boolean(b?.preferred)) - Number(Boolean(a?.preferred)))
+        .map(item => item?.name)
+        .filter(Boolean)
+    : [];
+  return sheet?.identity?.commonNames?.sv?.[0] || legacySwedishNames[0] || sheet?.swedishContext?.commonName || "—";
+}
+
+function getScientificName(sheet) {
+  return sheet?.identity?.scientificName || sheet?.scientificName || "";
+}
+
+function getTaxonomyClassification(sheet) {
+  return sheet?.taxonomy?.classification || {
+    kingdom: sheet?.taxonomy?.kingdom,
+    phylum: sheet?.taxonomy?.phylum,
+    class: sheet?.taxonomy?.class,
+    order: sheet?.taxonomy?.order,
+    family: sheet?.taxonomy?.family,
+    genus: sheet?.taxonomy?.genus,
+    species: sheet?.taxonomy?.species
+  };
+}
+
+function getAcceptedScientificName(sheet) {
+  return sheet?.taxonomy?.acceptedScientificName || sheet?.taxonomy?.acceptedName;
+}
+
+function getAcceptedTaxonKey(sheet) {
+  return sheet?.taxonomy?.acceptedTaxonKey || sheet?.taxonomy?.gbifUsageKey;
+}
+
+function getChecklistKey(sheet) {
+  return sheet?.taxonomy?.resolvedAgainstChecklistKey || sheet?.taxonomy?.gbifChecklistKey;
+}
+
+function getHeroLede(sheet) {
+  return sheet?.hero?.lede || sheet?.hero?.strapline || sheet?.summary || "";
+}
+
+function getReturnReason(sheet) {
+  return sheet?.hero?.returnReason || sheet?.whyReturn?.[0] || "";
+}
+
+function getSheetLiterature(sheet) {
+  return sheet?.literature || sheet?.selectedLiterature || [];
+}
+
+function getMediaFile(item) {
+  return item?.file || item?.src || (item?.filename ? `img/${item.filename}` : "");
+}
+
+function getMediaCaption(item, sheet) {
+  return item?.caption || item?.alt || getEnglishName(sheet);
+}
+
+function getMediaCoordinates(item) {
+  if (typeof item?.capturedAt?.decimalLatitude === "number" && typeof item?.capturedAt?.decimalLongitude === "number") {
+    return {
+      lat: item.capturedAt.decimalLatitude,
+      lon: item.capturedAt.decimalLongitude,
+      label: item?.capturedAt?.localityName || item?.caption || ""
+    };
+  }
+  if (typeof item?.coordinates?.lat === "number" && typeof item?.coordinates?.lon === "number") {
+    return {
+      lat: item.coordinates.lat,
+      lon: item.coordinates.lon,
+      label: item?.siteName || item?.caption || ""
+    };
+  }
+  return null;
 }
 
 function getSlugFromLocation() {
@@ -192,14 +276,15 @@ async function loadSpeciesSheet(slug) {
 }
 
 function buildGbifHexTileTemplate(sheet) {
-  const gbif = sheet?.distribution?.gbif;
-  if (!gbif || !gbif.taxonKey) return null;
+  const gbif = sheet?.distribution?.gbif || {};
+  const taxonKey = gbif.taxonKey || getAcceptedTaxonKey(sheet);
+  if (!taxonKey) return null;
   const params = new URLSearchParams();
   params.set("srs", gbif.srs || "EPSG:3857");
   params.set("style", gbif.tileStyle || "classic.poly");
   params.set("bin", gbif.bin || "hex");
   params.set("hexPerTile", String(gbif.hexPerTile || 57));
-  params.set("taxonKey", String(gbif.taxonKey));
+  params.set("taxonKey", String(taxonKey));
   const filters = gbif.filters || {};
   const yearFrom = filters.yearFrom || 2000;
   const yearTo = new Date().getFullYear() + 1;
@@ -230,6 +315,7 @@ function renderQuickFacts(sheet) {
 
 function renderFieldRecord(sheet) {
   const field = sheet.fieldRecord || {};
+  const locality = field.localityName || field.siteName || field.locationLabel;
   return `
     <div class="panel">
       <p class="eyebrow">Field record</p>
@@ -238,7 +324,7 @@ function renderFieldRecord(sheet) {
         <div class="meta-row"><div class="meta-label">Observer</div><div>${formatValue(field.observer || sheet.defaults?.personName)}</div></div>
         <div class="meta-row"><div class="meta-label">Date</div><div>${formatValue(field.date)}</div></div>
         <div class="meta-row"><div class="meta-label">Time</div><div>${formatValue(field.time)}</div></div>
-        <div class="meta-row"><div class="meta-label">Locality</div><div>${formatValue(field.localityName)}</div></div>
+        <div class="meta-row"><div class="meta-label">Locality</div><div>${formatValue(locality)}</div></div>
         <div class="meta-row"><div class="meta-label">Municipality / county</div><div>${escapeHtml([field.municipality, field.county].filter(Boolean).join(" / ") || "Not yet filled")}</div></div>
         <div class="meta-row"><div class="meta-label">Coordinates</div><div>${field.decimalLatitude != null && field.decimalLongitude != null ? `${escapeHtml(field.decimalLatitude)}, ${escapeHtml(field.decimalLongitude)}` : "Not yet filled"}</div></div>
         <div class="meta-row"><div class="meta-label">Habitat note</div><div>${formatValue(field.habitatNote)}</div></div>
@@ -256,9 +342,10 @@ function renderMediaGallery(sheet) {
   const active = media[state.galleryIndex] || media[0];
   const thumbs = media.map((item, index) => {
     const isActive = index === state.galleryIndex ? "is-active" : "";
+    const file = getMediaFile(item);
     return `
       <button type="button" class="thumbnail-button ${isActive}" data-index="${index}" aria-label="Show photo ${index + 1}">
-        <img src="${escapeHtml(item.file)}" alt="${escapeHtml(item.caption || getEnglishName(sheet))}">
+        <img src="${escapeHtml(file)}" alt="${escapeHtml(getMediaCaption(item, sheet))}">
       </button>
     `;
   }).join("");
@@ -266,7 +353,7 @@ function renderMediaGallery(sheet) {
   return `
     <div class="panel hero-media">
       <div class="main-image-wrap">
-        <img class="main-image" src="${escapeHtml(active.file)}" alt="${escapeHtml(active.caption || getEnglishName(sheet))}">
+        <img class="main-image" src="${escapeHtml(getMediaFile(active))}" alt="${escapeHtml(getMediaCaption(active, sheet))}">
       </div>
       <div class="thumbnail-row">${thumbs}</div>
       <div class="hero-caption">${escapeHtml(active.caption || "")}</div>
@@ -280,11 +367,12 @@ function renderSourceList(sources) {
     <div class="source-list">
       ${sources.map(source => `
         <div class="source-item">
-          <div class="source-item__label">${escapeHtml(source.label || source.url || "Source")}</div>
+          <div class="source-item__label">${escapeHtml(source.label || source.id || source.url || "Source")}</div>
           <div class="source-item__meta">
             ${source.type ? `<div>${escapeHtml(source.type)}</div>` : ""}
             ${source.url ? `<div><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.url)}</a></div>` : ""}
             ${source.note ? `<div>${escapeHtml(source.note)}</div>` : ""}
+            ${Array.isArray(source.usedFor) && source.usedFor.length ? `<div>${escapeHtml(source.usedFor.join(", "))}</div>` : ""}
           </div>
         </div>
       `).join("")}
@@ -301,9 +389,9 @@ function renderLiterature(literature) {
           <div class="literature-item__title">${escapeHtml(item.title || "Untitled reference")}</div>
           <div class="literature-item__meta">
             <div>${escapeHtml((item.authors || []).join(", "))}${item.year ? ` (${escapeHtml(item.year)})` : ""}</div>
-            <div>${escapeHtml([item.journal, item.volume, item.issue ? `(${item.issue})` : "", item.pagesOrArticle].filter(Boolean).join(" "))}</div>
-            ${item.doi ? `<div>DOI: <a href="${escapeHtml(item.url || `https://doi.org/${item.doi}`)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.doi)}</a></div>` : ""}
-            ${item.whyRelevant ? `<div>${escapeHtml(item.whyRelevant)}</div>` : ""}
+            <div>${escapeHtml([item.journal, item.volume, item.issue ? `(${item.issue})` : "", item.pagesOrArticle || item.pages].filter(Boolean).join(" "))}</div>
+            ${item.doi ? `<div>DOI: <a href="${escapeHtml(item.url || item.doi_url || `https://doi.org/${item.doi}`)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.doi)}</a></div>` : ""}
+            ${item.whyRelevant || item.relevance ? `<div>${escapeHtml(item.whyRelevant || item.relevance)}</div>` : ""}
           </div>
         </div>
       `).join("")}
@@ -314,8 +402,8 @@ function renderLiterature(literature) {
 function renderSheet(sheet) {
   const mainName = getEnglishName(sheet);
   const swedishName = getSwedishName(sheet);
-  const scientificName = sheet?.identity?.scientificName || "";
-  const taxonomy = sheet?.taxonomy?.classification || {};
+  const scientificName = getScientificName(sheet);
+  const taxonomy = getTaxonomyClassification(sheet);
   const swedish = sheet?.swedishContext || {};
   const redList = swedish.redList2025 || {};
   const gbifTileTemplate = buildGbifHexTileTemplate(sheet);
@@ -330,11 +418,11 @@ function renderSheet(sheet) {
             <h2 class="hero-title">${escapeHtml(mainName)}</h2>
             <p class="hero-scientific"><em>${escapeHtml(scientificName)}</em> · Swedish: ${escapeHtml(swedishName)}</p>
             <p class="byline">Default name: ${escapeHtml(sheet?.defaults?.personName || "Tobias Andermann")} · Page author: ${escapeHtml(getDisplayPerson(sheet, "pageAuthor"))}</p>
-            <p class="hero-lede">${escapeHtml(sheet?.hero?.lede || "")}</p>
+            <p class="hero-lede">${escapeHtml(getHeroLede(sheet))}</p>
             ${renderQuickFacts(sheet)}
             <div class="note-box">
               <strong>Return reason</strong>
-              <div class="section-text">${escapeHtml(sheet?.hero?.returnReason || "")}</div>
+              <div class="section-text">${escapeHtml(getReturnReason(sheet))}</div>
             </div>
           </div>
           ${renderFieldRecord(sheet)}
@@ -359,7 +447,7 @@ function renderSheet(sheet) {
                 <span class="badge">Present only</span>
                 <span class="badge">Hex summary</span>
               </div>
-              <p class="section-text">${escapeHtml(sheet?.distribution?.samplingBiasNote || "")}</p>
+              <p class="section-text">${escapeHtml(sheet?.distribution?.samplingBiasNote || sheet?.distribution?.caveat || "")}</p>
             </div>
             <div class="info-card panel">
               <h3 class="section-title">Field locality mini-map</h3>
@@ -374,7 +462,7 @@ function renderSheet(sheet) {
         <div class="panel">
           <p class="eyebrow">International context</p>
           <h2 class="section-title">Ecology and global perspective</h2>
-          <p class="section-text">${escapeHtml(sheet?.internationalContext?.summary || "")}</p>
+          <p class="section-text">${escapeHtml(sheet?.internationalContext?.summary || sheet?.internationalContext?.overview || "")}</p>
           <h3 class="section-title">Ecology</h3>
           ${formatList(sheet?.internationalContext?.ecology || [])}
           <h3 class="section-title">Threats</h3>
@@ -389,7 +477,7 @@ function renderSheet(sheet) {
         <div class="panel">
           <p class="eyebrow">Swedish context</p>
           <h2 class="section-title">Artfakta-led Swedish sheet</h2>
-          <p class="section-text">${escapeHtml(swedish.summary || "")}</p>
+          <p class="section-text">${escapeHtml(swedish.summary || swedish.overview || "")}</p>
           <div class="meta-grid">
             <div class="meta-row"><div class="meta-label">Swedish name</div><div>${escapeHtml(swedishName)}</div></div>
             <div class="meta-row"><div class="meta-label">Swedish Red List 2025</div><div>${escapeHtml(redList.category || "—")} ${redList.criterion ? `(${escapeHtml(redList.criterion)})` : ""}</div></div>
@@ -408,11 +496,11 @@ function renderSheet(sheet) {
 
       <section class="panel">
         <p class="eyebrow">Taxonomy</p>
-        <h2 class="section-title">GBIF taxonomy</h2>
-        <div class="meta-grid">
-          <div class="meta-row"><div class="meta-label">Accepted scientific name</div><div>${formatValue(sheet?.taxonomy?.acceptedScientificName)}</div></div>
-          <div class="meta-row"><div class="meta-label">GBIF taxon key</div><div>${formatValue(sheet?.taxonomy?.acceptedTaxonKey)}</div></div>
-          <div class="meta-row"><div class="meta-label">Resolved against checklistKey</div><div>${formatValue(sheet?.taxonomy?.resolvedAgainstChecklistKey)}</div></div>
+          <h2 class="section-title">GBIF taxonomy</h2>
+          <div class="meta-grid">
+          <div class="meta-row"><div class="meta-label">Accepted scientific name</div><div>${formatValue(getAcceptedScientificName(sheet))}</div></div>
+          <div class="meta-row"><div class="meta-label">GBIF taxon key</div><div>${formatValue(getAcceptedTaxonKey(sheet))}</div></div>
+          <div class="meta-row"><div class="meta-label">Resolved against checklistKey</div><div>${formatValue(getChecklistKey(sheet))}</div></div>
           <div class="meta-row"><div class="meta-label">Kingdom → species</div><div>${escapeHtml([taxonomy.kingdom, taxonomy.phylum, taxonomy.class, taxonomy.order, taxonomy.family, taxonomy.genus, taxonomy.species].filter(Boolean).join(" → ") || "No classification loaded")}</div></div>
           <div class="meta-row"><div class="meta-label">Synonyms</div><div>${escapeHtml((sheet?.taxonomy?.synonyms || []).join("; ") || "—")}</div></div>
         </div>
@@ -422,7 +510,7 @@ function renderSheet(sheet) {
         <div class="panel">
           <p class="eyebrow">Literature</p>
           <h2 class="section-title">Cross-checked literature</h2>
-          ${renderLiterature(sheet?.literature || [])}
+          ${renderLiterature(getSheetLiterature(sheet))}
         </div>
         <div class="panel">
           <p class="eyebrow">Sources</p>
@@ -463,15 +551,14 @@ function getFieldCoordinates(sheet) {
     };
   }
   if (Array.isArray(sheet?.media)) {
-    const photoWithCoords = sheet.media.find(item =>
-      typeof item?.capturedAt?.decimalLatitude === "number" &&
-      typeof item?.capturedAt?.decimalLongitude === "number"
-    );
+    const photoWithCoords = sheet.media
+      .map(item => ({ item, coords: getMediaCoordinates(item) }))
+      .find(entry => entry.coords);
     if (photoWithCoords) {
       return {
-        lat: photoWithCoords.capturedAt.decimalLatitude,
-        lon: photoWithCoords.capturedAt.decimalLongitude,
-        label: photoWithCoords.capturedAt.localityName || photoWithCoords.caption || getEnglishName(sheet)
+        lat: photoWithCoords.coords.lat,
+        lon: photoWithCoords.coords.lon,
+        label: photoWithCoords.coords.label || getEnglishName(sheet)
       };
     }
   }
