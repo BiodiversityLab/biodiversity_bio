@@ -1,4 +1,4 @@
-# measure.bio species sheets
+# biodiversity.bio species sheets
 
 This version is intentionally simple:
 
@@ -201,7 +201,7 @@ The checklist key is set to:
 Use the prompt below whenever you want your local model to create a new species sheet JSON.
 
 ```text
-You are working inside the measure.bio species-sheet project.
+You are working inside the biodiversity.bio species-sheet project.
 
 Your task is to create exactly one new species sheet JSON file in `species_sheets/` for the focal species, and to make it immediately usable by the static webpage.
 
@@ -269,4 +269,3 @@ Focus on producing a complete, evidence-based, visitor-friendly species sheet ra
    ```
 4. Commit and push to GitHub.
 5. Netlify redeploys automatically.
-
