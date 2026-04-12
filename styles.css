@@ -337,12 +337,6 @@ img { display: block; max-width: 100%; }
   min-height: 420px;
   border-radius: var(--radius-small);
 }
-.mini-map {
-  width: 100%;
-  min-height: 220px;
-  border-radius: var(--radius-small);
-  overflow: hidden;
-}
 .map-notes {
   display: grid;
   gap: 0.8rem;

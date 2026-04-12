@@ -450,9 +450,8 @@ function renderSheet(sheet) {
               <p class="section-text">${escapeHtml(sheet?.distribution?.samplingBiasNote || sheet?.distribution?.caveat || "")}</p>
             </div>
             <div class="info-card panel">
-              <h3 class="section-title">Field locality mini-map</h3>
-              <div id="fieldLocationMap" class="mini-map"></div>
-              <p class="footer-note">If coordinates are filled in under <code>fieldRecord</code> or a photo's <code>capturedAt</code>, this map becomes clickable and centres on the observation.</p>
+              <h3 class="section-title">Observation point</h3>
+              <p class="section-text">If field coordinates are available, the sampling location is marked directly on the main GBIF map.</p>
             </div>
           </div>
         </div>
@@ -568,17 +567,13 @@ function getFieldCoordinates(sheet) {
 function renderMaps(sheet) {
   if (!window.L) {
     const globalMapEl = document.getElementById("globalGbifMap");
-    const fieldMapEl = document.getElementById("fieldLocationMap");
     if (globalMapEl) globalMapEl.innerHTML = '<div class="empty-state"><p>Leaflet did not load. The rest of the page still works.</p></div>';
-    if (fieldMapEl) fieldMapEl.innerHTML = '<div class="empty-state"><p>Leaflet did not load.</p></div>';
     return;
   }
 
   destroyMap("global");
-  destroyMap("field");
 
   const globalMapEl = document.getElementById("globalGbifMap");
-  const fieldMapEl = document.getElementById("fieldLocationMap");
   const tileTemplate = buildGbifHexTileTemplate(sheet);
   const fieldCoords = getFieldCoordinates(sheet);
 
@@ -607,32 +602,6 @@ function renderMaps(sheet) {
         weight: 2,
         fillOpacity: 0.95
       }).addTo(globalMap).bindPopup(escapeHtml(fieldCoords.label));
-    }
-  }
-
-  if (fieldMapEl) {
-    if (fieldCoords) {
-      const fieldMap = L.map(fieldMapEl, {
-        zoomControl: true
-      }).setView([fieldCoords.lat, fieldCoords.lon], 12);
-      state.maps.field = fieldMap;
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        attribution: '&copy; OpenStreetMap contributors'
-      }).addTo(fieldMap);
-      const marker = L.marker([fieldCoords.lat, fieldCoords.lon]).addTo(fieldMap);
-      const popupHtml = `
-        <strong>${escapeHtml(fieldCoords.label)}</strong><br>
-        <a href="https://www.openstreetmap.org/?mlat=${encodeURIComponent(fieldCoords.lat)}&mlon=${encodeURIComponent(fieldCoords.lon)}#map=14/${encodeURIComponent(fieldCoords.lat)}/${encodeURIComponent(fieldCoords.lon)}" target="_blank" rel="noopener noreferrer">Open this location in OpenStreetMap</a>
-      `;
-      marker.bindPopup(popupHtml).openPopup();
-    } else {
-      fieldMapEl.innerHTML = `
-        <div class="empty-state">
-          <h3 class="section-title">No coordinates yet</h3>
-          <p>Add <code>fieldRecord.decimalLatitude</code> and <code>fieldRecord.decimalLongitude</code>, or fill a photo's <code>capturedAt</code> coordinates.</p>
-        </div>
-      `;
     }
   }
 }
