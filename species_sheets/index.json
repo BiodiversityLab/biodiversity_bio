@@ -1,0 +1,27 @@
+{
+  "generatedBy": "scripts/build_site_data.py",
+  "generatedAt": "2026-04-12T16:25:58.120834+00:00",
+  "count": 2,
+  "species": [
+    {
+      "slug": "Gonepteryx_rhamni",
+      "file": "Gonepteryx_rhamni.json",
+      "mainName": "Gonepteryx rhamni",
+      "scientificName": "Gonepteryx rhamni",
+      "swedishName": "citronfjäril",
+      "heroImage": null,
+      "defaultPersonName": "Tobias Andermann",
+      "group": "Animalia"
+    },
+    {
+      "slug": "Sarcosoma_globosum",
+      "file": "Sarcosoma_globosum.json",
+      "mainName": "Witches cauldron",
+      "scientificName": "Sarcosoma globosum",
+      "swedishName": "bombmurkla",
+      "heroImage": "img/Sarcosoma_globosum_1.jpeg",
+      "defaultPersonName": "Tobias Andermann",
+      "group": "Fungi"
+    }
+  ]
+}

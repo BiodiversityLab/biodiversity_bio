@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>measure.bio — species sheets</title>
+  <meta name="description" content="measure.bio species sheets for field observations, ecology, distribution and conservation context.">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <div>
+        <p class="eyebrow">measure.bio</p>
+        <h1 class="site-title">Species sheets</h1>
+        <p class="site-subtitle">Static, folder-based species pages for observations, ecology, maps and Swedish conservation context.</p>
+      </div>
+      <div class="site-meta">
+        <label class="search-label" for="speciesSearch">Search species</label>
+        <input id="speciesSearch" class="search-input" type="search" placeholder="Search by English, Swedish or scientific name">
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <p class="sidebar-title">Available sheets</p>
+        <p id="speciesCount" class="sidebar-count">Loading…</p>
+      </div>
+      <nav id="speciesList" class="species-list" aria-label="Species list"></nav>
+    </aside>
+
+    <section id="content" class="content">
+      <div class="empty-state">
+        <p class="eyebrow">Loading</p>
+        <h2>Preparing species sheet</h2>
+        <p>The page loads species data from <code>species_sheets/index.json</code> using relative paths, so it works on Netlify subpaths and local static servers.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
