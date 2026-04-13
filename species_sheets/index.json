@@ -1,6 +1,6 @@
 {
   "generatedBy": "scripts/build_site_data.py",
-  "generatedAt": "2026-04-13T21:25:11.749825+00:00",
+  "generatedAt": "2026-04-13T21:44:43.732078+00:00",
   "count": 5,
   "species": [
     {
@@ -36,7 +36,7 @@
     {
       "slug": "Sarcosoma_globosum",
       "file": "Sarcosoma_globosum.json",
-      "mainName": "Witches cauldron",
+      "mainName": "Witches Cauldron",
       "scientificName": "Sarcosoma globosum",
       "swedishName": "bombmurkla",
       "heroImage": "img/Sarcosoma_globosum_1.jpeg",
