@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/build_site_data.py",
-  "generatedAt": "2026-04-13T14:58:33.992582+00:00",
-  "count": 4,
+  "generatedAt": "2026-04-13T20:36:20.633387+00:00",
+  "count": 5,
   "species": [
     {
       "slug": "Aglais_io",
@@ -42,6 +42,16 @@
       "heroImage": "img/Sarcosoma_globosum_1.jpeg",
       "defaultPersonName": "Tobias Andermann",
       "group": "Fungi"
+    },
+    {
+      "slug": "Tussilago_farfara",
+      "file": "Tussilago_farfara.json",
+      "mainName": "Coltsfoot",
+      "scientificName": "Tussilago farfara",
+      "swedishName": "hästhov",
+      "heroImage": "img/Tussilago_farfara_1.jpeg",
+      "defaultPersonName": "Tobias Andermann",
+      "group": "Plantae"
     }
   ]
 }

@@ -1,0 +1,435 @@
+{
+  "schemaVersion": "1.3.0",
+  "defaults": {
+    "personName": "Tobias Andermann",
+    "country": "Sweden",
+    "language": "en"
+  },
+  "identity": {
+    "slug": "Tussilago_farfara",
+    "scientificName": "Tussilago farfara",
+    "mainName": "Coltsfoot",
+    "commonNames": {
+      "en": [
+        "Coltsfoot",
+        "Colt's-foot",
+        "Colts-foot"
+      ],
+      "sv": [
+        "hästhov"
+      ]
+    }
+  },
+  "summary": "A very early spring composite that flowers before its leaves appear, spreads strongly by rhizomes, and shows up across Sweden and much of temperate Eurasia wherever open disturbed ground keeps returning.",
+  "byline": {
+    "pageAuthor": null,
+    "observer": null,
+    "photographer": null
+  },
+  "fieldRecord": {
+    "observer": null,
+    "date": "2026-04-11",
+    "time": "13:00:45",
+    "localityName": "",
+    "municipality": "",
+    "county": "",
+    "country": "Sweden",
+    "decimalLatitude": 59.820044,
+    "decimalLongitude": 17.568519,
+    "coordinateUncertaintyMeters": 4.75,
+    "habitatNote": "The linked photos show flowering shoots emerging through last year's dry litter, which fits the species' typical habit of flowering before the large basal leaves expand.",
+    "observationNote": "EXIF-backed photo record from the linked image set. Running scripts/build_site_data.py will fill date, time and coordinates from the matching photos when metadata are present.",
+    "observedAtDate": "2026-04-11",
+    "observedAtTime": "13:00:45",
+    "siteName": "",
+    "locationLabel": null,
+    "samplingMethod": "Field photography",
+    "notes": ""
+  },
+  "media": [
+    {
+      "file": "img/Tussilago_farfara_1.jpeg",
+      "caption": "Close view of two Coltsfoot heads on scaly spring stems, photographed before the species' large basal leaves have appeared.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-11",
+        "time": "13:00:45",
+        "localityName": "",
+        "decimalLatitude": 59.820044,
+        "decimalLongitude": 17.568519
+      }
+    },
+    {
+      "file": "img/Tussilago_farfara_2.jpeg",
+      "caption": "Overhead view of paired flower heads rising through dry grass, showing how conspicuous Coltsfoot can be in the first part of spring.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-11",
+        "time": "13:00:36",
+        "localityName": "",
+        "decimalLatitude": 59.820031,
+        "decimalLongitude": 17.568475
+      }
+    },
+    {
+      "file": "img/Tussilago_farfara_3.jpeg",
+      "caption": "A wider spring-ground view with Coltsfoot flowering low in the litter beside other early season plants.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-11",
+        "time": "13:00:28",
+        "localityName": "",
+        "decimalLatitude": 59.820014,
+        "decimalLongitude": 17.568456
+      }
+    }
+  ],
+  "hero": {
+    "lede": "Coltsfoot is one of the easiest spring plants to notice once you know the timing: bright yellow heads appear on woolly, scaly stems before the plant produces the hoof-shaped leaves that gave it both the English and Swedish names. It is also a useful reminder that very common species still have real ecological character, because this one combines early flowering, deep rhizomes, fast colonisation of open soil and strong sensitivity to disturbance.",
+    "shortMorphology": "Yellow dandelion-like flower heads borne singly on short woolly scaly stems in early spring; the large hoof-shaped basal leaves appear later, after flowering.",
+    "returnReason": "Revisit this species twice: first for the flower-only phase in very early spring, then later to compare how completely the broad leaves take over once flowering is finished."
+  },
+  "taxonomy": {
+    "source": "GBIF species match with Catalogue of Life checklistKey",
+    "sourceUrl": "https://www.gbif.org/species/3149879",
+    "acceptedTaxonKey": 3149879,
+    "acceptedScientificName": "Tussilago farfara L.",
+    "rank": "SPECIES",
+    "resolvedAgainstChecklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "resolvedAgainstDataset": "Catalogue of Life checklist via GBIF species/match?checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+    "classification": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Asterales",
+      "family": "Asteraceae",
+      "genus": "Tussilago",
+      "species": "Tussilago farfara"
+    },
+    "synonyms": [
+      "Cineraria farfara (L.) Bernh.",
+      "Petasites farfara (L.) Baill.",
+      "Farfara radiata Gilib.",
+      "Tussilago alpestris Hegetschw.",
+      "Tussilago radiata Gilib.",
+      "Tussilago vulgaris Lam."
+    ],
+    "commonNamesFromGbif": {
+      "en": [
+        "Colt's-Foot",
+        "Colt's-foot",
+        "Colts-foot",
+        "Coltsfoot"
+      ]
+    }
+  },
+  "quickFacts": [
+    {
+      "label": "Main English name",
+      "value": "Coltsfoot"
+    },
+    {
+      "label": "Swedish name",
+      "value": "hästhov"
+    },
+    {
+      "label": "Global IUCN",
+      "value": "No global assessment confirmed"
+    },
+    {
+      "label": "Swedish Red List 2025",
+      "value": "LC"
+    },
+    {
+      "label": "Spring cue",
+      "value": "Flowers before leaves"
+    },
+    {
+      "label": "GBIF Sweden records since 2000",
+      "value": "24,402 filtered observations"
+    }
+  ],
+  "distribution": {
+    "globalSummary": "Plants of the World Online treats Tussilago farfara as native across temperate Eurasia to North Africa and the Himalaya, with introduced populations in parts of North America, New Zealand and a few other regions. The filtered GBIF observation layer adds 445,411 post-2000 human or machine observations, with the densest modern reporting in western and northern Europe plus Canada, but that footprint mixes native and introduced populations and should not be read as a clean native-range map.",
+    "swedenSummary": "Sweden sits well inside the accepted native range and has 24,402 filtered GBIF observations since 2000 under the project map settings. That high count fits a widespread, familiar spring plant, but the densest hexes still reflect where people photograph and upload records most often rather than a simple measure of abundance.",
+    "globalGbifFilteredCount": 445411,
+    "swedenGbifFilteredCount": 24402,
+    "topCountries": [
+      {
+        "country": "FR",
+        "count": 61765
+      },
+      {
+        "country": "NL",
+        "count": 47436
+      },
+      {
+        "country": "GB",
+        "count": 39633
+      },
+      {
+        "country": "DE",
+        "count": 37961
+      },
+      {
+        "country": "FI",
+        "count": 35427
+      },
+      {
+        "country": "CH",
+        "count": 31778
+      },
+      {
+        "country": "RU",
+        "count": 29836
+      },
+      {
+        "country": "SE",
+        "count": 24402
+      },
+      {
+        "country": "NO",
+        "count": 22399
+      },
+      {
+        "country": "CA",
+        "count": 19833
+      }
+    ],
+    "gbif": {
+      "provider": "GBIF Maps API v2",
+      "mapType": "hex-density",
+      "taxonKey": 3149879,
+      "tileStyle": "classic.poly",
+      "bin": "hex",
+      "hexPerTile": 57,
+      "srs": "EPSG:3857",
+      "filters": {
+        "basisOfRecord": [
+          "HUMAN_OBSERVATION",
+          "MACHINE_OBSERVATION"
+        ],
+        "occurrenceStatus": "PRESENT",
+        "yearFrom": 2000
+      },
+      "notes": [
+        "The map shows aggregated GBIF occurrence density rather than individual points.",
+        "Filters are restricted to HUMAN_OBSERVATION and MACHINE_OBSERVATION records from year 2000 onwards and to records with occurrenceStatus = PRESENT.",
+        "The webpage renders this layer as a hex summary map."
+      ]
+    },
+    "samplingBiasNote": "GBIF density here mostly reflects where observers, apps, digitisation projects and casual spring-photography habits are strongest. Common roadside and garden-edge plants can produce very dense hexes in recorder-rich countries, while equally established populations remain underrepresented where fewer observations are shared."
+  },
+  "internationalContext": {
+    "summary": "Internationally, Coltsfoot is best understood as a widespread temperate perennial with strong disturbance ecology rather than as a conservation-priority rarity. The main global story is its combination of early flowering, mixed sexual and clonal reproduction, and the ability to hold or regain ground through deep rhizomes on repeatedly opened soils.",
+    "status": {
+      "system": "IUCN Red List",
+      "category": "Not confirmed",
+      "label": "No global species-level IUCN assessment was confirmed during this refresh",
+      "assessmentYear": null,
+      "scope": "Global"
+    },
+    "ecology": [
+      "A rhizomatous perennial forb whose yellow flower heads emerge before the leaves, making it one of the earliest conspicuous composites in spring.",
+      "Reproduces both by seed and by vegetative spread; literature and FEIS both emphasize the importance of rhizomes for persistence after disturbance.",
+      "Best established on open, disturbed or recently exposed soils, especially where moisture remains available and competition stays relatively low.",
+      "Seed production and viable seed output can be much higher in open unshaded conditions than under young woodland cover, even though germination itself can remain high in both settings.",
+      "Seeds are carried primarily by wind and secondarily by water, while rhizome fragments can also regenerate when buried shallowly enough to resprout."
+    ],
+    "threats": [
+      "No broad global decline signal was confirmed during this refresh.",
+      "In introduced or heavily managed settings, the species is more often treated as a persistent coloniser than as a species of conservation concern.",
+      "Dense occurrence data can overstate ecological dominance in recorder-rich landscapes because common spring plants are photographed disproportionately often."
+    ],
+    "phenology": {
+      "northernEurope": "Lowland flowering often begins in March or April, but in more northerly or higher-elevation parts of the range flowering shifts later; leaves expand after the flowering phase rather than before it.",
+      "note": "The flower-before-leaf sequence is one of the most useful field cues for separating this plant from other yellow spring composites."
+    }
+  },
+  "swedishContext": {
+    "summary": "In Sweden, the official Artfakta/Dyntaxa treatment accepts Tussilago farfara and recommends hästhov as the Swedish name. The local 2025 Red List workbook records it as bofast och reproducerande, spontaneous in origin and assessed as Livskraftig (LC), so the Swedish story here is not rarity but familiarity: a widespread native spring species that is easy to notice early, long before many other broad-leaved herbs have fully emerged.",
+    "commonName": "hästhov",
+    "redList2025": {
+      "category": "LC",
+      "criterion": "n/a",
+      "taxonId": 220396,
+      "swedishOccurrence": "Bofast och reproducerande",
+      "immigrationHistory": "Spontan",
+      "documentation": "De skattade värdena som bedömningen baserar sig på ligger alla inom intervallet för kategorin Livskraftig (LC)."
+    },
+    "keyFacts": [
+      "Artfakta/Dyntaxa taxon 220396 treats Tussilago farfara as accepted and hästhov as the recommended Swedish name.",
+      "The Swedish Red List 2025 cache classifies the species as LC.",
+      "The local workbook records the species as spontaneous, resident and reproducing in Sweden.",
+      "As a visitor-facing species, hästhov is worth revisiting because the flower-only stage is brief and easy to miss if you only look later when the large leaves dominate."
+    ],
+    "artfakta": {
+      "url": "https://artfakta.se/naturvard/taxon/tussilago-farfara-220396/",
+      "fallbackUrl": "https://artfakta.se/artbestamning/taxon/tussilago-farfara-220396",
+      "citation": "SLU Artdatabanken. Artfakta: hästhov.",
+      "note": "Use Artfakta as the main Swedish species-information source when refreshing this page locally."
+    }
+  },
+  "literature": [
+    {
+      "title": "Pollination and reproduction of Tussilago farfara (Asteraceae)",
+      "authors": [
+        "Jenny-Dewajana Mayer Wild",
+        "Gerhard Gottsberger"
+      ],
+      "year": 2003,
+      "journal": "Botanische Jahrbücher für Systematik, Pflanzengeschichte und Pflanzengeographie",
+      "volume": "124",
+      "issue": "3",
+      "pagesOrArticle": "273-285",
+      "doi": "10.1127/0006-8152/2003/0124-0273",
+      "url": "https://doi.org/10.1127/0006-8152/2003/0124-0273",
+      "whyRelevant": "Best direct source here for flower function, pollination biology and the breeding-system side of the species' very early spring strategy."
+    },
+    {
+      "title": "Comparative biology of Tussilago farfara L., Chamaenerion angustifolium (L.) Scop., Epilobium montanum L., and Epilobium adenocaulon Hausskn. I. General biology and germination",
+      "authors": [
+        "P. J. Myerscough",
+        "F. H. Whitehead"
+      ],
+      "year": 1966,
+      "journal": "New Phytologist",
+      "volume": "65",
+      "issue": "2",
+      "pagesOrArticle": "192-210",
+      "doi": "10.1111/j.1469-8137.1966.tb06352.x",
+      "url": "https://doi.org/10.1111/j.1469-8137.1966.tb06352.x",
+      "whyRelevant": "Useful for seed biology and early establishment, especially when explaining why the species can exploit freshly opened ground."
+    },
+    {
+      "title": "Comparative biology of Tussilago farfara L., Chamaenerion angustifolium (L.) Scop., Epilobium montanum L., and Epilobium adenocaulon Hausskn. II. Growth and ecology",
+      "authors": [
+        "P. J. Myerscough",
+        "F. H. Whitehead"
+      ],
+      "year": 1967,
+      "journal": "New Phytologist",
+      "volume": "66",
+      "issue": "4",
+      "pagesOrArticle": "785-823",
+      "doi": "10.1111/j.1469-8137.1967.tb05445.x",
+      "url": "https://doi.org/10.1111/j.1469-8137.1967.tb05445.x",
+      "whyRelevant": "Core comparative ecology paper for habitat use, growth strategy and the species' response to open disturbed conditions."
+    },
+    {
+      "title": "Variation in Reproductive Allocation in Tussilago farfara",
+      "authors": [
+        "Stephen J. Bostock"
+      ],
+      "year": 1980,
+      "journal": "Oikos",
+      "volume": "34",
+      "issue": "3",
+      "pagesOrArticle": "359",
+      "doi": "10.2307/3544296",
+      "url": "https://doi.org/10.2307/3544296",
+      "whyRelevant": "Useful for explaining why flower output and reproductive effort shift with plant condition and light environment rather than staying fixed."
+    },
+    {
+      "title": "Effect of rhizome fragment length and burial depth on emergence of Tussilago farfara",
+      "authors": [
+        "A. L. Dalbato",
+        "T. Alfredsson",
+        "L. M. Karlsson",
+        "L. Andersson"
+      ],
+      "year": 2014,
+      "journal": "Weed Research",
+      "volume": "54",
+      "issue": "4",
+      "pagesOrArticle": "347-355",
+      "doi": "10.1111/wre.12080",
+      "url": "https://doi.org/10.1111/wre.12080",
+      "whyRelevant": "Directly relevant to disturbance persistence because it shows how buried rhizome fragments can regenerate under realistic soil-management scenarios."
+    }
+  ],
+  "sources": [
+    {
+      "label": "GBIF species match API",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/species/match?name=Tussilago+farfara&verbose=true&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+      "note": "Catalogue of Life checklist workflow used to resolve the accepted GBIF taxon key.",
+      "usedFor": [
+        "taxonomy",
+        "checklist workflow"
+      ]
+    },
+    {
+      "label": "GBIF species API",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/species/3149879",
+      "note": "Accepted taxon details and English vernacular names.",
+      "usedFor": [
+        "taxonomy",
+        "common name"
+      ]
+    },
+    {
+      "label": "GBIF occurrence search",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=3149879&basisOfRecord=HUMAN_OBSERVATION&basisOfRecord=MACHINE_OBSERVATION&year=2000%2C2027&occurrenceStatus=PRESENT&limit=0&facet=country&facetLimit=10",
+      "note": "Filtered observation layer used for counts, top countries and map configuration.",
+      "usedFor": [
+        "distribution",
+        "GBIF map"
+      ]
+    },
+    {
+      "label": "Plants of the World Online",
+      "type": "Reference database",
+      "url": "https://powo.science.kew.org/taxon/256904-1",
+      "note": "Used for accepted native and introduced range framing outside the Swedish context.",
+      "usedFor": [
+        "international context",
+        "native range"
+      ]
+    },
+    {
+      "label": "USFS Fire Effects Information System",
+      "type": "Species account",
+      "url": "https://www.fs.usda.gov/database/feis/plants/forb/tusfar/all.html",
+      "note": "Used for early-flowering timing, rhizomatous growth, seed dispersal, establishment on disturbed ground and North American introduction context.",
+      "usedFor": [
+        "ecology",
+        "phenology",
+        "distribution"
+      ]
+    },
+    {
+      "label": "Artfakta taxon page",
+      "type": "Swedish species page",
+      "url": "https://artfakta.se/naturvard/taxon/tussilago-farfara-220396/",
+      "note": "Primary Swedish landing page for taxonomy, maps and local species context.",
+      "usedFor": [
+        "Swedish context",
+        "Artfakta block"
+      ]
+    },
+    {
+      "label": "Dyntaxa taxon API",
+      "type": "API",
+      "url": "https://nos-api.artdatabanken.se/api/taxa/220396",
+      "note": "Official SLU taxon record used for accepted Swedish taxonomy and the recommended Swedish common name, since GBIF vernacular output included a mismatched Swedish name.",
+      "usedFor": [
+        "Swedish context",
+        "common names"
+      ]
+    },
+    {
+      "label": "Local Swedish Red List 2025 cache",
+      "type": "Local dataset",
+      "note": "Used data/swedish_redlist_2025_index.json, generated from data/Rodlistearbete_2025_alla_filer.xlsx, for category LC, taxonId 220396, Swedish occurrence, immigration history and documentation text.",
+      "usedFor": [
+        "Swedish Red List 2025"
+      ]
+    }
+  ]
+}
