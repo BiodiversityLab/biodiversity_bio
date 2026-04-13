@@ -15,8 +15,11 @@ from __future__ import annotations
 
 import json
 import re
+import time
 from pathlib import Path
 from typing import Any, Dict, List
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
 
 try:
     import openpyxl
@@ -36,8 +39,11 @@ IMG_DIR = ROOT / "img"
 DATA_DIR = ROOT / "data"
 REDLIST_XLSX = DATA_DIR / "Rodlistearbete_2025_alla_filer.xlsx"
 REDLIST_JSON = DATA_DIR / "swedish_redlist_2025_index.json"
+REVERSE_GEOCODE_JSON = DATA_DIR / "reverse_geocode_cache.json"
 DEFAULT_PERSON_NAME = "Tobias Andermann"
 SUPPORTED_IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".webp"}
+NOMINATIM_URL = "https://nominatim.openstreetmap.org/reverse"
+NOMINATIM_USER_AGENT = "biodiversity.bio-site-builder/1.0"
 
 
 def slugify(value: str) -> str:
@@ -56,6 +62,15 @@ def save_json(path: Path, payload: Dict[str, Any]) -> None:
         handle.write("\n")
 
 
+def load_optional_json(path: Path) -> Dict[str, Any]:
+    if not path.exists():
+        return {}
+    try:
+        return load_json(path)
+    except Exception:
+        return {}
+
+
 def is_blank(value: Any) -> bool:
     return value is None or value == ""
 
@@ -63,6 +78,30 @@ def is_blank(value: Any) -> bool:
 def set_if_blank(mapping: Dict[str, Any], key: str, value: Any) -> None:
     if not is_blank(value) and is_blank(mapping.get(key)):
         mapping[key] = value
+
+
+def first_non_blank(*values: Any) -> Any:
+    for value in values:
+        if not is_blank(value):
+            return value
+    return None
+
+
+def unique_non_blank(values: List[Any]) -> List[str]:
+    seen = set()
+    output: List[str] = []
+    for value in values:
+        if is_blank(value):
+            continue
+        text = str(value).strip()
+        if not text:
+            continue
+        key = text.casefold()
+        if key in seen:
+            continue
+        seen.add(key)
+        output.append(text)
+    return output
 
 
 def to_relative_image_path(path: Path) -> str:
@@ -446,6 +485,103 @@ def ensure_media(sheet: Dict[str, Any], slug: str, field_record: Dict[str, Any],
         populate_field_record_from_metadata(field_record, first_metadata)
 
 
+def coordinate_cache_key(latitude: float, longitude: float) -> str:
+    return f"{latitude:.5f},{longitude:.5f}"
+
+
+def parse_reverse_geocode(payload: Dict[str, Any]) -> Dict[str, Any]:
+    address = payload.get("address") if isinstance(payload.get("address"), dict) else {}
+    locality_name = first_non_blank(
+        payload.get("name"),
+        address.get("tourism"),
+        address.get("attraction"),
+        address.get("natural"),
+        address.get("leisure"),
+        address.get("historic"),
+        address.get("amenity"),
+        address.get("building"),
+        address.get("farm"),
+        address.get("isolated_dwelling"),
+        address.get("hamlet"),
+        address.get("suburb"),
+        address.get("neighbourhood"),
+        address.get("quarter"),
+        address.get("residential"),
+        address.get("village"),
+        address.get("locality"),
+        address.get("town"),
+        address.get("city"),
+        address.get("municipality"),
+    )
+    municipality = first_non_blank(
+        address.get("municipality"),
+        address.get("city"),
+        address.get("town"),
+        address.get("village"),
+    )
+    county = first_non_blank(address.get("county"), address.get("state"))
+    country = address.get("country")
+    location_label_parts = unique_non_blank([locality_name, municipality, county, country])
+    return {
+        "localityName": locality_name,
+        "siteName": locality_name,
+        "locationLabel": ", ".join(location_label_parts) if location_label_parts else None,
+        "municipality": municipality,
+        "county": county,
+        "country": country,
+    }
+
+
+def reverse_geocode(latitude: float, longitude: float, cache: Dict[str, Dict[str, Any]]) -> Dict[str, Any]:
+    cache_key = coordinate_cache_key(latitude, longitude)
+    cached = cache.get(cache_key)
+    if isinstance(cached, dict) and cached:
+        return cached
+
+    query = urlencode(
+        {
+            "format": "jsonv2",
+            "lat": f"{latitude:.6f}",
+            "lon": f"{longitude:.6f}",
+            "zoom": 18,
+            "addressdetails": 1,
+            "accept-language": "sv",
+        }
+    )
+    request = Request(
+        f"{NOMINATIM_URL}?{query}",
+        headers={
+            "User-Agent": NOMINATIM_USER_AGENT,
+            "Accept": "application/json",
+        },
+    )
+    try:
+        with urlopen(request, timeout=20) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except Exception:
+        return {}
+
+    parsed = parse_reverse_geocode(payload)
+    if parsed:
+        cache[cache_key] = parsed
+        time.sleep(1.0)
+    return parsed
+
+
+def ensure_reverse_geocoded_location(field_record: Dict[str, Any], cache: Dict[str, Dict[str, Any]]) -> None:
+    latitude = field_record.get("decimalLatitude")
+    longitude = field_record.get("decimalLongitude")
+    if not isinstance(latitude, (int, float)) or not isinstance(longitude, (int, float)):
+        return
+    if not any(is_blank(field_record.get(key)) for key in ("localityName", "municipality", "county", "locationLabel", "siteName")):
+        return
+    resolved = reverse_geocode(float(latitude), float(longitude), cache)
+    if not resolved:
+        return
+    for key in ("localityName", "siteName", "locationLabel", "municipality", "county", "country"):
+        set_if_blank(field_record, key, resolved.get(key))
+
+
 def first_common_name(names: Any) -> str | None:
     if isinstance(names, list) and names:
         return str(names[0])
@@ -454,7 +590,7 @@ def first_common_name(names: Any) -> str | None:
     return None
 
 
-def ensure_defaults(sheet: Dict[str, Any], redlist_lookup: Dict[str, Dict[str, Any]]) -> None:
+def ensure_defaults(sheet: Dict[str, Any], redlist_lookup: Dict[str, Dict[str, Any]], geocode_cache: Dict[str, Dict[str, Any]]) -> None:
     sheet.setdefault("schemaVersion", "1.3.0")
     defaults = sheet.setdefault("defaults", {})
     defaults.setdefault("personName", DEFAULT_PERSON_NAME)
@@ -521,17 +657,19 @@ def ensure_defaults(sheet: Dict[str, Any], redlist_lookup: Dict[str, Dict[str, A
             artfakta.setdefault("note", "Use Artfakta as the main Swedish species-information source when refreshing this page locally.")
 
     ensure_media(sheet, slug, field_record, defaults.get("country", "Sweden"))
+    ensure_reverse_geocoded_location(field_record, geocode_cache)
 
 
 def build_index() -> Dict[str, Any]:
     redlist_lookup = build_redlist_lookup()
+    geocode_cache = load_optional_json(REVERSE_GEOCODE_JSON)
     entries: List[Dict[str, Any]] = []
 
     for sheet_path in sorted(SPECIES_DIR.glob("*.json")):
         if sheet_path.name == "index.json":
             continue
         sheet = load_json(sheet_path)
-        ensure_defaults(sheet, redlist_lookup)
+        ensure_defaults(sheet, redlist_lookup, geocode_cache)
         save_json(sheet_path, sheet)
 
         identity = sheet["identity"]
@@ -559,6 +697,7 @@ def build_index() -> Dict[str, Any]:
         "count": len(entries),
         "species": entries,
     }
+    save_json(REVERSE_GEOCODE_JSON, geocode_cache)
     save_json(SPECIES_DIR / "index.json", payload)
     return payload
 

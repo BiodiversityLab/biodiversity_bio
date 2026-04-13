@@ -29,9 +29,9 @@
     "observer": null,
     "date": "2026-04-11",
     "time": "12:21:06",
-    "localityName": "",
-    "municipality": "",
-    "county": "",
+    "localityName": "Håga",
+    "municipality": "Uppsala kommun",
+    "county": "Uppsala län",
     "country": "Sweden",
     "decimalLatitude": 59.830094,
     "decimalLongitude": 17.578633,
@@ -40,8 +40,8 @@
     "observationNote": "EXIF-backed photo record from the linked image set. Running scripts/build_site_data.py will fill the date, time and coordinates from the matching photos.",
     "observedAtDate": "2026-04-11",
     "observedAtTime": "12:21:06",
-    "siteName": "",
-    "locationLabel": null,
+    "siteName": "Håga",
+    "locationLabel": "Håga, Uppsala kommun, Uppsala län, Sverige",
     "samplingMethod": "Field photography",
     "notes": ""
   },
@@ -87,9 +87,8 @@
     }
   ],
   "hero": {
-    "lede": "The Comma is one of those species that becomes easy to love once you notice the silhouette: the wings look torn, the underside looks like a dead leaf, and the small white comma on the hindwing explains the English name immediately. It is also one of the more rewarding spring butterflies in Sweden because adults survive the winter and can fly on the first genuinely warm days.",
-    "shortMorphology": "Bright orange upperwings marked with black patches, deeply scalloped wing edges, and a dark marbled underside carrying a small white comma-shaped mark on the hindwing.",
-    "returnReason": "Check this species again on mild late-winter and spring days: overwintered adults can appear early, and later broods reveal the seasonal shift between summer and overwintering forms."
+    "lede": "The Comma is one of those species that becomes easy to love once you notice the silhouette: the wings look torn, the underside looks like a dead leaf, and the small white comma on the hindwing explains the English name immediately. It is also one of the more rewarding spring butterflies in Sweden because adults survive the winter and can fly on the first genuinely warm days. Check this species again on mild late-winter and spring days: overwintered adults can appear early, and later broods reveal the seasonal shift between summer and overwintering forms.",
+    "shortMorphology": "Bright orange upperwings marked with black patches, deeply scalloped wing edges, and a dark marbled underside carrying a small white comma-shaped mark on the hindwing."
   },
   "taxonomy": {
     "source": "GBIF species match with Catalogue of Life checklistKey",

@@ -29,9 +29,9 @@
     "observer": null,
     "date": "2026-04-11",
     "time": "13:14:53",
-    "localityName": "",
-    "municipality": "",
-    "county": "",
+    "localityName": "Ekensberg",
+    "municipality": "Uppsala kommun",
+    "county": "Uppsala län",
     "country": "Sweden",
     "decimalLatitude": 59.821297,
     "decimalLongitude": 17.563386,
@@ -40,8 +40,8 @@
     "observationNote": "EXIF-backed photo record from the linked image set. Running scripts/build_site_data.py will fill date, time and coordinates from the matching photos.",
     "observedAtDate": "2026-04-11",
     "observedAtTime": "13:14:53",
-    "siteName": "",
-    "locationLabel": null,
+    "siteName": "Ekensberg",
+    "locationLabel": "Ekensberg, Uppsala kommun, Uppsala län, Sverige",
     "samplingMethod": "Field photography",
     "notes": ""
   },
@@ -78,18 +78,17 @@
       "credit": null,
       "photographer": null,
       "capturedAt": {
-        "date": "",
-        "time": "",
+        "date": "2026-04-11",
+        "time": "13:19:03",
         "localityName": "",
-        "decimalLatitude": null,
-        "decimalLongitude": null
+        "decimalLatitude": 59.821358,
+        "decimalLongitude": 17.563522
       }
     }
   ],
   "hero": {
-    "lede": "Witches cauldron is one of the most memorable spring fungi in northern forests: dark, squat, gelatinous and unmistakably strange. It is also a strong example of why fungal conservation needs patience, because fruiting varies wildly between years and modern occurrence maps mix real habitat patterns with sudden bursts of observer attention.",
-    "shortMorphology": "Large barrel- to globe-shaped fruit bodies, often 5-12 cm wide, with a black-brown fertile disc and a velvety dark-brown outer surface; older fruit bodies flatten, wrinkle and collapse.",
-    "returnReason": "This species rewards repeat visits because known sites may fail to fruit in some years and then reappear, turning each spring into a real check rather than a static checklist exercise."
+    "lede": "Witches cauldron is one of the most memorable spring fungi in northern forests: dark, squat, gelatinous and unmistakably strange. It is also a strong example of why fungal conservation needs patience, because fruiting varies wildly between years and modern occurrence maps mix real habitat patterns with sudden bursts of observer attention. This species rewards repeat visits because known sites may fail to fruit in some years and then reappear, turning each spring into a real check rather than a static checklist exercise.",
+    "shortMorphology": "Large barrel- to globe-shaped fruit bodies, often 5-12 cm wide, with a black-brown fertile disc and a velvety dark-brown outer surface; older fruit bodies flatten, wrinkle and collapse."
   },
   "taxonomy": {
     "source": "GBIF species match with Catalogue of Life checklistKey",

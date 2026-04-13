@@ -28,9 +28,9 @@
     "observer": null,
     "date": "2026-04-11",
     "time": "12:55:17",
-    "localityName": "",
-    "municipality": "",
-    "county": "",
+    "localityName": "Ekensberg",
+    "municipality": "Uppsala kommun",
+    "county": "Uppsala län",
     "country": "Sweden",
     "decimalLatitude": 59.821586,
     "decimalLongitude": 17.570369,
@@ -39,8 +39,8 @@
     "observationNote": "EXIF-backed photo record from the linked image set. Running scripts/build_site_data.py will fill date, time and coordinates from the matching photos.",
     "observedAtDate": "2026-04-11",
     "observedAtTime": "12:55:17",
-    "siteName": "",
-    "locationLabel": null,
+    "siteName": "Ekensberg",
+    "locationLabel": "Ekensberg, Uppsala kommun, Uppsala län, Sverige",
     "samplingMethod": "Field photography",
     "notes": ""
   },
@@ -86,9 +86,8 @@
     }
   ],
   "hero": {
-    "lede": "Peacock is one of the easiest butterflies to remember once you have seen the open wings, but the species becomes more interesting when the wings are closed: it is an adult overwinterer that can appear on the first warm spring days, survives cold through diapause, and turns up in open-data maps wherever butterfly recording is especially intense.",
-    "shortMorphology": "Deep red upperwings with bold eyespots on all four wings; the underside is much darker and more bark- or leaf-like when the butterfly is resting closed-winged.",
-    "returnReason": "This is a strong revisit species because first spring flights shift with weather and some western-European populations now show a partial second generation."
+    "lede": "Peacock is one of the easiest butterflies to remember once you have seen the open wings, but the species becomes more interesting when the wings are closed: it is an adult overwinterer that can appear on the first warm spring days, survives cold through diapause, and turns up in open-data maps wherever butterfly recording is especially intense. It is a strong revisit species because first spring flights shift with weather and some western-European populations now show a partial second generation.",
+    "shortMorphology": "Deep red upperwings with bold eyespots on all four wings; the underside is much darker and more bark- or leaf-like when the butterfly is resting closed-winged."
   },
   "taxonomy": {
     "source": "GBIF species match with Catalogue of Life checklistKey",

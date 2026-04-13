@@ -30,9 +30,9 @@
     "observer": null,
     "date": "2026-04-11",
     "time": "13:00:45",
-    "localityName": "",
-    "municipality": "",
-    "county": "",
+    "localityName": "Högbyhatt",
+    "municipality": "Uppsala kommun",
+    "county": "Uppsala län",
     "country": "Sweden",
     "decimalLatitude": 59.820044,
     "decimalLongitude": 17.568519,
@@ -41,8 +41,8 @@
     "observationNote": "EXIF-backed photo record from the linked image set. Running scripts/build_site_data.py will fill date, time and coordinates from the matching photos when metadata are present.",
     "observedAtDate": "2026-04-11",
     "observedAtTime": "13:00:45",
-    "siteName": "",
-    "locationLabel": null,
+    "siteName": "Högbyhatt",
+    "locationLabel": "Högbyhatt, Uppsala kommun, Uppsala län, Sverige",
     "samplingMethod": "Field photography",
     "notes": ""
   },
@@ -88,9 +88,8 @@
     }
   ],
   "hero": {
-    "lede": "Coltsfoot is one of the easiest spring plants to notice once you know the timing: bright yellow heads appear on woolly, scaly stems before the plant produces the hoof-shaped leaves that gave it both the English and Swedish names. It is also a useful reminder that very common species still have real ecological character, because this one combines early flowering, deep rhizomes, fast colonisation of open soil and strong sensitivity to disturbance.",
-    "shortMorphology": "Yellow dandelion-like flower heads borne singly on short woolly scaly stems in early spring; the large hoof-shaped basal leaves appear later, after flowering.",
-    "returnReason": "Revisit this species twice: first for the flower-only phase in very early spring, then later to compare how completely the broad leaves take over once flowering is finished."
+    "lede": "Coltsfoot is one of the easiest spring plants to notice once you know the timing: bright yellow heads appear on woolly, scaly stems before the plant produces the hoof-shaped leaves that gave it both the English and Swedish names. It is also a useful reminder that very common species still have real ecological character, because this one combines early flowering, deep rhizomes, fast colonisation of open soil and strong sensitivity to disturbance. Revisit this species twice: first for the flower-only phase in very early spring, then later to compare how completely the broad leaves take over once flowering is finished.",
+    "shortMorphology": "Yellow dandelion-like flower heads borne singly on short woolly scaly stems in early spring; the large hoof-shaped basal leaves appear later, after flowering."
   },
   "taxonomy": {
     "source": "GBIF species match with Catalogue of Life checklistKey",

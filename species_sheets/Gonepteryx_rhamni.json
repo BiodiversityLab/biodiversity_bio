@@ -29,9 +29,9 @@
     "observer": null,
     "date": "2026-04-11",
     "time": "12:38:30",
-    "localityName": "",
-    "municipality": "",
-    "county": "",
+    "localityName": "Håga",
+    "municipality": "Uppsala kommun",
+    "county": "Uppsala län",
     "country": "Sweden",
     "decimalLatitude": 59.826858,
     "decimalLongitude": 17.571067,
@@ -40,8 +40,8 @@
     "observationNote": "EXIF-backed photo record from the linked image set. Running scripts/build_site_data.py will fill date, time and coordinates from the matching photos.",
     "observedAtDate": "2026-04-11",
     "observedAtTime": "12:38:30",
-    "siteName": "",
-    "locationLabel": null,
+    "siteName": "Håga",
+    "locationLabel": "Håga, Uppsala kommun, Uppsala län, Sverige",
     "samplingMethod": "Field photography",
     "notes": ""
   },
@@ -87,9 +87,8 @@
     }
   ],
   "hero": {
-    "lede": "Brimstone is one of the clearest Swedish examples of how a common butterfly can still tell a strong ecological story. It overwinters as an adult, depends on buckthorns for breeding, and can appear in spring long before many people expect butterflies to be active at all.",
-    "shortMorphology": "Large pale-yellow to greenish-yellow butterfly with sharply pointed leaf-like wings; resting adults show a strong dead-leaf effect and a small orange discal spot on each wing.",
-    "returnReason": "This species is worth checking repeatedly through spring because overwintered adults can appear on the first warm days, while later in the season the same species shifts into a different habitat-use pattern."
+    "lede": "Brimstone is one of the clearest Swedish examples of how a common butterfly can still tell a strong ecological story. It overwinters as an adult, depends on buckthorns for breeding, and can appear in spring long before many people expect butterflies to be active at all. This species is worth checking repeatedly through spring because overwintered adults can appear on the first warm days, while later in the season the same species shifts into a different habitat-use pattern.",
+    "shortMorphology": "Large pale-yellow to greenish-yellow butterfly with sharply pointed leaf-like wings; resting adults show a strong dead-leaf effect and a small orange discal spot on each wing."
   },
   "taxonomy": {
     "source": "GBIF species match with Catalogue of Life checklistKey",

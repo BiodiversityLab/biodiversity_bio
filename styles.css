@@ -283,6 +283,23 @@ img { display: block; max-width: 100%; }
   color: var(--muted);
   line-height: 1.65;
 }
+.section-text,
+.meta-row,
+.source-item,
+.literature-item,
+.source-item__meta,
+.literature-item__meta {
+  min-width: 0;
+}
+.section-text a,
+.meta-row a,
+.source-item__meta a,
+.literature-item__meta a,
+.source-item__label,
+.literature-item__title {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
 .two-up {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -307,6 +324,50 @@ img { display: block; max-width: 100%; }
 }
 .meta-row:last-child { border-bottom: 0; }
 .meta-label { color: var(--muted); }
+.meta-row > :last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.taxonomy-ranks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.taxonomy-rank {
+  min-width: 0;
+  padding: 0.85rem 0.95rem;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: var(--taxonomy-bg, #f7f2e4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+.taxonomy-rank__label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.taxonomy-rank__value {
+  display: block;
+  font-weight: 700;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.taxonomy-rank--kingdom { --taxonomy-bg: #efe8d6; }
+.taxonomy-rank--phylum { --taxonomy-bg: #ece7dd; }
+.taxonomy-rank--class { --taxonomy-bg: #e7ece3; }
+.taxonomy-rank--order { --taxonomy-bg: #e3ede8; }
+.taxonomy-rank--family { --taxonomy-bg: #e2ebef; }
+.taxonomy-rank--genus { --taxonomy-bg: #e8e5f1; }
+.taxonomy-rank--species { --taxonomy-bg: #f3e6eb; }
+.taxonomy-rank--genus .taxonomy-rank__value,
+.taxonomy-rank--species .taxonomy-rank__value {
+  font-style: italic;
+}
 .badge-row {
   display: flex;
   flex-wrap: wrap;
@@ -362,6 +423,10 @@ img { display: block; max-width: 100%; }
   color: var(--muted);
   margin-top: 0.3rem;
   line-height: 1.55;
+}
+.source-item__meta > div,
+.literature-item__meta > div {
+  min-width: 0;
 }
 .note-box {
   padding: 0.9rem;

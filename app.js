@@ -119,12 +119,20 @@ function getChecklistKey(sheet) {
   return sheet?.taxonomy?.resolvedAgainstChecklistKey || sheet?.taxonomy?.gbifChecklistKey;
 }
 
-function getHeroLede(sheet) {
-  return sheet?.hero?.lede || sheet?.hero?.strapline || sheet?.summary || "";
+function joinHeroText(primary, secondary) {
+  const first = String(primary || "").trim();
+  const second = String(secondary || "").trim();
+  if (!first) return second;
+  if (!second) return first;
+  if (first.includes(second)) return first;
+  return `${first} ${second}`;
 }
 
-function getReturnReason(sheet) {
-  return sheet?.hero?.returnReason || sheet?.whyReturn?.[0] || "";
+function getHeroLede(sheet) {
+  return joinHeroText(
+    sheet?.hero?.lede || sheet?.hero?.strapline || sheet?.summary || "",
+    sheet?.hero?.returnReason || sheet?.whyReturn?.[0] || ""
+  );
 }
 
 function getSheetLiterature(sheet) {
@@ -313,22 +321,39 @@ function renderQuickFacts(sheet) {
   `;
 }
 
+function renderMetaRow(label, valueHtml) {
+  return `<div class="meta-row"><div class="meta-label">${escapeHtml(label)}</div><div>${valueHtml}</div></div>`;
+}
+
 function renderFieldRecord(sheet) {
   const field = sheet.fieldRecord || {};
   const locality = field.localityName || field.siteName || field.locationLabel;
+  const municipalityCounty = [field.municipality, field.county].filter(Boolean).join(" / ");
+  const rows = [
+    renderMetaRow("Observer", formatValue(field.observer || sheet.defaults?.personName)),
+    renderMetaRow("Date", formatValue(field.date)),
+    renderMetaRow("Time", formatValue(field.time))
+  ];
+  if (locality) {
+    rows.push(renderMetaRow("Locality", escapeHtml(locality)));
+  }
+  if (municipalityCounty) {
+    rows.push(renderMetaRow("Municipality / county", escapeHtml(municipalityCounty)));
+  }
+  rows.push(
+    renderMetaRow(
+      "Coordinates",
+      field.decimalLatitude != null && field.decimalLongitude != null
+        ? `${escapeHtml(field.decimalLatitude)}, ${escapeHtml(field.decimalLongitude)}`
+        : "Not yet filled"
+    )
+  );
+  rows.push(renderMetaRow("Habitat note", formatValue(field.habitatNote)));
   return `
     <div class="panel">
       <p class="eyebrow">Field record</p>
       <h2 class="section-title">Quick entry block</h2>
-      <div class="meta-grid">
-        <div class="meta-row"><div class="meta-label">Observer</div><div>${formatValue(field.observer || sheet.defaults?.personName)}</div></div>
-        <div class="meta-row"><div class="meta-label">Date</div><div>${formatValue(field.date)}</div></div>
-        <div class="meta-row"><div class="meta-label">Time</div><div>${formatValue(field.time)}</div></div>
-        <div class="meta-row"><div class="meta-label">Locality</div><div>${formatValue(locality)}</div></div>
-        <div class="meta-row"><div class="meta-label">Municipality / county</div><div>${escapeHtml([field.municipality, field.county].filter(Boolean).join(" / ") || "Not yet filled")}</div></div>
-        <div class="meta-row"><div class="meta-label">Coordinates</div><div>${field.decimalLatitude != null && field.decimalLongitude != null ? `${escapeHtml(field.decimalLatitude)}, ${escapeHtml(field.decimalLongitude)}` : "Not yet filled"}</div></div>
-        <div class="meta-row"><div class="meta-label">Habitat note</div><div>${formatValue(field.habitatNote)}</div></div>
-      </div>
+      <div class="meta-grid">${rows.join("")}</div>
       <p class="footer-note">Edit this directly in each species JSON under <code>fieldRecord</code>, or use <code>python scripts/update_field_record.py ...</code>.</p>
     </div>
   `;
@@ -399,6 +424,31 @@ function renderLiterature(literature) {
   `;
 }
 
+function renderTaxonomyRanks(taxonomy) {
+  const ranks = [
+    ["kingdom", "Kingdom"],
+    ["phylum", "Phylum"],
+    ["class", "Class"],
+    ["order", "Order"],
+    ["family", "Family"],
+    ["genus", "Genus"],
+    ["species", "Species"]
+  ].filter(([key]) => taxonomy?.[key]);
+  if (!ranks.length) {
+    return '<p class="muted">No classification loaded.</p>';
+  }
+  return `
+    <div class="taxonomy-ranks">
+      ${ranks.map(([key, label]) => `
+        <div class="taxonomy-rank taxonomy-rank--${escapeHtml(key)}">
+          <span class="taxonomy-rank__label">${escapeHtml(label)}</span>
+          <span class="taxonomy-rank__value">${escapeHtml(taxonomy[key])}</span>
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
+
 function renderSheet(sheet) {
   const mainName = getEnglishName(sheet);
   const swedishName = getSwedishName(sheet);
@@ -417,13 +467,9 @@ function renderSheet(sheet) {
             <p class="eyebrow">${escapeHtml([taxonomy.kingdom, taxonomy.phylum].filter(Boolean).join(" · "))}</p>
             <h2 class="hero-title">${escapeHtml(mainName)}</h2>
             <p class="hero-scientific"><em>${escapeHtml(scientificName)}</em> · Swedish: ${escapeHtml(swedishName)}</p>
-            <p class="byline">Default name: ${escapeHtml(sheet?.defaults?.personName || "Tobias Andermann")} · Page author: ${escapeHtml(getDisplayPerson(sheet, "pageAuthor"))}</p>
+            <p class="byline">Page author: ${escapeHtml(getDisplayPerson(sheet, "pageAuthor"))}</p>
             <p class="hero-lede">${escapeHtml(getHeroLede(sheet))}</p>
             ${renderQuickFacts(sheet)}
-            <div class="note-box">
-              <strong>Return reason</strong>
-              <div class="section-text">${escapeHtml(getReturnReason(sheet))}</div>
-            </div>
           </div>
           ${renderFieldRecord(sheet)}
         </div>
@@ -495,13 +541,13 @@ function renderSheet(sheet) {
 
       <section class="panel">
         <p class="eyebrow">Taxonomy</p>
-          <h2 class="section-title">GBIF taxonomy</h2>
-          <div class="meta-grid">
-          <div class="meta-row"><div class="meta-label">Accepted scientific name</div><div>${formatValue(getAcceptedScientificName(sheet))}</div></div>
-          <div class="meta-row"><div class="meta-label">GBIF taxon key</div><div>${formatValue(getAcceptedTaxonKey(sheet))}</div></div>
-          <div class="meta-row"><div class="meta-label">Resolved against checklistKey</div><div>${formatValue(getChecklistKey(sheet))}</div></div>
-          <div class="meta-row"><div class="meta-label">Kingdom → species</div><div>${escapeHtml([taxonomy.kingdom, taxonomy.phylum, taxonomy.class, taxonomy.order, taxonomy.family, taxonomy.genus, taxonomy.species].filter(Boolean).join(" → ") || "No classification loaded")}</div></div>
-          <div class="meta-row"><div class="meta-label">Synonyms</div><div>${escapeHtml((sheet?.taxonomy?.synonyms || []).join("; ") || "—")}</div></div>
+        <h2 class="section-title">GBIF taxonomy</h2>
+        ${renderTaxonomyRanks(taxonomy)}
+        <div class="meta-grid">
+          ${renderMetaRow("Accepted scientific name", formatValue(getAcceptedScientificName(sheet)))}
+          ${renderMetaRow("GBIF taxon key", formatValue(getAcceptedTaxonKey(sheet)))}
+          ${renderMetaRow("Resolved against checklistKey", formatValue(getChecklistKey(sheet)))}
+          ${renderMetaRow("Synonyms", escapeHtml((sheet?.taxonomy?.synonyms || []).join("; ") || "—"))}
         </div>
       </section>
 
