@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/build_site_data.py",
-  "generatedAt": "2026-04-12T18:01:05.521727+00:00",
-  "count": 2,
+  "generatedAt": "2026-04-13T08:59:42.242942+00:00",
+  "count": 3,
   "species": [
     {
       "slug": "Gonepteryx_rhamni",
@@ -10,6 +10,16 @@
       "scientificName": "Gonepteryx rhamni",
       "swedishName": "citronfjäril",
       "heroImage": "img/Gonepteryx_rhamni_1.jpeg",
+      "defaultPersonName": "Tobias Andermann",
+      "group": "Animalia"
+    },
+    {
+      "slug": "Polygonia_c-album",
+      "file": "Polygonia_c-album.json",
+      "mainName": "Comma",
+      "scientificName": "Polygonia c-album",
+      "swedishName": "vinbärsfuks",
+      "heroImage": "img/Polygonia_c-album_1.jpeg",
       "defaultPersonName": "Tobias Andermann",
       "group": "Animalia"
     },

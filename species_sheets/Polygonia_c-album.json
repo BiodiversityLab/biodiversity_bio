@@ -1,0 +1,405 @@
+{
+  "schemaVersion": "1.3.0",
+  "defaults": {
+    "personName": "Tobias Andermann",
+    "country": "Sweden",
+    "language": "en"
+  },
+  "identity": {
+    "slug": "Polygonia_c-album",
+    "scientificName": "Polygonia c-album",
+    "mainName": "Comma",
+    "commonNames": {
+      "en": [
+        "Comma",
+        "Comma butterfly"
+      ],
+      "sv": [
+        "vinbärsfuks"
+      ]
+    }
+  },
+  "summary": "A ragged-winged butterfly that overwinters as an adult, uses a broad but selective host-plant range, and often appears in Swedish spring before the landscape feels ready for butterflies.",
+  "byline": {
+    "pageAuthor": null,
+    "observer": null,
+    "photographer": null
+  },
+  "fieldRecord": {
+    "observer": null,
+    "date": "2026-04-11",
+    "time": "12:21:06",
+    "localityName": "",
+    "municipality": "",
+    "county": "",
+    "country": "Sweden",
+    "decimalLatitude": 59.830094,
+    "decimalLongitude": 17.578633,
+    "coordinateUncertaintyMeters": 4.75,
+    "habitatNote": "Adult photographed in April; add site notes if you want the page to describe the exact Swedish habitat and host plants at this locality.",
+    "observationNote": "EXIF-backed photo record from the linked image set. Running scripts/build_site_data.py will fill the date, time and coordinates from the matching photos.",
+    "observedAtDate": "2026-04-11",
+    "observedAtTime": "12:21:06",
+    "siteName": "",
+    "locationLabel": null,
+    "samplingMethod": "Field photography",
+    "notes": ""
+  },
+  "media": [
+    {
+      "file": "img/Polygonia_c-album_1.jpeg",
+      "caption": "Closed-wing Comma showing the scalloped wing outline and the pale comma mark on the hindwing underside.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-11",
+        "time": "12:21:06",
+        "localityName": "",
+        "decimalLatitude": 59.830094,
+        "decimalLongitude": 17.578633
+      }
+    },
+    {
+      "file": "img/Polygonia_c-album_2.jpeg",
+      "caption": "A second view of the cryptic underwing pattern that makes resting commas resemble a dry leaf.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-11",
+        "time": "12:21:02",
+        "localityName": "",
+        "decimalLatitude": 59.830089,
+        "decimalLongitude": 17.578636
+      }
+    },
+    {
+      "file": "img/Polygonia_c-album_3.jpeg",
+      "caption": "Close field view of Polygonia c-album emphasizing the jagged wing margin typical of anglewing butterflies.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-11",
+        "time": "12:20:44",
+        "localityName": "",
+        "decimalLatitude": 59.830097,
+        "decimalLongitude": 17.578656
+      }
+    }
+  ],
+  "hero": {
+    "lede": "The Comma is one of those species that becomes easy to love once you notice the silhouette: the wings look torn, the underside looks like a dead leaf, and the small white comma on the hindwing explains the English name immediately. It is also one of the more rewarding spring butterflies in Sweden because adults survive the winter and can fly on the first genuinely warm days.",
+    "shortMorphology": "Bright orange upperwings marked with black patches, deeply scalloped wing edges, and a dark marbled underside carrying a small white comma-shaped mark on the hindwing.",
+    "returnReason": "Check this species again on mild late-winter and spring days: overwintered adults can appear early, and later broods reveal the seasonal shift between summer and overwintering forms."
+  },
+  "taxonomy": {
+    "source": "GBIF species match with Catalogue of Life checklistKey",
+    "sourceUrl": "https://www.gbif.org/species/1898544",
+    "acceptedTaxonKey": 1898544,
+    "acceptedScientificName": "Polygonia c-album (Linnaeus, 1758)",
+    "rank": "SPECIES",
+    "resolvedAgainstChecklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "resolvedAgainstDataset": "Catalogue of Life checklist via GBIF species/match?checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+    "classification": {
+      "kingdom": "Animalia",
+      "phylum": "Arthropoda",
+      "class": "Insecta",
+      "order": "Lepidoptera",
+      "family": "Nymphalidae",
+      "genus": "Polygonia",
+      "species": "Polygonia c-album"
+    },
+    "synonyms": [
+      "Papilio c-album Linnaeus, 1758",
+      "Nymphalis c-album (Linnaeus, 1758)",
+      "Polygonia album Newnham",
+      "Polygonia i-album Esper, 1793",
+      "Polygonia castanea Verity, 1950"
+    ],
+    "commonNamesFromGbif": {
+      "en": [
+        "Comma",
+        "Comma Butterfly"
+      ]
+    }
+  },
+  "quickFacts": [
+    {
+      "label": "Main English name",
+      "value": "Comma"
+    },
+    {
+      "label": "Swedish name",
+      "value": "vinbärsfuks"
+    },
+    {
+      "label": "Europe IUCN 2010",
+      "value": "LC"
+    },
+    {
+      "label": "Swedish Red List 2025",
+      "value": "LC"
+    },
+    {
+      "label": "Overwintering stage",
+      "value": "Adult butterfly"
+    },
+    {
+      "label": "GBIF Sweden records since 2000",
+      "value": "34,846 filtered observations"
+    }
+  ],
+  "distribution": {
+    "globalSummary": "Range context from GBIF and European conservation sources supports a widespread western-Palaearctic butterfly. The filtered GBIF layer used here is an observation surface rather than a native-range polygon, and it is dominated by recorder-rich western Europe.",
+    "swedenSummary": "In Sweden the species is resident, reproducing, and assessed as LC in 2025. The Swedish filtered GBIF layer is substantial, but the global map is visually dominated by countries with stronger observer networks and digitized butterfly datasets.",
+    "globalGbifFilteredCount": 1376151,
+    "swedenGbifFilteredCount": 34846,
+    "topCountries": [
+      {
+        "country": "GB",
+        "count": 704750
+      },
+      {
+        "country": "NL",
+        "count": 221467
+      },
+      {
+        "country": "FR",
+        "count": 116347
+      },
+      {
+        "country": "BE",
+        "count": 90859
+      },
+      {
+        "country": "DE",
+        "count": 67040
+      },
+      {
+        "country": "FI",
+        "count": 44422
+      },
+      {
+        "country": "SE",
+        "count": 34846
+      }
+    ],
+    "gbif": {
+      "provider": "GBIF Maps API v2",
+      "mapType": "hex-density",
+      "taxonKey": 1898544,
+      "tileStyle": "classic.poly",
+      "bin": "hex",
+      "hexPerTile": 57,
+      "srs": "EPSG:3857",
+      "filters": {
+        "basisOfRecord": [
+          "HUMAN_OBSERVATION",
+          "MACHINE_OBSERVATION"
+        ],
+        "occurrenceStatus": "PRESENT",
+        "yearFrom": 2000
+      },
+      "notes": [
+        "The map shows aggregated GBIF occurrence density rather than individual points.",
+        "Filters are restricted to HUMAN_OBSERVATION and MACHINE_OBSERVATION records from year 2000 onwards and to records with occurrenceStatus = PRESENT.",
+        "The webpage renders this layer as a hex summary map."
+      ]
+    },
+    "samplingBiasNote": "GBIF hex density here reflects reporting culture, observer effort, and dataset mobilization as much as biological distribution. The United Kingdom, Netherlands, Belgium and other recorder-rich countries strongly amplify the map, so sparse hexes should not be read as true scarcity or absence."
+  },
+  "internationalContext": {
+    "summary": "Polygonia c-album is a food-generalist nymphalid whose ecology combines host-plant flexibility with strong seasonal programming: some adults develop directly, while others enter reproductive diapause and overwinter. During source checking for this sheet, no separate global IUCN assessment was located; the accessible formal IUCN assessment is the Europe assessment, which lists the species as Least Concern in 2010.",
+    "ecology": [
+      "Adults can enter reproductive diapause and overwinter, allowing spring flights well before fresh summer broods are on the wing.",
+      "Seasonal morphs differ in wing underside appearance, and experiments support the idea that the leaf-like resting pattern functions as camouflage on different seasonal backgrounds.",
+      "Larvae are polyphagous, but females do not rank host plants at random; oviposition choices respond to plant chemistry and plant identity.",
+      "Climate-driven expansion is constrained not only by temperature but also by where suitable larval host plants are available.",
+      "Recent transcriptomic work suggests that flexible physiological responses after host switches help explain the species' broad host repertoire."
+    ],
+    "threats": [
+      "The evidence base used here emphasizes resource distribution and seasonal strategy more than acute global threat, and the Europe assessment treats the species as Least Concern.",
+      "At local scale, breeding opportunity still depends on retaining suitable larval host plants in woodland edges, hedgerows, gardens and scrubby habitats.",
+      "Climate warming can open new areas thermally, but expansion still depends on whether the host-plant landscape keeps up."
+    ],
+    "phenology": {
+      "northernEurope": "Overwintered adults may fly on mild days from late winter into spring; fresh adults appear later in the season, and the final generation overwinters as adults.",
+      "note": "Voltinism and the balance between directly developing and diapausing morphs vary with photoperiod and regional climate."
+    }
+  },
+  "swedishContext": {
+    "summary": "In Sweden, vinbärsfuks is treated as a resident breeding butterfly with spontaneous occurrence, and the 2025 Swedish Red List assessment places it in LC. The local ArtDatabanken red-list documentation used here is brief but unusually clear: it states that the population is increasing, making this a good species for showing that a familiar butterfly can still be ecologically interesting without being nationally threatened.",
+    "commonName": "vinbärsfuks",
+    "redList2025": {
+      "category": "LC",
+      "criterion": "n/a",
+      "taxonId": 201063,
+      "swedishOccurrence": "Bofast och reproducerande",
+      "immigrationHistory": "Spontan",
+      "documentation": "Populationen är ökande. De skattade värdena som bedömningen baserar sig på ligger alla inom intervallet för kategorin Livskraftig (LC)."
+    },
+    "keyFacts": [
+      "Artfakta/Dyntaxa taxon 201063 treats Polygonia c-album as an accepted species and vinbärsfuks as the recommended Swedish name.",
+      "The Swedish Red List 2025 data used locally classify the species as LC and state that the population is increasing.",
+      "The same Swedish data list the species as bofast och reproducerande, with immigration history spontan.",
+      "Because adults overwinter, vinbärsfuks is worth revisiting very early in spring when relatively few other conspicuous butterflies are active."
+    ],
+    "artfakta": {
+      "url": "https://artfakta.se/naturvard/taxon/polygonia-c-album-201063/",
+      "fallbackUrl": "https://artfakta.se/artbestamning/taxon/polygonia-c-album-201063",
+      "citation": "SLU Artdatabanken. Artfakta: vinbärsfuks (Polygonia c-album).",
+      "note": "Use Artfakta as the main Swedish species-information source when refreshing this page locally."
+    }
+  },
+  "literature": [
+    {
+      "title": "Seasonal plasticity in life history traits: growth and development in Polygonia c-album (Lepidoptera: Nymphalidae)",
+      "authors": [
+        "Soren Nylin"
+      ],
+      "year": 1992,
+      "journal": "Biological Journal of the Linnean Society",
+      "volume": "47",
+      "issue": "3",
+      "pagesOrArticle": "301-323",
+      "doi": "10.1111/j.1095-8312.1992.tb00672.x",
+      "url": "https://doi.org/10.1111/j.1095-8312.1992.tb00672.x",
+      "whyRelevant": "Core source for diapause, seasonal development and life-history plasticity."
+    },
+    {
+      "title": "Seasonal polyphenism and leaf mimicry in the comma butterfly",
+      "authors": [
+        "Christer Wiklund",
+        "Birgitta S. Tullberg"
+      ],
+      "year": 2004,
+      "journal": "Animal Behaviour",
+      "volume": "68",
+      "issue": "3",
+      "pagesOrArticle": "621-627",
+      "doi": "10.1016/j.anbehav.2003.12.008",
+      "url": "https://doi.org/10.1016/j.anbehav.2003.12.008",
+      "whyRelevant": "Useful for the evidence behind seasonal camouflage and the leaf-mimic interpretation of the resting adult."
+    },
+    {
+      "title": "Role of larval host plants in the climate-driven range expansion of the butterfly Polygonia c-album",
+      "authors": [
+        "Brigitte Braschler",
+        "Jane K. Hill"
+      ],
+      "year": 2007,
+      "journal": "Journal of Animal Ecology",
+      "volume": "76",
+      "issue": "3",
+      "pagesOrArticle": "415-423",
+      "doi": "10.1111/j.1365-2656.2007.01217.x",
+      "url": "https://doi.org/10.1111/j.1365-2656.2007.01217.x",
+      "whyRelevant": "Best concise source here for linking climate-driven spread to host-plant availability rather than temperature alone."
+    },
+    {
+      "title": "Nonvolatile Chemical Cues Affect Host-Plant Ranking by Gravid Polygonia c-album Females",
+      "authors": [
+        "Raimondas Mozuraitis",
+        "Rushana Murtazina",
+        "Soren Nylin",
+        "Anna-Karin Borg-Karlson"
+      ],
+      "year": 2012,
+      "journal": "Zeitschrift för Naturforschung C",
+      "volume": "67",
+      "issue": "1-2",
+      "pagesOrArticle": "93-102",
+      "doi": "10.1515/znc-2012-1-212",
+      "url": "https://doi.org/10.1515/znc-2012-1-212",
+      "whyRelevant": "Shows that host use is broad but still mediated by plant cues and active female choice."
+    },
+    {
+      "title": "Plasticity for the win: Flexible transcriptional response to host plant switches in the comma butterfly (Polygonia c-album)",
+      "authors": [
+        "Katharina Schneider",
+        "Rachel A. Steward",
+        "Maria de la Paz Celorio-Mancera",
+        "Niklas Janz",
+        "Dick Moberg",
+        "Christopher W. Wheat",
+        "Soren Nylin"
+      ],
+      "year": 2024,
+      "journal": "Molecular Ecology",
+      "volume": "33",
+      "issue": "16",
+      "pagesOrArticle": "e17479",
+      "doi": "10.1111/mec.17479",
+      "url": "https://doi.org/10.1111/mec.17479",
+      "whyRelevant": "Adds recent evidence that physiological flexibility helps the species cope with host switches."
+    }
+  ],
+  "sources": [
+    {
+      "label": "GBIF species match API",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/species/match?name=Polygonia+c-album&verbose=true&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+      "note": "Catalogue of Life checklist workflow used to resolve the accepted GBIF taxon key.",
+      "usedFor": [
+        "taxonomy",
+        "checklist workflow"
+      ]
+    },
+    {
+      "label": "GBIF species API",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/species/1898544",
+      "note": "Accepted taxon details, basionym and default English vernacular name.",
+      "usedFor": [
+        "taxonomy",
+        "common name"
+      ]
+    },
+    {
+      "label": "GBIF occurrence search",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=1898544&basisOfRecord=HUMAN_OBSERVATION&basisOfRecord=MACHINE_OBSERVATION&year=2000%2C2027&occurrenceStatus=PRESENT&limit=0&facet=country&facetLimit=10",
+      "note": "Filtered observation layer used for counts, top countries and map configuration.",
+      "usedFor": [
+        "distribution",
+        "GBIF map"
+      ]
+    },
+    {
+      "label": "Artfakta taxon page",
+      "type": "Swedish species page",
+      "url": "https://artfakta.se/naturvard/taxon/polygonia-c-album-201063/",
+      "note": "Primary Swedish landing page for taxonomy, conservation context and local maps.",
+      "usedFor": [
+        "Swedish context",
+        "Artfakta block"
+      ]
+    },
+    {
+      "label": "Dyntaxa taxon API",
+      "type": "API",
+      "url": "https://nos-api.artdatabanken.se/api/taxa/201063",
+      "note": "Official SLU taxon record used for accepted Swedish and English names.",
+      "usedFor": [
+        "Swedish context",
+        "common names"
+      ]
+    },
+    {
+      "label": "Local Swedish Red List 2025 cache",
+      "type": "Local dataset",
+      "note": "Used data/swedish_redlist_2025_index.json, generated from data/Rodlistearbete_2025_alla_filer.xlsx, for category LC, taxonId 201063, Swedish occurrence and immigration history.",
+      "usedFor": [
+        "Swedish Red List 2025"
+      ]
+    },
+    {
+      "label": "IUCN European Red List of Butterflies",
+      "type": "PDF",
+      "url": "https://portals.iucn.org/library/sites/library/files/documents/RL-4-011.pdf",
+      "note": "Used for the Europe regional Least Concern context; no separate global IUCN assessment was located during this source check.",
+      "usedFor": [
+        "regional conservation status"
+      ]
+    }
+  ]
+}
