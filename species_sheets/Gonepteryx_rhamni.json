@@ -1,176 +1,160 @@
 {
-  "schemaVersion": "measure.bio/species-sheet-v3",
-  "slug": "gonepteryx-rhamni",
-  "scientificName": "Gonepteryx rhamni",
-  "commonName": "Brimstone",
-  "summary": "A long-lived spring butterfly that overwinters as an adult, breeds on buckthorns, and remains common in Sweden even though the visible GBIF footprint is strongly amplified by observer-rich countries.",
-  "fieldRecord": {
-    "observedAtDate": "2026-04-11",
-    "observedAtTime": "12:38:30",
-    "timezone": "Europe/Stockholm",
-    "siteName": null,
-    "locationLabel": null,
-    "municipality": null,
-    "county": null,
+  "schemaVersion": "1.3.0",
+  "defaults": {
+    "personName": "Tobias Andermann",
     "country": "Sweden",
-    "decimalLatitude": 59.82686,
-    "decimalLongitude": 17.57107,
-    "observer": "",
-    "samplingMethod": "Field photography",
-    "habitatNote": "The available images show an overwintered adult resting among dry leaf litter and woody vegetation in early-spring light.",
-    "notes": "Photo-backed profile seeded from GBIF, the Swedish Red List dataset, and DOI-checked literature. Add exact date, place, and coordinates if you want the page to show a field-record map.",
+    "language": "en"
+  },
+  "identity": {
+    "slug": "Gonepteryx_rhamni",
+    "scientificName": "Gonepteryx rhamni",
+    "mainName": "Brimstone",
+    "commonNames": {
+      "en": [
+        "Brimstone",
+        "Brimstone butterfly"
+      ],
+      "sv": [
+        "citronfjäril"
+      ]
+    }
+  },
+  "summary": "A long-lived spring butterfly that overwinters as an adult, breeds on buckthorns, and stays common in Sweden even though the GBIF map is dominated by observer-rich countries rather than a simple abundance gradient.",
+  "byline": {
+    "pageAuthor": null,
+    "observer": null,
+    "photographer": null
+  },
+  "fieldRecord": {
+    "observer": null,
     "date": "2026-04-11",
     "time": "12:38:30",
     "localityName": "",
+    "municipality": "",
+    "county": "",
+    "country": "Sweden",
+    "decimalLatitude": 59.826858,
+    "decimalLongitude": 17.571067,
     "coordinateUncertaintyMeters": 4.73,
-    "observationNote": ""
+    "habitatNote": "The linked photos show an overwintered adult resting low in dry leaf litter and woody edge vegetation during an early-spring flight period.",
+    "observationNote": "EXIF-backed photo record from the linked image set. Running scripts/build_site_data.py will fill date, time and coordinates from the matching photos.",
+    "observedAtDate": "2026-04-11",
+    "observedAtTime": "12:38:30",
+    "siteName": "",
+    "locationLabel": null,
+    "samplingMethod": "Field photography",
+    "notes": ""
+  },
+  "media": [
+    {
+      "file": "img/Gonepteryx_rhamni_1.jpeg",
+      "caption": "Closed wings show why resting brimstones disappear so easily into last year's leaves.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-11",
+        "time": "12:38:30",
+        "localityName": "",
+        "decimalLatitude": 59.826858,
+        "decimalLongitude": 17.571067
+      }
+    },
+    {
+      "file": "img/Gonepteryx_rhamni_2.jpeg",
+      "caption": "Close view of the underside pattern and the small orange discal spot on the wing.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-11",
+        "time": "12:39:48",
+        "localityName": "",
+        "decimalLatitude": 59.826836,
+        "decimalLongitude": 17.571036
+      }
+    },
+    {
+      "file": "img/Gonepteryx_rhamni_3.jpeg",
+      "caption": "The thin pale wing and leaf-tip shape remain visible even in a worn spring individual.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-11",
+        "time": "12:39:02",
+        "localityName": "",
+        "decimalLatitude": 59.827064,
+        "decimalLongitude": 17.570669
+      }
+    }
+  ],
+  "hero": {
+    "lede": "Brimstone is one of the clearest Swedish examples of how a common butterfly can still tell a strong ecological story. It overwinters as an adult, depends on buckthorns for breeding, and can appear in spring long before many people expect butterflies to be active at all.",
+    "shortMorphology": "Large pale-yellow to greenish-yellow butterfly with sharply pointed leaf-like wings; resting adults show a strong dead-leaf effect and a small orange discal spot on each wing.",
+    "returnReason": "This species is worth checking repeatedly through spring because overwintered adults can appear on the first warm days, while later in the season the same species shifts into a different habitat-use pattern."
   },
   "taxonomy": {
-    "kingdom": "Animalia",
-    "phylum": "Arthropoda",
-    "class": "Insecta",
-    "order": "Lepidoptera",
-    "family": "Pieridae",
-    "genus": "Gonepteryx",
-    "species": "Gonepteryx rhamni",
-    "authority": "(Linnaeus, 1758)",
-    "gbifUsageKey": 1920712,
-    "acceptedName": "Gonepteryx rhamni",
-    "acceptedNameSource": "GBIF Backbone Taxonomy",
-    "synonyms": [
-      "Papilio rhamni Linnaeus, 1758",
-      "Colias rhamni (Linnaeus, 1758)",
-      "Rhodocera rhamni (Linnaeus, 1758)"
-    ],
-    "notes": [
-      "Taxonomy cross-checked against the GBIF Backbone entry used by the site.",
-      "This sheet does not claim subspecies-level treatment."
-    ],
-    "gbifChecklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
-    "gbifDatasetTitle": "Catalogue of Life",
+    "source": "GBIF species match with Catalogue of Life checklistKey",
+    "sourceUrl": "https://www.gbif.org/species/1920712",
+    "acceptedTaxonKey": 1920712,
+    "acceptedScientificName": "Gonepteryx rhamni (Linnaeus, 1758)",
+    "rank": "SPECIES",
+    "resolvedAgainstChecklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "resolvedAgainstDataset": "Catalogue of Life checklist via GBIF species/match?checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
     "classification": {
       "kingdom": "Animalia",
       "phylum": "Arthropoda",
       "class": "Insecta",
       "order": "Lepidoptera",
       "family": "Pieridae",
-      "genus": "Gonepteryx"
-    }
-  },
-  "commonNames": [
-    {
-      "lang": "en",
-      "name": "Brimstone",
-      "preferred": true,
-      "region": "International"
+      "genus": "Gonepteryx",
+      "species": "Gonepteryx rhamni"
     },
-    {
-      "lang": "en",
-      "name": "Common brimstone",
-      "preferred": false,
-      "region": "International"
-    },
-    {
-      "lang": "sv",
-      "name": "citronfjäril",
-      "preferred": true,
-      "region": "Sweden"
-    }
-  ],
-  "hero": {
-    "eyebrow": "Spring butterfly · adult overwinterer",
-    "headline": "Brimstone",
-    "subheadline": "Gonepteryx rhamni",
-    "strapline": "One of the first butterflies to signal spring in Sweden, but ecologically more interesting than its familiarity suggests: it is long-lived, host-limited, and seasonally mobile.",
-    "statusBadges": [
-      {
-        "label": "Europe: LC",
-        "tone": "neutral"
-      },
-      {
-        "label": "Sweden 2025: LC",
-        "tone": "neutral"
-      }
+    "synonyms": [
+      "Papilio rhamni Linnaeus, 1758",
+      "Colias rhamni (Linnaeus, 1758)",
+      "Rhodocera rhamni (Linnaeus, 1758)",
+      "Papilio ecclipsis Linnaeus, 1763"
     ],
-    "swedishCommonName": "citronfjäril"
-  },
-  "observation": {
-    "date": null,
-    "location": null,
-    "notes": "Legacy compatibility block; exact field metadata has not been added yet for these images.",
-    "photo": null,
-    "imageFolderPattern": "Gonepteryx_rhamni_*"
-  },
-  "media": [
-    {
-      "src": "img/Gonepteryx_rhamni_1.jpeg",
-      "filename": "Gonepteryx_rhamni_1.jpeg",
-      "alt": "Overwintered Gonepteryx rhamni resting closed-winged in dry leaf litter, showing the leaf-like underside and pointed forewing tip.",
-      "caption": "Closed wings show why resting brimstones disappear so easily into last year’s leaves.",
-      "credit": "",
-      "capturedAtDate": "2026-04-11",
-      "capturedAtTime": "12:38:30",
-      "siteName": null,
-      "locationLabel": null,
-      "municipality": null,
-      "county": null,
-      "country": "Sweden",
-      "coordinates": {
-        "lat": 59.826858,
-        "lon": 17.571067
-      },
-      "notes": ""
-    },
-    {
-      "src": "img/Gonepteryx_rhamni_2.jpeg",
-      "filename": "Gonepteryx_rhamni_2.jpeg",
-      "alt": "Close handheld view of Gonepteryx rhamni showing the greenish underside, fine venation, and orange discal spot.",
-      "caption": "Close view of the underside pattern and the small orange discal spot on the wing.",
-      "credit": "",
-      "capturedAtDate": "2026-04-11",
-      "capturedAtTime": "12:39:48",
-      "siteName": null,
-      "locationLabel": null,
-      "municipality": null,
-      "county": null,
-      "country": "Sweden",
-      "coordinates": {
-        "lat": 59.826836,
-        "lon": 17.571036
-      },
-      "notes": ""
-    },
-    {
-      "src": "img/Gonepteryx_rhamni_3.jpeg",
-      "filename": "Gonepteryx_rhamni_3.jpeg",
-      "alt": "Pale spring brimstone with closed wings held in the hand against a forest backdrop.",
-      "caption": "The thin pale wing and leaf-tip shape remain visible even in a worn spring individual.",
-      "credit": "",
-      "capturedAtDate": "2026-04-11",
-      "capturedAtTime": "12:39:02",
-      "siteName": null,
-      "locationLabel": null,
-      "municipality": null,
-      "county": null,
-      "country": "Sweden",
-      "coordinates": {
-        "lat": 59.827064,
-        "lon": 17.570669
-      },
-      "notes": ""
+    "commonNamesFromGbif": {
+      "en": [
+        "Brimstone",
+        "Brimstone Butterfly"
+      ],
+      "sv": [
+        "Citronfjäril"
+      ]
     }
-  ],
-  "ecologyHighlights": [
-    "Larvae are strongly tied to buckthorns, especially alder buckthorn (Frangula alnus) and common buckthorn (Rhamnus cathartica).",
-    "Unlike many butterflies, the species overwinters as an adult and can therefore appear very early in spring.",
-    "Adults use different seasonal habitat sets: breeding depends on host-plant availability, while summer persistence can favor cooler and more wooded sites.",
-    "The species is mobile enough to track patchy resources, but local breeding still remains constrained by larval host plants.",
-    "The sharply pointed wings and leaf-like underside provide effective camouflage when the butterfly rests with wings closed."
+  },
+  "quickFacts": [
+    {
+      "label": "Main English name",
+      "value": "Brimstone"
+    },
+    {
+      "label": "Swedish name",
+      "value": "citronfjäril"
+    },
+    {
+      "label": "Europe IUCN 2010",
+      "value": "LC"
+    },
+    {
+      "label": "Swedish Red List 2025",
+      "value": "LC"
+    },
+    {
+      "label": "Overwintering stage",
+      "value": "Adult butterfly"
+    },
+    {
+      "label": "GBIF Sweden records since 2000",
+      "value": "101,309 filtered observations"
+    }
   ],
   "distribution": {
-    "text": "Gonepteryx rhamni is a widespread western-Palearctic brimstone, familiar across much of Europe and recorded far beyond Sweden. The live GBIF observation layer for this project is enormous, but it is dominated by high-reporting countries rather than reading as a direct abundance map.",
-    "gbifDownloaded": 1949099,
-    "gbifTotalAvailable": 2225441,
+    "globalSummary": "Gonepteryx rhamni is a widespread western-Palearctic brimstone. The filtered GBIF layer used here is best read as an observation surface, not a native-range map, and it is strongly inflated by countries with dense butterfly-recording communities.",
+    "swedenSummary": "In Sweden the species is resident, reproducing and assessed as LC in 2025. Swedish GBIF coverage is substantial, but the global map is still visually dominated by the UK, the Netherlands and other countries with strong observer networks.",
+    "globalGbifFilteredCount": 1950006,
+    "swedenGbifFilteredCount": 101309,
     "topCountries": [
       {
         "country": "GB",
@@ -178,153 +162,79 @@
       },
       {
         "country": "NL",
-        "count": 391675
+        "count": 391690
       },
       {
         "country": "FR",
-        "count": 197649
+        "count": 197698
       },
       {
         "country": "DE",
-        "count": 111306
+        "count": 111822
       },
       {
         "country": "SE",
-        "count": 101308
+        "count": 101309
+      },
+      {
+        "country": "FI",
+        "count": 98740
       }
     ],
-    "bbox": null,
-    "caveat": "GBIF density here mostly reflects where butterfly recording platforms are strong, where records have been digitized, and where observer effort is high. The UK and the Netherlands dominate the filtered layer, so map density should not be read as a simple biological abundance gradient.",
-    "global": {
-      "overview": "At broad scale this is a western-Palearctic species. The Europe-focused conservation sources used here support a widespread European interpretation; the farther Asian extent should be treated as background range context rather than a claim about continuous occupancy everywhere.",
-      "nativeRange": "Native across much of Europe and extending eastward into the temperate Palearctic. For this page, the defensible core statement is that it is a widespread European brimstone rather than a narrow-range specialist.",
-      "gbif": {
-        "search": {
-          "scientificName": "Gonepteryx rhamni",
-          "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
-          "hasCoordinate": true,
-          "basisOfRecord": [
-            "HUMAN_OBSERVATION",
-            "MACHINE_OBSERVATION"
-          ],
-          "occurrenceStatus": "PRESENT",
-          "yearMin": 2000
-        },
-        "map": {
-          "mode": "points",
-          "center": {
-            "lat": 54.0,
-            "lon": 13.0
-          },
-          "zoom": 3,
-          "minZoom": 2,
-          "maxZoom": 14,
-          "pointLimit": 2500,
-          "fitMaxZoom": 8,
-          "title": "Global GBIF occurrence records",
-          "subtitle": "Human or machine observations from 2000 onwards, filtered to present records only."
-        }
-      }
+    "gbif": {
+      "provider": "GBIF Maps API v2",
+      "mapType": "hex-density",
+      "taxonKey": 1920712,
+      "tileStyle": "classic.poly",
+      "bin": "hex",
+      "hexPerTile": 57,
+      "srs": "EPSG:3857",
+      "filters": {
+        "basisOfRecord": [
+          "HUMAN_OBSERVATION",
+          "MACHINE_OBSERVATION"
+        ],
+        "occurrenceStatus": "PRESENT",
+        "yearFrom": 2000
+      },
+      "notes": [
+        "The map shows aggregated GBIF occurrence density rather than individual points.",
+        "Filters are restricted to HUMAN_OBSERVATION and MACHINE_OBSERVATION records from year 2000 onwards and to records with occurrenceStatus = PRESENT.",
+        "The webpage renders this layer as a hex summary map."
+      ]
     },
-    "sweden": {
-      "overview": "In Sweden the species is resident and reproducing, and the 2025 national assessment treats it as Livskraftig (LC). It is common enough to be familiar, but still useful as a teaching species for spring phenology, host-plant dependence, and observer bias in open biodiversity data.",
-      "focus": "The Sweden-only GBIF layer is much thinner than the UK layer but still substantial, with more than 100,000 filtered records. Much of that density likely reflects where people report butterflies frequently, not only where the species is most biologically concentrated.",
-      "gbif": {
-        "search": {
-          "scientificName": "Gonepteryx rhamni",
-          "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
-          "country": "SE",
-          "hasCoordinate": true,
-          "basisOfRecord": [
-            "HUMAN_OBSERVATION",
-            "MACHINE_OBSERVATION"
-          ],
-          "occurrenceStatus": "PRESENT",
-          "yearMin": 2000
-        },
-        "map": {
-          "mode": "points",
-          "pointLimit": 2000,
-          "fitMaxZoom": 10,
-          "center": {
-            "lat": 60.2,
-            "lon": 15.2
-          },
-          "zoom": 5,
-          "minZoom": 4,
-          "maxZoom": 10,
-          "style": "classic.poly",
-          "bin": "square",
-          "squareSize": 64,
-          "title": "Sverige · högre upplösning",
-          "subtitle": "Sweden-only GBIF records using the same filters as the global layer."
-        }
-      }
-    }
+    "samplingBiasNote": "GBIF density here reflects recorder effort, digitization, and the strength of local butterfly-reporting systems as much as biological distribution. The UK and the Netherlands dominate the filtered layer, so dense hexes should not be read as a direct abundance gradient and sparse regions should not be treated as absence."
   },
   "internationalContext": {
-    "overview": "Internationally, Gonepteryx rhamni is a good example of a butterfly that is both widespread and ecologically specific. It is not a rarity story; it is a seasonal-habitat and host-plant story.",
+    "summary": "Internationally, Brimstone is a useful species because it is common enough to be familiar but structured enough to be ecologically informative: breeding depends on buckthorns, adults overwinter, and some populations use different parts of the landscape across the year. During this refresh, I confirmed a Europe-scale IUCN assessment of Least Concern from 2010 but did not locate a separate global IUCN Red List assessment to cite with the same confidence.",
     "status": {
       "system": "European Red List of Butterflies / IUCN Europe",
       "category": "LC",
       "label": "Least Concern",
       "assessmentYear": 2010,
-      "populationTrend": "",
-      "summary": "The Europe-scale assessment treats the species as Least Concern rather than as a near-threshold conservation case."
+      "scope": "Europe",
+      "note": "No separate global IUCN assessment was confirmed during this refresh."
     },
     "ecology": [
-      "Breeding distribution is closely linked to the availability of larval buckthorns, especially Frangula alnus and Rhamnus cathartica.",
-      "The species overwinters as an adult, making it unusually long-lived for a butterfly that remains conspicuous in both spring and late summer.",
-      "Field studies from Spain support seasonal elevational movement, with cooler and more wooded summer sites used differently from breeding sites.",
-      "Adults respond to floral scent cues and are not restricted to a single nectar source in the way larvae are restricted to host plants.",
-      "The wing underside works as strong leaf mimicry, while male wing colour is produced through pierid pigment and structural effects."
+      "Larvae are closely tied to buckthorns, especially Frangula alnus and Rhamnus cathartica, even though the adult butterfly ranges widely through the landscape.",
+      "The species overwinters as an adult, which helps explain why it can be one of the first conspicuous butterflies on warm spring days.",
+      "Field studies in mountain systems show seasonal elevational movement, with summer and return movements responding to both climate and resource availability.",
+      "Adult feeding behaviour responds to floral scent cues rather than to a single nectar source, while reproductive phenology in Sweden is shaped by the long adult lifespan and the overwintering strategy.",
+      "The pale-yellow wing colour and resting leaf mimicry are not just aesthetic features; they are part of how the butterfly remains conspicuous in flight but cryptic at rest."
     ],
     "threats": [
-      "Local breeding can be limited where larval host shrubs are scarce, fragmented, or removed from the landscape.",
-      "Landscape simplification can decouple breeding habitat from summer shelter and overwintering cover.",
-      "In mountain systems, climate change can tighten the spacing between seasonal habitat networks needed across the annual cycle."
+      "Local breeding can still be limited where host shrubs are removed, fragmented or disconnected from sheltering habitat.",
+      "Landscape simplification can separate breeding sites from summer refuges and overwintering cover even when adults remain easy to see in spring.",
+      "Climate change may relax thermal limits in some regions, but seasonal movement still depends on resource availability and habitat continuity."
     ],
-    "visitorHooks": [
-      "Check the first warm days of spring: this is one of the earliest butterflies many people notice after winter.",
-      "Compare the breeding-season host-plant story with the summer movement story; the same butterfly uses the landscape differently across the year.",
-      "Watch the GBIF map critically: it is a good case study in how observer effort shapes open biodiversity layers."
-    ]
+    "phenology": {
+      "northernEurope": "Adults overwinter and can fly on mild late-winter or spring days; breeding follows host-plant flush and later-season adults move toward overwintering cover.",
+      "note": "The species is unusually good for watching how weather shifts first-flight timing between years."
+    }
   },
   "swedishContext": {
-    "overview": "In Sweden, citronfjäril is a classic spring signal rather than a red-list concern. That makes it useful on this site for a different reason: it links familiar field experience to real questions about host plants, phenology, overwintering strategy, and data bias.",
+    "summary": "In Sweden, citronfjäril is a classic spring signal rather than a red-list concern. Artfakta and the local 2025 Swedish Red List data make that clear: the species is treated as accepted, resident and reproducing, with a national category of LC and an increasing population. That combination makes it a strong visitor-facing species because it links a familiar spring sighting to host-plant dependence, overwintering biology and observer bias in open biodiversity data.",
     "commonName": "citronfjäril",
-    "status": {
-      "system": "Svenska rödlistan 2025 / SLU Artdatabanken",
-      "category": "LC",
-      "label": "Livskraftig",
-      "criterion": "n/a",
-      "assessmentYear": 2025,
-      "protectedStatus": ""
-    },
-    "redlist2025": {
-      "criterion": "n/a",
-      "category": "LC",
-      "label": "Livskraftig",
-      "assessmentYear": 2025,
-      "documentation": "",
-      "swedishOccurrence": "Bofast och reproducerande",
-      "immigrationHistory": "Spontan",
-      "sourceDataset": "SLU Artdatabanken, Rödlistearbete 2025"
-    },
-    "rangeNote": "The bundled Swedish Red List index treats the species as resident and reproducing in Sweden. The site should therefore frame Swedish records as part of a stable native presence, not as an occasional immigrant story.",
-    "habitat": [
-      "Woodland edges, scrubby mosaics, hedgerows, and damp or semi-open places where buckthorns grow.",
-      "Woody cover matters not only for breeding landscapes but also for shelter and overwintering.",
-      "Adult observations can pile up in sunny spring corridors even when the larval host plants are tucked into wetter or shrubbier nearby patches."
-    ],
-    "phenology": "Adults can appear very early in spring after overwintering, breed when host plants flush, and produce a summer generation that later seeks overwintering shelter.",
-    "specialFacts": [
-      "Citronfjäril is one of the easiest Swedish butterflies to notice early in the year because the adult survives winter.",
-      "The 2025 Swedish Red List marks the species as Livskraftig (LC), not as a current national concern.",
-      "Its familiar status makes it useful for teaching that common species can still have narrow larval requirements and complex annual movements."
-    ],
-    "reportingCall": null,
-    "management": null,
     "redList2025": {
       "category": "LC",
       "criterion": "n/a",
@@ -333,29 +243,20 @@
       "immigrationHistory": "Spontan",
       "documentation": "Populationen är ökande. De skattade värdena som bedömningen baserar sig på ligger alla inom intervallet för kategorin Livskraftig (LC)."
     },
+    "keyFacts": [
+      "Artfakta/Dyntaxa taxon 201051 treats Gonepteryx rhamni as an accepted species and citronfjäril as the recommended Swedish name.",
+      "The Swedish Red List 2025 data classify the species as LC and state that the population is increasing.",
+      "The local red-list data also treat the species as bofast och reproducerande, with immigration history spontan.",
+      "Because adults overwinter, citronfjäril is one of the most useful Swedish butterflies for revisiting very early in spring."
+    ],
     "artfakta": {
       "url": "https://artfakta.se/naturvard/taxon/gonepteryx-rhamni-201051/",
       "fallbackUrl": "https://artfakta.se/artbestamning/taxon/gonepteryx-rhamni-201051",
-      "citation": "SLU Artdatabanken. Artfakta: citronfjäril.",
+      "citation": "SLU Artdatabanken. Artfakta: citronfjäril (Gonepteryx rhamni).",
       "note": "Use Artfakta as the main Swedish species-information source when refreshing this page locally."
     }
   },
-  "similarSpecies": [
-    {
-      "name": "Gonepteryx cleopatra",
-      "note": "The closest look-alike within the genus, but males show a stronger orange flush on the upperside and the species is not the standard Swedish brimstone."
-    },
-    {
-      "name": "Pieris whites and Colias yellows",
-      "note": "These can match the pale-yellow impression at a distance, but they lack the sharply pointed leaf-mimic wing shape and the characteristic orange discal spots of a resting brimstone."
-    }
-  ],
-  "whyReturn": [
-    "The page becomes more interesting every spring because first-flight timing shifts noticeably with weather.",
-    "It is a good species for comparing what a common butterfly looks like in the field versus what it looks like in open-data layers.",
-    "New host-plant or habitat notes would materially improve the Swedish context without needing a rare-species story."
-  ],
-  "selectedLiterature": [
+  "literature": [
     {
       "title": "Oviposition strategies in Pieridae butterflies and the role of an egg-killing plant trait therein",
       "authors": [
@@ -363,15 +264,14 @@
         "Liana O. Greenberg",
         "Nina E. Fatouros"
       ],
-      "journal": "Ecology and Evolution",
       "year": 2024,
+      "journal": "Ecology and Evolution",
       "volume": "14",
       "issue": "7",
-      "pages": "e11697",
+      "pagesOrArticle": "e11697",
       "doi": "10.1002/ece3.11697",
-      "doi_url": "https://doi.org/10.1002/ece3.11697",
-      "verified": true,
-      "relevance": "Useful for breeding ecology: it documents oviposition placement for G. rhamni on natural host plants."
+      "url": "https://doi.org/10.1002/ece3.11697",
+      "whyRelevant": "Useful for breeding ecology because it includes Gonepteryx rhamni in a modern analysis of oviposition strategy on natural host plants."
     },
     {
       "title": "Climate conditions and resource availability drive return elevational migrations in a single-brooded insect",
@@ -379,121 +279,129 @@
         "David Gutiérrez",
         "Robert J. Wilson"
       ],
-      "journal": "Oecologia",
       "year": 2014,
+      "journal": "Oecologia",
       "volume": "175",
       "issue": "3",
-      "pages": "861-873",
+      "pagesOrArticle": "861-873",
       "doi": "10.1007/s00442-014-2952-4",
-      "doi_url": "https://doi.org/10.1007/s00442-014-2952-4",
-      "verified": true,
-      "relevance": "Best source here for seasonal habitat partitioning, uphill summer movement, and climate-related constraints."
+      "url": "https://doi.org/10.1007/s00442-014-2952-4",
+      "whyRelevant": "Best source here for seasonal habitat partitioning, return elevational migration and climate-resource interactions."
     },
     {
       "title": "Colors and pterin pigmentation of pierid butterfly wings",
       "authors": [
         "B. Wijnen",
-        "H. L. Leertouwer",
-        "D. G. Stavenga"
+        "H.L. Leertouwer",
+        "D.G. Stavenga"
       ],
-      "journal": "Journal of Insect Physiology",
       "year": 2007,
+      "journal": "Journal of Insect Physiology",
       "volume": "53",
       "issue": "12",
-      "pages": "1206-1217",
+      "pagesOrArticle": "1206-1217",
       "doi": "10.1016/j.jinsphys.2007.06.016",
-      "doi_url": "https://doi.org/10.1016/j.jinsphys.2007.06.016",
-      "verified": true,
-      "relevance": "Supports the colour-structure context for pierid wings, including the conspicuous wing appearance of brimstones."
+      "url": "https://doi.org/10.1016/j.jinsphys.2007.06.016",
+      "whyRelevant": "Supports the colour-structure context behind the species' bright wing appearance."
     },
     {
-      "title": "Foraging responses in the butterflies Inachis io, Aglais urticae, and Gonepteryx rhamni to floral scents",
+      "title": "Early Male Emergence and Reproductive Phenology of the Adult Overwintering Butterfly Gonepteryx rhamni in Sweden",
+      "authors": [
+        "Christer Wiklund",
+        "Virpi Lindfors",
+        "Johan Forsberg"
+      ],
+      "year": 1996,
+      "journal": "Oikos",
+      "volume": "75",
+      "issue": "2",
+      "pagesOrArticle": "227",
+      "doi": "10.2307/3546246",
+      "url": "https://doi.org/10.2307/3546246",
+      "whyRelevant": "Directly useful for Swedish phenology because it focuses on reproductive timing in an adult-overwintering population."
+    },
+    {
+      "title": "Foraging responses in the butterflies Inachis io, Aglais urticae (Nymphalidae), and Gonepteryx rhamni (Pieridae) to floral scents",
       "authors": [
         "Stig Andersson"
       ],
-      "journal": "Chemoecology",
       "year": 2003,
+      "journal": "Chemoecology",
       "volume": "13",
-      "pages": "1-11",
+      "issue": null,
+      "pagesOrArticle": "1-11",
       "doi": "10.1007/s000490300000",
-      "doi_url": "https://doi.org/10.1007/s000490300000",
-      "verified": true,
-      "relevance": "Useful for adult feeding ecology because it shows behavioral responses to floral scent cues."
+      "url": "https://doi.org/10.1007/s000490300000",
+      "whyRelevant": "Useful for adult nectar-foraging ecology because it tests behavioural responses to floral scent cues."
     }
   ],
-  "swedishResources": [],
-  "sourceFiles": {
-    "taxonomy": null,
-    "distributionSummary": null,
-    "occurrencesCsv": null,
-    "literature": null,
-    "note": "This page-ready JSON draft was created from the local species-sheet schema plus targeted source checks, not from a full packet run in a networked Python environment.",
-    "swedishRedlistWorkbook": "data/Rodlistearbete_2025_alla_filer.xlsx",
-    "swedishRedlistIndex": "data/swedish_redlist_2025_index.json"
-  },
   "sources": [
     {
-      "id": "gbif-taxonomy",
-      "label": "GBIF Backbone Taxonomy",
-      "url": "https://www.gbif.org/species/1920712",
+      "label": "GBIF species match API",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/species/match?name=Gonepteryx+rhamni&verbose=true&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+      "note": "Catalogue of Life checklist workflow used to resolve the accepted GBIF taxon key.",
       "usedFor": [
         "taxonomy",
-        "synonyms",
+        "checklist workflow"
+      ]
+    },
+    {
+      "label": "GBIF species API",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/species/1920712",
+      "note": "Accepted taxon details, basionym and English vernacular names.",
+      "usedFor": [
+        "taxonomy",
+        "common name"
+      ]
+    },
+    {
+      "label": "GBIF occurrence search",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=1920712&basisOfRecord=HUMAN_OBSERVATION&basisOfRecord=MACHINE_OBSERVATION&year=2000%2C2027&occurrenceStatus=PRESENT&limit=0&facet=country&facetLimit=10",
+      "note": "Filtered observation layer used for counts, top countries and map configuration.",
+      "usedFor": [
+        "distribution",
+        "GBIF map"
+      ]
+    },
+    {
+      "label": "Artfakta taxon page",
+      "type": "Swedish species page",
+      "url": "https://artfakta.se/naturvard/taxon/gonepteryx-rhamni-201051/",
+      "note": "Primary Swedish landing page for taxonomy, conservation context and local maps.",
+      "usedFor": [
+        "Swedish context",
+        "Artfakta block"
+      ]
+    },
+    {
+      "label": "Dyntaxa taxon API",
+      "type": "API",
+      "url": "https://nos-api.artdatabanken.se/api/taxa/201051",
+      "note": "Official SLU taxon record used for accepted Swedish and English names.",
+      "usedFor": [
+        "Swedish context",
         "common names"
       ]
     },
     {
-      "id": "gbif-occurrence-api",
-      "label": "GBIF occurrence API with site map filters",
-      "url": "https://api.gbif.org/v1/occurrence/search?taxon_key=1920712&has_coordinate=true&occurrence_status=present&year=2000,2026&basis_of_record=HUMAN_OBSERVATION&basis_of_record=MACHINE_OBSERVATION&limit=0&facet=country&facetLimit=5",
+      "label": "Local Swedish Red List 2025 cache",
+      "type": "Local dataset",
+      "note": "Used data/swedish_redlist_2025_index.json, generated from data/Rodlistearbete_2025_alla_filer.xlsx, for category LC, taxonId 201051, Swedish occurrence and immigration history.",
       "usedFor": [
-        "occurrence counts",
-        "top countries",
-        "distribution bias note"
+        "Swedish Red List 2025"
       ]
     },
     {
-      "id": "eunis-europe",
-      "label": "EUNIS species page / European Red List context",
-      "url": "https://eunis.eea.europa.eu/species/91102",
+      "label": "IUCN European Red List of Butterflies",
+      "type": "PDF",
+      "url": "https://portals.iucn.org/library/sites/library/files/documents/RL-4-011.pdf",
+      "note": "Used for the Europe-scale Least Concern context; no separate global IUCN assessment was confirmed during this refresh.",
       "usedFor": [
-        "Europe-scale status",
-        "European distribution framing"
-      ]
-    },
-    {
-      "id": "slu-redlist-2025-workbook",
-      "label": "SLU Artdatabanken · Rödlistearbete 2025 workbook",
-      "url": "data/Rodlistearbete_2025_alla_filer.xlsx",
-      "usedFor": [
-        "Swedish Red List category",
-        "Swedish common name",
-        "resident status"
+        "regional conservation status"
       ]
     }
-  ],
-  "buildNotes": {
-    "skillOrigin": "species-sheet-builder",
-    "compatibility": "Netlify-ready static build. The build script scans species_sheets/ and img/, writes a manifest to dist/species_sheets/index.json, and deploys a static front end plus optional Netlify functions for live GBIF points.",
-    "recommendedLocalNextStep": "If you want a fully materialized evidence packet beside this page, run the bundled species-sheet-builder scripts in a networked environment and attach the resulting taxonomy, occurrence, and literature artifacts."
-  },
-  "defaults": {
-    "personName": "Tobias Andermann",
-    "country": "Sweden",
-    "language": "en"
-  },
-  "identity": {
-    "scientificName": "Gonepteryx rhamni",
-    "slug": "Gonepteryx_rhamni",
-    "commonNames": {
-      "sv": [
-        "citronfjäril"
-      ]
-    }
-  },
-  "byline": {
-    "pageAuthor": null,
-    "observer": null,
-    "photographer": null
-  }
+  ]
 }
