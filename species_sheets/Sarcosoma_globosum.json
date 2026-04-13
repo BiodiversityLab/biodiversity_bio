@@ -19,6 +19,7 @@
       ]
     }
   },
+  "summary": "A heavy, dark spring fungus of older spruce forest whose rarity story is inseparable from habitat continuity, uneven fruiting, and strong observer bias in modern occurrence data.",
   "byline": {
     "pageAuthor": null,
     "observer": null,
@@ -35,8 +36,8 @@
     "decimalLatitude": 59.821297,
     "decimalLongitude": 17.563386,
     "coordinateUncertaintyMeters": 3.53,
-    "habitatNote": "",
-    "observationNote": "Fill this block first when adding a new field observation. The website uses these values for the location card and the interactive locality mini-map.",
+    "habitatNote": "The linked photos show fruit bodies in moss and conifer litter, matching the species' usual early-spring appearance in older spruce-dominated forest.",
+    "observationNote": "EXIF-backed photo record from the linked image set. Running scripts/build_site_data.py will fill date, time and coordinates from the matching photos.",
     "observedAtDate": "2026-04-11",
     "observedAtTime": "13:14:53",
     "siteName": "",
@@ -73,18 +74,18 @@
     }
   ],
   "hero": {
-    "lede": "A striking spring fungus of older conifer forest, Witches cauldron is one of the most memorable fungi you can encounter in Scandinavia: dark, heavy, velvet-brown outside, and filled with a gelatinous reservoir that gives the fruit body its odd, cauldron-like form.",
-    "shortMorphology": "Large barrel- to globe-shaped fruit bodies, usually 5–12 cm wide, with a glossy black-brown disc and a velvety chocolate-brown outer surface. Older fruit bodies flatten and wrinkle as they mature.",
-    "returnReason": "This is a species worth checking repeatedly through spring because fruiting varies strongly among years and can track local habitat quality and disturbance."
+    "lede": "Witches cauldron is one of the most memorable spring fungi in northern forests: dark, squat, gelatinous and unmistakably strange. It is also a strong example of why fungal conservation needs patience, because fruiting varies wildly between years and modern occurrence maps mix real habitat patterns with sudden bursts of observer attention.",
+    "shortMorphology": "Large barrel- to globe-shaped fruit bodies, often 5-12 cm wide, with a black-brown fertile disc and a velvety dark-brown outer surface; older fruit bodies flatten, wrinkle and collapse.",
+    "returnReason": "This species rewards repeat visits because known sites may fail to fruit in some years and then reappear, turning each spring into a real check rather than a static checklist exercise."
   },
   "taxonomy": {
-    "source": "GBIF Backbone Taxonomy",
+    "source": "GBIF species match with Catalogue of Life checklistKey",
     "sourceUrl": "https://www.gbif.org/species/2593417",
     "acceptedTaxonKey": 2593417,
     "acceptedScientificName": "Sarcosoma globosum (Schmidel) Casp.",
     "rank": "SPECIES",
     "resolvedAgainstChecklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
-    "resolvedAgainstDataset": "Catalogue of Life checklist via GBIF name_backbone(checklistKey=...)",
+    "resolvedAgainstDataset": "Catalogue of Life checklist via GBIF species/match?checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
     "classification": {
       "kingdom": "Fungi",
       "phylum": "Ascomycota",
@@ -120,8 +121,8 @@
       "value": "bombmurkla"
     },
     {
-      "label": "Global status",
-      "value": "Near Threatened (IUCN Red List, 2015)"
+      "label": "Global IUCN 2015",
+      "value": "NT"
     },
     {
       "label": "Swedish Red List 2025",
@@ -132,13 +133,45 @@
       "value": "Older spruce-dominated forest with moss and conifer litter"
     },
     {
-      "label": "Main fruiting window",
-      "value": "Late March to May in Sweden"
+      "label": "GBIF Sweden records since 2000",
+      "value": "34 filtered observations"
     }
   ],
   "distribution": {
-    "globalSummary": "A boreal to hemiboreal fungus best known from northern Europe, especially Sweden, Finland and parts of Russia, with much sparser records elsewhere.",
-    "swedenSummary": "Sweden is one of the species' global strongholds, with many historical and current reports concentrated in suitable spruce-forest landscapes.",
+    "globalSummary": "The strongest evidence base for Sarcosoma globosum lies in northern Europe and adjacent boreal regions, but the filtered GBIF layer also includes observations from North America. Those records are useful as an observation layer, not as a clean statement about continuous native range, and the strongest modern GBIF densities are in Russia and Finland rather than Sweden.",
+    "swedenSummary": "Sweden remains one of the species' best-known conservation countries, but the filtered modern GBIF layer is tiny, with only 34 Swedish observations since 2000 under the project filters. That low count should be read together with the species' irregular fruiting and the strong role of observer culture in where records appear.",
+    "globalGbifFilteredCount": 2010,
+    "swedenGbifFilteredCount": 34,
+    "topCountries": [
+      {
+        "country": "RU",
+        "count": 923
+      },
+      {
+        "country": "FI",
+        "count": 669
+      },
+      {
+        "country": "US",
+        "count": 197
+      },
+      {
+        "country": "CA",
+        "count": 87
+      },
+      {
+        "country": "EE",
+        "count": 36
+      },
+      {
+        "country": "LT",
+        "count": 34
+      },
+      {
+        "country": "SE",
+        "count": 34
+      }
+    ],
     "gbif": {
       "provider": "GBIF Maps API v2",
       "mapType": "hex-density",
@@ -157,30 +190,39 @@
       },
       "notes": [
         "The map shows aggregated GBIF occurrence density rather than individual points.",
-        "Filters are restricted to Human Observation and Machine Observation records from year 2000 onwards and to records with occurrenceStatus = PRESENT."
+        "Filters are restricted to HUMAN_OBSERVATION and MACHINE_OBSERVATION records from year 2000 onwards and to records with occurrenceStatus = PRESENT.",
+        "The webpage renders this layer as a hex summary map."
       ]
     },
-    "samplingBiasNote": "GBIF maps reflect reporting and digitization effort as much as biological reality. Sparse regions can mean under-sampling rather than absence."
+    "samplingBiasNote": "GBIF density here reflects changing fungal observation culture, reporting effort and digitization as much as biology. For this species in particular, a recent paper explicitly links rising observation counts to observation culture, so sparse hexes can mean under-reporting and dense hexes can reflect active search behaviour rather than a simple abundance pattern."
   },
   "internationalContext": {
-    "summary": "Globally, Witches cauldron is a conspicuous but declining forest fungus whose best-documented strongholds are in northern Europe. It is associated with older spruce-dominated forests, fruits very early in the season, and is sensitive to habitat degradation.",
+    "summary": "Globally, Witches cauldron is a conspicuous but conservation-relevant forest fungus whose best-documented strongholds lie in northern Europe. The IUCN Red List assessment cited here treats it as Near Threatened in 2015, while recent literature emphasizes that the visible rise in observations can partly reflect changing fungal observation culture rather than a straightforward biological increase.",
+    "status": {
+      "system": "IUCN Red List",
+      "category": "NT",
+      "label": "Near Threatened",
+      "assessmentYear": 2015,
+      "scope": "Global"
+    },
     "ecology": [
-      "Usually described as a litter-associated terrestrial fungus in older spruce forest; the exact trophic mode is still debated.",
-      "Fruits shortly after snowmelt, often in moss and conifer litter on well-drained but moist ground.",
-      "Abundance fluctuates strongly between years, so repeated visits are often needed even at known localities."
+      "Usually described as a litter-associated terrestrial fungus in older spruce forest, although its exact trophic mode remains debated.",
+      "Fruits very early, often shortly after snowmelt, in moss and conifer litter on moist but usually well-drained ground.",
+      "Annual visibility is highly variable, so even established sites may need repeated visits across years.",
+      "Recent observation-culture work shows that rising record numbers do not automatically mean a biological increase; some of the signal comes from intensified search and reporting."
     ],
     "threats": [
-      "Clear-cutting and loss of long-continuity older forest habitat.",
-      "Overgrowth and habitat densification where historical forest grazing has ceased.",
-      "Broader forest damage and habitat-quality decline across parts of the range."
+      "Loss of old spruce-forest continuity through clear-cutting and stand replacement.",
+      "Decline in habitat quality where forest structure, moisture regime or litter conditions are altered.",
+      "Interpreting trends is difficult because fruiting is irregular and observation effort is uneven."
     ],
     "phenology": {
-      "northernEurope": "Often March to May, shortly after snowmelt.",
-      "note": "Timing varies with winter conditions and local snow cover."
+      "northernEurope": "Typically fruits from shortly after snowmelt through spring, often from March to May.",
+      "note": "Timing depends strongly on winter conditions, snow cover and local moisture."
     }
   },
   "swedishContext": {
-    "summary": "In Sweden, bombmurkla is a nationally important conservation species and one of the country's best-known spring fungi. Swedish sources emphasise older spruce forest, long forest continuity, and the need to revisit known sites even in years without visible fruit bodies.",
+    "summary": "In Sweden, bombmurkla is a nationally important conservation fungus rather than just a curiosity. Artfakta, Dyntaxa and the local 2025 Red List data all align on the core story: the species is accepted taxonomically, known as bombmurkla, resident and reproducing, and assessed as EN because habitat quality and locality numbers are expected to decline. The long Swedish red-list documentation also makes clear that many historical localities have disappeared and that repeated site revisits are necessary because fruiting can fail in individual years.",
     "commonName": "bombmurkla",
     "redList2025": {
       "category": "EN",
@@ -190,24 +232,17 @@
       "immigrationHistory": "Spontan",
       "documentation": "Artens levnadssätt är okänt. Den bildar fruktkroppar i mossa och barrförna på sandblandad mark i äldre blåbärs- och ängsgranskog, ofta vid moränryggar och i närheten av bäckdråg. Arten är välkänd och ofta eftersökt, med många nu försvunna lokaler. De senaste årens granbarkborreangrepp har försämrat statusen på flera av artens växtplatser i kärnområdet. Med förväntat ökade skogsskador i Götaland och Svealand bedöms hotnivån stiga. Sverige hyser en stor del av artens globala population. Antalet reproduktiva individer skattas till 17000 (11000-34000). Antalet har skattats genom att multiplicera tre faktorer: 1) Troliga antalet aktuella lokaler i landet (850). 2) Bedömt antal unika mycel/lokal (2). 3) En schablon för hur många fragmenterade enheter varje unikt mycel bedöms ge upphov till (10). Antalet lokalområden i landet skattas till 850 (550-1700). Utbredningsområdets storlek (EOO) överskrider gränsvärdet för rödlistning. Förekomstarean (AOO) skattas till 3300 (2250-6600) km². En minskning av populationen pågår eller förväntas ske. Minskningen avser förekomstarea, kvalitén på artens habitat och antalet lokalområden. Minskningstakten har uppgått till 30 % under de senaste 50 åren. Under de kommande 50 åren förväntas minskningstakten uppgå till 50 %. Under en tidsperiod om 50 år, som sträcker sig både bakåt och framåt i tiden, så bedöms minskningstakten uppgå till 40 %. Bedömningen baseras på minskad geografisk utbredning och/eller försämrad habitatkvalitet. De skattade värdena som bedömningen baserar sig på ligger alla inom intervallet för kategorin Starkt hotad (EN). Minskningstakten överstiger gränsvärdet för Starkt hotad (EN) enligt A-kriteriet. (A3c)."
     },
-    "protectedStatus": [
-      "Nationally protected in Sweden; the species must not be picked or damaged."
-    ],
     "keyFacts": [
-      "Artfakta is the primary Swedish species-information source to expand this entry, with taxonomy, species information, conservation context and maps on the Bombmurkla taxon page.",
-      "Naturvårdsverket's action programme describes the species as tied to older, nutrient-rich spruce forest with long continuity and notes February–May fruiting.",
-      "SLU Artdatabanken's Bombmurkleuppropet highlights that site revisits and non-detections are valuable because fruiting varies strongly between years."
+      "Artfakta/Dyntaxa taxon 1445 treats Sarcosoma globosum as accepted and bombmurkla as the recommended Swedish name.",
+      "The Swedish Red List 2025 data classify the species as EN under criterion A3c.",
+      "The local red-list documentation explicitly points to habitat-quality decline, lost localities and worsening pressure from forest damage.",
+      "Bombmurkla remains a strong revisit species because non-fruiting years can hide occupied sites."
     ],
     "artfakta": {
       "url": "https://artfakta.se/naturvard/taxon/sarcosoma-globosum-1445/",
       "fallbackUrl": "https://artfakta.se/artbestamning/taxon/sarcosoma-globosum-1445",
-      "citation": "SLU Artdatabanken. Artfakta: Bombmurkla (Sarcosoma globosum).",
+      "citation": "SLU Artdatabanken. Artfakta: bombmurkla (Sarcosoma globosum).",
       "note": "Use Artfakta as the main Swedish species-information source when refreshing this page locally."
-    },
-    "reportingCall": {
-      "title": "Bombmurkleuppropet 2026",
-      "url": "https://www.slu.se/artdatabanken/rapportering-och-fynd/upprop/bombmurkleuppropet-2026/",
-      "summary": "SLU Artdatabanken asks observers to revisit known sites, report both findings and non-findings, and document current site condition."
     }
   },
   "literature": [
@@ -225,80 +260,137 @@
       "pagesOrArticle": "263",
       "doi": "10.3390/jof10040263",
       "url": "https://doi.org/10.3390/jof10040263",
-      "whyRelevant": "Best recent habitat and distribution paper focused specifically on the species."
+      "whyRelevant": "Best recent species-focused paper here for habitat and distribution context."
+    },
+    {
+      "title": "Increase in Sarcosoma globosum observations reveals new fungal observation culture",
+      "authors": [
+        "Anna L. Ruotsalainen",
+        "Tapio Kekki",
+        "Esteri Ohenoja",
+        "Tea von Bonsdorff"
+      ],
+      "year": 2023,
+      "journal": "Fungal Ecology",
+      "volume": "65",
+      "issue": null,
+      "pagesOrArticle": "101282",
+      "doi": "10.1016/j.funeco.2023.101282",
+      "url": "https://doi.org/10.1016/j.funeco.2023.101282",
+      "whyRelevant": "Directly relevant to GBIF interpretation because it links rising observations to changing observation culture."
     },
     {
       "title": "Sarcosoma globosum – an indicator of climate change?",
       "authors": [
         "Esteri Ohenoja",
-        "Mariit Kaukonen",
-        "Anna Liisa Ruotsalainen"
+        "Maarit Kaukonen",
+        "Anna L. Ruotsalainen"
       ],
       "year": 2013,
       "journal": "Acta Mycologica",
       "volume": "48",
       "issue": "1",
-      "pagesOrArticle": "81–88",
+      "pagesOrArticle": "81-88",
       "doi": "10.5586/am.2013.010",
       "url": "https://doi.org/10.5586/am.2013.010",
-      "whyRelevant": "Useful for phenology, year-to-year variability and the climate context."
+      "whyRelevant": "Useful for early fruiting, year-to-year variability and the climate context."
     },
     {
       "title": "On the biology and ecology of Sarcosoma globosum in the middle taiga belt of West Siberia",
       "authors": [
-        "E. A. Zvyagina"
+        "Elena A Zvyagina"
       ],
       "year": 2015,
       "journal": "Environmental Dynamics and Global Climate Change",
       "volume": "6",
       "issue": "2",
-      "pagesOrArticle": "3–11",
+      "pagesOrArticle": "3-11",
       "doi": "10.17816/edgcc623-11",
       "url": "https://doi.org/10.17816/edgcc623-11",
-      "whyRelevant": "Gives a regional ecology perspective outside Sweden and helps frame international habitat variation."
+      "whyRelevant": "Adds a regional ecology perspective outside Sweden and helps frame the international habitat story."
     },
     {
-      "title": "Sarcosoma globosum. The IUCN Red List of Threatened Species 2015: e.T58515314A58515381",
+      "title": "Sarcosoma globosum: Dahlberg, A.",
       "authors": [
         "Anders Dahlberg"
       ],
       "year": 2015,
-      "journal": "The IUCN Red List of Threatened Species",
+      "journal": "IUCN Red List of Threatened Species",
+      "volume": null,
+      "issue": null,
+      "pagesOrArticle": null,
       "doi": "10.2305/IUCN.UK.2015-4.RLTS.T58515314A58515381.en",
-      "url": "https://www.iucnredlist.org/species/58515314/58515381",
-      "whyRelevant": "Global conservation assessment and threat summary."
+      "url": "https://doi.org/10.2305/IUCN.UK.2015-4.RLTS.T58515314A58515381.en",
+      "whyRelevant": "Global conservation assessment used for the NT status in this sheet."
     }
   ],
   "sources": [
     {
-      "label": "GBIF species profile",
-      "url": "https://www.gbif.org/species/2593417",
-      "type": "taxonomy"
+      "label": "GBIF species match API",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/species/match?name=Sarcosoma+globosum&verbose=true&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+      "note": "Catalogue of Life checklist workflow used to resolve the accepted GBIF taxon key.",
+      "usedFor": [
+        "taxonomy",
+        "checklist workflow"
+      ]
     },
     {
-      "label": "GBIF Maps API v2 documentation",
-      "url": "https://techdocs.gbif.org/en/data-use/importing-gbif-data-into-qgis",
-      "type": "map-api"
+      "label": "GBIF species API",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/species/2593417",
+      "note": "Accepted taxon details, vernacular names and synonyms.",
+      "usedFor": [
+        "taxonomy",
+        "common names"
+      ]
     },
     {
-      "label": "Artfakta: Bombmurkla",
+      "label": "GBIF occurrence search",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=2593417&basisOfRecord=HUMAN_OBSERVATION&basisOfRecord=MACHINE_OBSERVATION&year=2000%2C2027&occurrenceStatus=PRESENT&limit=0&facet=country&facetLimit=10",
+      "note": "Filtered observation layer used for counts, top countries and map configuration.",
+      "usedFor": [
+        "distribution",
+        "GBIF map"
+      ]
+    },
+    {
+      "label": "Artfakta taxon page",
+      "type": "Swedish species page",
       "url": "https://artfakta.se/naturvard/taxon/sarcosoma-globosum-1445/",
-      "type": "swedish-species-info"
+      "note": "Primary Swedish landing page for taxonomy, conservation context and local maps.",
+      "usedFor": [
+        "Swedish context",
+        "Artfakta block"
+      ]
     },
     {
-      "label": "SLU Artdatabanken: Bombmurkleuppropet 2026",
-      "url": "https://www.slu.se/artdatabanken/rapportering-och-fynd/upprop/bombmurkleuppropet-2026/",
-      "type": "swedish-current"
+      "label": "Dyntaxa taxon API",
+      "type": "API",
+      "url": "https://nos-api.artdatabanken.se/api/taxa/1445",
+      "note": "Official SLU taxon record used for accepted taxonomy and Swedish common name.",
+      "usedFor": [
+        "Swedish context",
+        "taxonomy"
+      ]
     },
     {
-      "label": "Naturvårdsverket: Åtgärdsprogram för bombmurkla",
-      "url": "https://www.naturvardsverket.se/publikationer/6300/atgardsprogram-bombmurkla/",
-      "type": "swedish-management"
+      "label": "Local Swedish Red List 2025 cache",
+      "type": "Local dataset",
+      "note": "Used data/swedish_redlist_2025_index.json, generated from data/Rodlistearbete_2025_alla_filer.xlsx, for category EN, criterion A3c, taxonId 1445 and the full Swedish documentation text.",
+      "usedFor": [
+        "Swedish Red List 2025"
+      ]
     },
     {
-      "label": "Swedish Red List workbook 2025",
-      "url": "data/Rodlistearbete_2025_alla_filer.xlsx",
-      "type": "swedish-redlist-local"
+      "label": "IUCN Red List DOI",
+      "type": "DOI",
+      "url": "https://doi.org/10.2305/IUCN.UK.2015-4.RLTS.T58515314A58515381.en",
+      "note": "Used for the global NT assessment in 2015.",
+      "usedFor": [
+        "global conservation status"
+      ]
     }
   ]
 }
