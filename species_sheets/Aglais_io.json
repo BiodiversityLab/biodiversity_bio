@@ -1,0 +1,429 @@
+{
+  "schemaVersion": "1.3.0",
+  "defaults": {
+    "personName": "Tobias Andermann",
+    "country": "Sweden",
+    "language": "en"
+  },
+  "identity": {
+    "slug": "Aglais_io",
+    "scientificName": "Aglais io",
+    "mainName": "Peacock",
+    "commonNames": {
+      "en": [
+        "Peacock"
+      ],
+      "sv": [
+        "påfågelöga"
+      ]
+    }
+  },
+  "summary": "A bold, eyespotted butterfly that overwinters as an adult, breeds on nettles, and stays common in Sweden even though the GBIF map is dominated by recorder-rich countries rather than a direct abundance pattern.",
+  "byline": {
+    "pageAuthor": null,
+    "observer": null,
+    "photographer": null
+  },
+  "fieldRecord": {
+    "observer": null,
+    "date": "2026-04-11",
+    "time": "12:55:17",
+    "localityName": "",
+    "municipality": "",
+    "county": "",
+    "country": "Sweden",
+    "decimalLatitude": 59.821586,
+    "decimalLongitude": 17.570369,
+    "coordinateUncertaintyMeters": 4.75,
+    "habitatNote": "The linked photos show an adult in early spring, matching the species' habit of overwintering as a butterfly and flying on the first warm days.",
+    "observationNote": "EXIF-backed photo record from the linked image set. Running scripts/build_site_data.py will fill date, time and coordinates from the matching photos.",
+    "observedAtDate": "2026-04-11",
+    "observedAtTime": "12:55:17",
+    "siteName": "",
+    "locationLabel": null,
+    "samplingMethod": "Field photography",
+    "notes": ""
+  },
+  "media": [
+    {
+      "file": "img/Aglais_io_1.jpeg",
+      "caption": "Adult Peacock photographed in spring, with the underside closed and the dark overwintering look still dominant.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-11",
+        "time": "12:55:17",
+        "localityName": "",
+        "decimalLatitude": 59.821586,
+        "decimalLongitude": 17.570369
+      }
+    },
+    {
+      "file": "img/Aglais_io_2.jpeg",
+      "caption": "Another field view of Aglais io, a species that can appear surprisingly early because the adult survives winter.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-11",
+        "time": "12:55:06",
+        "localityName": "",
+        "decimalLatitude": 59.821583,
+        "decimalLongitude": 17.570378
+      }
+    },
+    {
+      "file": "img/Aglais_io_3.jpeg",
+      "caption": "Close spring record of Peacock, useful for linking a familiar species to overwintering biology and seasonal timing.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-11",
+        "time": "12:55:15",
+        "localityName": "",
+        "decimalLatitude": 59.821586,
+        "decimalLongitude": 17.570367
+      }
+    }
+  ],
+  "hero": {
+    "lede": "Peacock is one of the easiest butterflies to remember once you have seen the open wings, but the species becomes more interesting when the wings are closed: it is an adult overwinterer that can appear on the first warm spring days, survives cold through diapause, and turns up in open-data maps wherever butterfly recording is especially intense.",
+    "shortMorphology": "Deep red upperwings with bold eyespots on all four wings; the underside is much darker and more bark- or leaf-like when the butterfly is resting closed-winged.",
+    "returnReason": "This is a strong revisit species because first spring flights shift with weather and some western-European populations now show a partial second generation."
+  },
+  "taxonomy": {
+    "source": "GBIF species match with Catalogue of Life checklistKey",
+    "sourceUrl": "https://www.gbif.org/species/4535827",
+    "acceptedTaxonKey": 4535827,
+    "acceptedScientificName": "Aglais io (Linnaeus, 1758)",
+    "rank": "SPECIES",
+    "resolvedAgainstChecklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "resolvedAgainstDataset": "Catalogue of Life checklist via GBIF species/match?checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+    "classification": {
+      "kingdom": "Animalia",
+      "phylum": "Arthropoda",
+      "class": "Insecta",
+      "order": "Lepidoptera",
+      "family": "Nymphalidae",
+      "genus": "Aglais",
+      "species": "Aglais io"
+    },
+    "synonyms": [
+      "Inachis io (Linnaeus, 1758)",
+      "Nymphalis io (Linnaeus, 1758)",
+      "Papilio io Linnaeus, 1758"
+    ],
+    "commonNamesFromGbif": {
+      "en": [
+        "Peacock"
+      ],
+      "sv": [
+        "Påfågelöga"
+      ]
+    }
+  },
+  "quickFacts": [
+    {
+      "label": "Main English name",
+      "value": "Peacock"
+    },
+    {
+      "label": "Swedish name",
+      "value": "påfågelöga"
+    },
+    {
+      "label": "World IUCN / EUNIS",
+      "value": "Not evaluated"
+    },
+    {
+      "label": "Europe IUCN",
+      "value": "LC"
+    },
+    {
+      "label": "Swedish Red List 2025",
+      "value": "LC"
+    },
+    {
+      "label": "GBIF Sweden records since 2000",
+      "value": "60,888 filtered observations"
+    }
+  ],
+  "distribution": {
+    "globalSummary": "Aglais io is widespread across Europe and recorded beyond Sweden, but the filtered GBIF layer used here is an observation surface rather than a native-range map. Western European countries with strong butterfly-recording networks dominate the map heavily, especially the United Kingdom and the Netherlands.",
+    "swedenSummary": "In Sweden the species is resident and reproducing, with a 2025 Swedish Red List category of LC. Swedish GBIF coverage is substantial, but the global pattern is still shaped far more by recorder density than by a simple biological concentration map.",
+    "globalGbifFilteredCount": 2556021,
+    "swedenGbifFilteredCount": 60888,
+    "topCountries": [
+      {
+        "country": "GB",
+        "count": 1294110
+      },
+      {
+        "country": "NL",
+        "count": 470739
+      },
+      {
+        "country": "FR",
+        "count": 187544
+      },
+      {
+        "country": "DE",
+        "count": 158807
+      },
+      {
+        "country": "BE",
+        "count": 151730
+      },
+      {
+        "country": "FI",
+        "count": 61138
+      },
+      {
+        "country": "SE",
+        "count": 60888
+      }
+    ],
+    "gbif": {
+      "provider": "GBIF Maps API v2",
+      "mapType": "hex-density",
+      "taxonKey": 4535827,
+      "tileStyle": "classic.poly",
+      "bin": "hex",
+      "hexPerTile": 57,
+      "srs": "EPSG:3857",
+      "filters": {
+        "basisOfRecord": [
+          "HUMAN_OBSERVATION",
+          "MACHINE_OBSERVATION"
+        ],
+        "occurrenceStatus": "PRESENT",
+        "yearFrom": 2000
+      },
+      "notes": [
+        "The map shows aggregated GBIF occurrence density rather than individual points.",
+        "Filters are restricted to HUMAN_OBSERVATION and MACHINE_OBSERVATION records from year 2000 onwards and to records with occurrenceStatus = PRESENT.",
+        "The webpage renders this layer as a hex summary map."
+      ]
+    },
+    "samplingBiasNote": "GBIF density here mostly reflects where butterfly recorders, citizen-science platforms, and digitized datasets are strongest. The UK and the Netherlands dominate the filtered layer, so dense hexes should not be read as a direct abundance gradient and sparse areas should not be treated as true scarcity."
+  },
+  "internationalContext": {
+    "summary": "Peacock is a familiar butterfly, but the DOI-backed ecology behind it is strong: larval performance depends on nettle quality, adults need time to feed and accumulate lipids before overwintering, diapausing adults show distinct cold-hardiness physiology, and the wing eyespots genuinely function as predator intimidation. Conservation context is mixed by scale: the EUNIS/IUCN panel lists the species as not evaluated globally but Least Concern in Europe.",
+    "status": {
+      "world": {
+        "system": "IUCN / EUNIS panel",
+        "category": "NE",
+        "label": "Not evaluated"
+      },
+      "europe": {
+        "system": "European Red List of Butterflies / IUCN Europe",
+        "category": "LC",
+        "label": "Least Concern"
+      }
+    },
+    "ecology": [
+      "Larval development, feeding efficiency and voltinism respond to the quality of stinging nettle (Urtica dioica), showing that host-plant condition matters, not just host-plant presence.",
+      "Adults feed to accumulate lipid reserves before winter, and the species overwinters as an adult butterfly rather than as an egg, larva or pupa.",
+      "Low-temperature experiments show distinct overwintering physiology and cold hardiness in diapausing adults.",
+      "The eyespots are not just decorative; experimental work with blue tits supports a real intimidation effect that improves survival.",
+      "Recent Belgian data suggest that parts of the range have recently become bivoltine, linking phenology to current climate conditions."
+    ],
+    "threats": [
+      "The Europe-scale assessment treats the species as Least Concern rather than as an immediate continental conservation concern.",
+      "Local population dynamics can still shift with host-plant quality, overwintering survival and changing seasonal conditions.",
+      "Open-data trends should be read cautiously because very large modern datasets amplify recorder effort as well as biological change."
+    ],
+    "phenology": {
+      "northernEurope": "Adults overwinter and can appear in early spring; in some parts of western Europe a recent partial second generation has also been documented.",
+      "note": "The timing of first spring flights and any second brood signal is weather-sensitive."
+    }
+  },
+  "swedishContext": {
+    "summary": "In Sweden, påfågelöga is a familiar resident butterfly rather than a red-list priority species, but the 2025 Swedish Red List data still note indications or suspicions of a decline in reproductive individuals while keeping the species in LC. That makes it a good Swedish teaching species: common enough to know, but not so trivial that questions about phenology, overwintering and data interpretation disappear.",
+    "commonName": "påfågelöga",
+    "redList2025": {
+      "category": "LC",
+      "criterion": "n/a",
+      "taxonId": 201059,
+      "swedishOccurrence": "Bofast och reproducerande",
+      "immigrationHistory": "Spontan",
+      "documentation": "Förekomstarean (AOO) överskrider gränsvärdet för rödlistning. Det föreligger indikation på eller misstanke om populationsminskning. Minskningen avser antalet reproduktiva individer. De skattade värdena som bedömningen baserar sig på ligger alla inom intervallet för kategorin Livskraftig (LC)."
+    },
+    "keyFacts": [
+      "Artfakta/Dyntaxa taxon 201059 treats Aglais io as accepted and påfågelöga as the recommended Swedish name.",
+      "The Swedish Red List 2025 data classify the species as LC, but still mention an indication or suspicion of decline in reproductive individuals.",
+      "The local red-list data treat the species as bofast och reproducerande, with immigration history spontan.",
+      "Because adults overwinter, påfågelöga is one of the Swedish butterflies most worth revisiting on the first truly warm spring days."
+    ],
+    "artfakta": {
+      "url": "https://artfakta.se/naturvard/taxon/aglais-io-201059/",
+      "fallbackUrl": "https://artfakta.se/artbestamning/taxon/aglais-io-201059",
+      "citation": "SLU Artdatabanken. Artfakta: påfågelöga (Aglais io).",
+      "note": "Use Artfakta as the main Swedish species-information source when refreshing this page locally."
+    }
+  },
+  "literature": [
+    {
+      "title": "Influence of the food plant, Urtica dioica, on larval development, feeding efficiences, and voltinism of a specialist insect, Inachis io",
+      "authors": [
+        "A. S. Pullin"
+      ],
+      "year": 1986,
+      "journal": "Ecography",
+      "volume": "9",
+      "issue": "1",
+      "pagesOrArticle": "72-78",
+      "doi": "10.1111/j.1600-0587.1986.tb01193.x",
+      "url": "https://doi.org/10.1111/j.1600-0587.1986.tb01193.x",
+      "whyRelevant": "Useful for the host-plant and larval-development side of the species' ecology."
+    },
+    {
+      "title": "Adult feeding time, lipid accumulation, and overwintering in Aglais urticae and Inachis io (Lepidoptera: Nymphalidae)",
+      "authors": [
+        "Andrew S. Pullin"
+      ],
+      "year": 1987,
+      "journal": "Journal of Zoology",
+      "volume": "211",
+      "issue": "4",
+      "pagesOrArticle": "631-641",
+      "doi": "10.1111/j.1469-7998.1987.tb04476.x",
+      "url": "https://doi.org/10.1111/j.1469-7998.1987.tb04476.x",
+      "whyRelevant": "Core source for adult feeding, lipid storage and the overwintering strategy."
+    },
+    {
+      "title": "Effects of low temperature on diapausing Aglais urticae and Inachis io (Lepidoptera: Nymphalidae): Overwintering physiology",
+      "authors": [
+        "A.S. Pullin",
+        "J.S. Bale"
+      ],
+      "year": 1989,
+      "journal": "Journal of Insect Physiology",
+      "volume": "35",
+      "issue": "4",
+      "pagesOrArticle": "283-290",
+      "doi": "10.1016/0022-1910(89)90076-0",
+      "url": "https://doi.org/10.1016/0022-1910(89)90076-0",
+      "whyRelevant": "Supports the physiology behind adult overwintering in cold conditions."
+    },
+    {
+      "title": "Prey survival by predator intimidation: an experimental study of peacock butterfly defence against blue tits",
+      "authors": [
+        "Adrian Vallin",
+        "Sven Jakobsson",
+        "Johan Lind",
+        "Christer Wiklund"
+      ],
+      "year": 2005,
+      "journal": "Proceedings of the Royal Society B: Biological Sciences",
+      "volume": "272",
+      "issue": "1569",
+      "pagesOrArticle": "1203-1207",
+      "doi": "10.1098/rspb.2004.3034",
+      "url": "https://doi.org/10.1098/rspb.2004.3034",
+      "whyRelevant": "Direct experimental support for the predator-intimidation value of the species' eyespots."
+    },
+    {
+      "title": "Foraging responses in the butterflies Inachis io, Aglais urticae (Nymphalidae), and Gonepteryx rhamni (Pieridae) to floral scents",
+      "authors": [
+        "Susanna Andersson"
+      ],
+      "year": 2003,
+      "journal": "Chemoecology",
+      "volume": "13",
+      "issue": "1",
+      "pagesOrArticle": "1-11",
+      "doi": "10.1007/s000490300000",
+      "url": "https://doi.org/10.1007/s000490300000",
+      "whyRelevant": "Useful for adult nectar-foraging behaviour because it tests responses to floral scent cues."
+    },
+    {
+      "title": "Abundant Citizen Science Data Reveal That the Peacock Butterfly Aglais io Recently Became Bivoltine in Belgium",
+      "authors": [
+        "Marc Herremans",
+        "Karin Gielen",
+        "Jos Van Kerckhoven",
+        "Pieter Vanormelingen",
+        "Wim Veraghtert",
+        "Kristijn R.R. Swinnen",
+        "Dirk Maes"
+      ],
+      "year": 2021,
+      "journal": "Insects",
+      "volume": "12",
+      "issue": "8",
+      "pagesOrArticle": "683",
+      "doi": "10.3390/insects12080683",
+      "url": "https://doi.org/10.3390/insects12080683",
+      "whyRelevant": "Adds a recent phenology shift case and a reminder that abundant observation data can reveal life-cycle changes."
+    }
+  ],
+  "sources": [
+    {
+      "label": "GBIF species match API",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/species/match?name=Aglais+io&verbose=true&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+      "note": "Catalogue of Life checklist workflow used to resolve the accepted GBIF taxon key.",
+      "usedFor": [
+        "taxonomy",
+        "checklist workflow"
+      ]
+    },
+    {
+      "label": "GBIF species API",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/species/4535827",
+      "note": "Accepted taxon details, vernacular names and synonyms.",
+      "usedFor": [
+        "taxonomy",
+        "common name"
+      ]
+    },
+    {
+      "label": "GBIF occurrence search",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=4535827&basisOfRecord=HUMAN_OBSERVATION&basisOfRecord=MACHINE_OBSERVATION&year=2000%2C2027&occurrenceStatus=PRESENT&limit=0&facet=country&facetLimit=10",
+      "note": "Filtered observation layer used for counts, top countries and map configuration.",
+      "usedFor": [
+        "distribution",
+        "GBIF map"
+      ]
+    },
+    {
+      "label": "Artfakta taxon page",
+      "type": "Swedish species page",
+      "url": "https://artfakta.se/naturvard/taxon/aglais-io-201059/",
+      "note": "Primary Swedish landing page for taxonomy, conservation context and local maps.",
+      "usedFor": [
+        "Swedish context",
+        "Artfakta block"
+      ]
+    },
+    {
+      "label": "Dyntaxa taxon API",
+      "type": "API",
+      "url": "https://nos-api.artdatabanken.se/api/taxa/201059",
+      "note": "Official SLU taxon record used for accepted Swedish and English names.",
+      "usedFor": [
+        "Swedish context",
+        "common names"
+      ]
+    },
+    {
+      "label": "Local Swedish Red List 2025 cache",
+      "type": "Local dataset",
+      "note": "Used data/swedish_redlist_2025_index.json, generated from data/Rodlistearbete_2025_alla_filer.xlsx, for category LC, taxonId 201059, Swedish occurrence and immigration history.",
+      "usedFor": [
+        "Swedish Red List 2025"
+      ]
+    },
+    {
+      "label": "EUNIS species page",
+      "type": "European conservation summary",
+      "url": "https://eunis.eea.europa.eu/species/316692",
+      "note": "Used for the World = Not evaluated and Europe = Least Concern conservation panel.",
+      "usedFor": [
+        "international status"
+      ]
+    }
+  ]
+}
