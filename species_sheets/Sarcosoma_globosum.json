@@ -71,6 +71,19 @@
         "decimalLatitude": 59.821258,
         "decimalLongitude": 17.563347
       }
+    },
+    {
+      "file": "img/Sarcosoma_globosum_3.jpeg",
+      "caption": "",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "",
+        "time": "",
+        "localityName": "",
+        "decimalLatitude": null,
+        "decimalLongitude": null
+      }
     }
   ],
   "hero": {
