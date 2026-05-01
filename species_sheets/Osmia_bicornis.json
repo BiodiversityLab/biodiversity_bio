@@ -1,0 +1,474 @@
+{
+  "schemaVersion": "1.3.0",
+  "defaults": {
+    "personName": "Tobias Andermann",
+    "country": "Sweden",
+    "language": "en"
+  },
+  "identity": {
+    "slug": "Osmia_bicornis",
+    "scientificName": "Osmia bicornis",
+    "mainName": "Red Mason Bee",
+    "commonNames": {
+      "en": [
+        "Red Mason Bee"
+      ],
+      "sv": [
+        "rödmurarbi"
+      ]
+    }
+  },
+  "summary": "A widespread spring mason bee that nests in pre-existing cavities with mud partitions, pollinates orchard blossoms, and remains easy to find around people even though the GBIF map is dominated by recorder-rich countries.",
+  "byline": {
+    "pageAuthor": null,
+    "observer": null,
+    "photographer": null
+  },
+  "fieldRecord": {
+    "observer": null,
+    "date": "2026-04-30",
+    "time": "08:52:24",
+    "localityName": "Gränlund",
+    "municipality": "Uppsala kommun",
+    "county": "Uppsala län",
+    "country": "Sweden",
+    "decimalLatitude": 59.918744,
+    "decimalLongitude": 17.762153,
+    "coordinateUncertaintyMeters": 4.15,
+    "habitatNote": "The linked photos show an adult resting on a wall surface, which fits a species that often nests close to buildings, drilled holes, reeds and other pre-existing cavities.",
+    "observationNote": "EXIF-backed photo record from the linked image set. Running scripts/build_site_data.py will fill date, time and coordinates from the matching photos.",
+    "observedAtDate": "2026-04-30",
+    "observedAtTime": "08:52:24",
+    "siteName": "Gränlund",
+    "locationLabel": "Gränlund, Uppsala kommun, Uppsala län, Sverige",
+    "samplingMethod": "Field photography",
+    "notes": ""
+  },
+  "media": [
+    {
+      "file": "img/Osmia_bicornis_1.jpeg",
+      "caption": "Close field view of an adult Red Mason Bee resting on a pale wall surface, a useful reminder that this cavity-nesting species often lives right alongside buildings and garden structures.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-30",
+        "time": "08:52:24",
+        "localityName": "",
+        "decimalLatitude": 59.918744,
+        "decimalLongitude": 17.762153
+      }
+    },
+    {
+      "file": "img/Osmia_bicornis_2.jpeg",
+      "caption": "Another close side view of Osmia bicornis, showing the warm brown body hairs and compact mason-bee shape.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-30",
+        "time": "08:52:16",
+        "localityName": "",
+        "decimalLatitude": 59.918675,
+        "decimalLongitude": 17.762039
+      }
+    },
+    {
+      "file": "img/Osmia_bicornis_3.jpeg",
+      "caption": "Adult Red Mason Bee photographed sunlit against a wall, matching the species' spring activity around nesting cavities in built environments.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-30",
+        "time": "08:52:21",
+        "localityName": "",
+        "decimalLatitude": 59.918739,
+        "decimalLongitude": 17.762136
+      }
+    }
+  ],
+  "hero": {
+    "lede": "Red Mason Bee is one of the best species for noticing how much solitary bee life happens right beside people. Females pack mud-walled brood cells into narrow cavities, provision them with mixed spring pollen, and can turn reeds, wall cracks and bee hotels into active nest sites. It is a strong revisit species because spring emergence and nesting activity shift quickly with weather, while the GBIF map mostly shows where recorder networks are strongest rather than where the bee is truly most abundant.",
+    "shortMorphology": "A robust ginger-brown solitary bee with dark wings and a dark face; females have two small facial horns, while males are smaller, paler-faced and longer-antennate."
+  },
+  "taxonomy": {
+    "source": "GBIF species match with Catalogue of Life checklistKey",
+    "sourceUrl": "https://www.gbif.org/species/5039315",
+    "acceptedTaxonKey": 5039315,
+    "acceptedScientificName": "Osmia bicornis (Linnaeus, 1758)",
+    "rank": "SPECIES",
+    "resolvedAgainstChecklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "resolvedAgainstDataset": "Catalogue of Life checklist via GBIF species/match?checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+    "classification": {
+      "kingdom": "Animalia",
+      "phylum": "Arthropoda",
+      "class": "Insecta",
+      "order": "Hymenoptera",
+      "family": "Megachilidae",
+      "genus": "Osmia",
+      "species": "Osmia bicornis"
+    },
+    "synonyms": [
+      "Apis bicornis Linnaeus, 1758",
+      "Apis rufa Linnaeus, 1758",
+      "Apis cornigera Rossi, 1790",
+      "Osmia rufa (Linnaeus, 1758)",
+      "Osmia bicornis rufa (Linnaeus, 1758)",
+      "Osmia hedera Smith, 1844"
+    ],
+    "commonNamesFromGbif": {
+      "en": [
+        "Red Mason Bee"
+      ],
+      "sv": [
+        "rödmurarbi",
+        "rött murarbi"
+      ]
+    }
+  },
+  "quickFacts": [
+    {
+      "label": "Main English name",
+      "value": "Red Mason Bee"
+    },
+    {
+      "label": "Swedish name",
+      "value": "rödmurarbi"
+    },
+    {
+      "label": "Global IUCN",
+      "value": "No separate assessment confirmed"
+    },
+    {
+      "label": "Europe IUCN 2014",
+      "value": "LC"
+    },
+    {
+      "label": "Swedish Red List 2025",
+      "value": "LC"
+    },
+    {
+      "label": "Nesting style",
+      "value": "Cavity-nesting solitary bee"
+    },
+    {
+      "label": "GBIF Sweden records since 2000",
+      "value": "4,027 filtered observations"
+    }
+  ],
+  "distribution": {
+    "globalSummary": "Osmia bicornis is a widespread western-Palearctic mason bee and is observed broadly across Europe in the filtered GBIF layer used here. That layer is an observation surface rather than a native-range map, and it is strongly dominated by countries with dense recorder networks, especially the Netherlands, Germany and the United Kingdom.",
+    "swedenSummary": "In Sweden, rödmurarbi is treated as resident and reproducing, with a 2025 Swedish Red List category of LC. Swedish GBIF coverage is solid for a solitary bee, but the international map pattern is still shaped more by recorder effort and digitized datasets than by a simple abundance gradient.",
+    "globalGbifFilteredCount": 87275,
+    "swedenGbifFilteredCount": 4027,
+    "topCountries": [
+      {
+        "country": "NL",
+        "count": 42911
+      },
+      {
+        "country": "DE",
+        "count": 13676
+      },
+      {
+        "country": "GB",
+        "count": 11935
+      },
+      {
+        "country": "BE",
+        "count": 5945
+      },
+      {
+        "country": "SE",
+        "count": 4027
+      },
+      {
+        "country": "CH",
+        "count": 2978
+      },
+      {
+        "country": "FR",
+        "count": 1441
+      },
+      {
+        "country": "NO",
+        "count": 718
+      },
+      {
+        "country": "FI",
+        "count": 604
+      },
+      {
+        "country": "DK",
+        "count": 513
+      }
+    ],
+    "gbif": {
+      "provider": "GBIF Maps API v2",
+      "mapType": "hex-density",
+      "taxonKey": 5039315,
+      "tileStyle": "classic.poly",
+      "bin": "hex",
+      "hexPerTile": 57,
+      "srs": "EPSG:3857",
+      "filters": {
+        "basisOfRecord": [
+          "HUMAN_OBSERVATION",
+          "MACHINE_OBSERVATION"
+        ],
+        "occurrenceStatus": "PRESENT",
+        "yearFrom": 2000
+      },
+      "notes": [
+        "The map shows aggregated GBIF occurrence density rather than individual points.",
+        "Filters are restricted to HUMAN_OBSERVATION and MACHINE_OBSERVATION records from year 2000 onwards and to records with occurrenceStatus = PRESENT.",
+        "The webpage renders this layer as a hex summary map."
+      ]
+    },
+    "samplingBiasNote": "GBIF density here mainly reflects where bee recorders, garden and bee-hotel observations, and digitized national datasets are strongest. The Netherlands, Germany and the UK dominate the filtered layer, so dense hexes should not be read as a direct abundance gradient and sparse areas should not be treated as true scarcity."
+  },
+  "internationalContext": {
+    "summary": "Internationally, Red Mason Bee is unusually well studied for a solitary bee because it nests readily in trap nests, orchard settings and other manageable cavities. That makes it a good species for linking spring phenology, pollen use, brood development and agricultural stressors into one visitor-friendly story. The 2014 European Red List of Bees treats the species as Least Concern in Europe, but I did not confirm a separate global IUCN assessment during this refresh.",
+    "status": {
+      "world": {
+        "system": "IUCN Red List",
+        "category": null,
+        "label": "No separate global assessment confirmed",
+        "note": "The conservation source used here is regional rather than global."
+      },
+      "europe": {
+        "system": "European Red List of Bees / IUCN Europe",
+        "category": "LC",
+        "label": "Least Concern",
+        "assessmentYear": 2014
+      }
+    },
+    "ecology": [
+      "Females nest in pre-existing cavities and partition linear brood cells with mud, which is why the species readily uses reeds, drilled holes, old mortar and similar narrow spaces.",
+      "The species is polylectic rather than tied to one pollen plant, and comparative diet work shows that broad pollen use still depends on real physiological fit between pollen and larval development.",
+      "Offspring body size depends strongly on maternal provisioning and brood-cell microclimate, so warm nesting conditions can change the size and likely the fitness of the next generation.",
+      "Spring emergence and daily activity are synchronized by environmental time cues, making the species a good marker for weather-sensitive phenology.",
+      "In managed landscapes the bee can be valuable for apple pollination, but nesting support works best when cavity sites and flowering resources are close together."
+    ],
+    "threats": [
+      "Experimental work shows that sublethal neonicotinoid exposure can reduce reproductive success, so apparently common cavity-nesting bees are not automatically resilient to agricultural stress.",
+      "Loss of nesting cavities or nearby spring forage can limit breeding even where adults still appear in gardens and orchard edges.",
+      "Artificial nesting aids can help observation and management, but they also concentrate brood and need careful placement and hygiene to avoid becoming poor-quality habitat."
+    ],
+    "phenology": {
+      "northernEurope": "Adults fly in spring, females provision nests through late spring and early summer, the new generation completes development over summer, and adults overwinter in cocoons before emerging the following spring.",
+      "note": "Warm springs can shift flowering and bee emergence by different amounts, so revisit timing matters."
+    }
+  },
+  "swedishContext": {
+    "summary": "In Sweden, rödmurarbi is an accepted Artfakta/Dyntaxa species with a 2025 Swedish Red List category of LC and status bofast och reproducerande. It is a useful Swedish visitor species because it often appears around gardens, walls and bee hotels, making solitary-bee nesting easier to notice than in many ground-nesting species.",
+    "commonName": "rödmurarbi",
+    "redList2025": {
+      "category": "LC",
+      "criterion": "n/a",
+      "taxonId": 219422,
+      "swedishOccurrence": "Bofast och reproducerande",
+      "immigrationHistory": "Spontan",
+      "documentation": "Det finns inga tecken på betydande populationsförändring. De skattade värdena som bedömningen baserar sig på ligger alla inom intervallet för kategorin Livskraftig (LC)."
+    },
+    "keyFacts": [
+      "Artfakta/Dyntaxa taxon 219422 treats Osmia bicornis as accepted and rödmurarbi as the recommended Swedish name.",
+      "The Swedish Red List 2025 data classify the species as LC and note no signs of a significant population change.",
+      "The local red-list data treat the species as bofast och reproducerande, with immigration history spontan.",
+      "Because the bee nests in above-ground cavities sealed with mud, it is one of the easier solitary bees to revisit around Swedish gardens and buildings."
+    ],
+    "artfakta": {
+      "url": "https://artfakta.se/naturvard/taxon/osmia-bicornis-219422/",
+      "fallbackUrl": "https://artfakta.se/artbestamning/taxon/osmia-bicornis-219422",
+      "citation": "SLU Artdatabanken. Artfakta: rödmurarbi (Osmia bicornis).",
+      "note": "Use Artfakta as the main Swedish species-information source when refreshing this page locally."
+    }
+  },
+  "literature": [
+    {
+      "title": "Current state of knowledge on the biology and breeding of the solitary bee – Osmia bicornis",
+      "authors": [
+        "Aleksandra Splitt",
+        "Michał Schulz",
+        "Piotr Skórka"
+      ],
+      "year": 2022,
+      "journal": "Journal of Apicultural Research",
+      "volume": "61",
+      "issue": "2",
+      "pagesOrArticle": "163-179",
+      "doi": "10.1080/00218839.2021.1957610",
+      "url": "https://doi.org/10.1080/00218839.2021.1957610",
+      "whyRelevant": "Useful overview source for nesting, life cycle, accompanying organisms, flower use and management."
+    },
+    {
+      "title": "Factors affecting offspring body size in the solitary bee Osmia bicornis (Hymenoptera, Megachilidae)",
+      "authors": [
+        "Sabine Radmacher",
+        "Erhard Strohm"
+      ],
+      "year": 2010,
+      "journal": "Apidologie",
+      "volume": "41",
+      "issue": "2",
+      "pagesOrArticle": "169-177",
+      "doi": "10.1051/apido/2009064",
+      "url": "https://doi.org/10.1051/apido/2009064",
+      "whyRelevant": "Supports the claim that brood provisioning and nest microclimate shape offspring body size."
+    },
+    {
+      "title": "On managing the red mason bee (Osmia bicornis) in apple orchards",
+      "authors": [
+        "Bernd Gruber",
+        "Katharina Eckel",
+        "Jeroen Everaars",
+        "Carsten F. Dormann"
+      ],
+      "year": 2011,
+      "journal": "Apidologie",
+      "volume": "42",
+      "issue": "5",
+      "pagesOrArticle": "564-576",
+      "doi": "10.1007/s13592-011-0059-z",
+      "url": "https://doi.org/10.1007/s13592-011-0059-z",
+      "whyRelevant": "Grounds the orchard-pollination and management discussion in a species-specific applied study."
+    },
+    {
+      "title": "The circadian clock uses different environmental time cues to synchronize emergence and locomotion of the solitary bee Osmia bicornis",
+      "authors": [
+        "Katharina Beer",
+        "Mariela Schenk",
+        "Charlotte Helfrich-Förster",
+        "Andrea Holzschuh"
+      ],
+      "year": 2019,
+      "journal": "Scientific Reports",
+      "volume": "9",
+      "issue": "1",
+      "pagesOrArticle": "17748",
+      "doi": "10.1038/s41598-019-54111-3",
+      "url": "https://doi.org/10.1038/s41598-019-54111-3",
+      "whyRelevant": "Useful for weather-sensitive emergence timing and activity rhythms."
+    },
+    {
+      "title": "Sublethal neonicotinoid insecticide exposure reduces solitary bee reproductive success",
+      "authors": [
+        "Christoph Sandrock",
+        "Lorenzo G. Tanadini",
+        "Jeffery S. Pettis",
+        "Jacobus C. Biesmeijer",
+        "Simon G. Potts",
+        "Peter Neumann"
+      ],
+      "year": 2014,
+      "journal": "Agricultural and Forest Entomology",
+      "volume": "16",
+      "issue": "2",
+      "pagesOrArticle": "119-128",
+      "doi": "10.1111/afe.12041",
+      "url": "https://doi.org/10.1111/afe.12041",
+      "whyRelevant": "Supports the threats section by showing that a common solitary bee can lose reproductive output under sublethal pesticide exposure."
+    },
+    {
+      "title": "Closely related pollen generalist bees differ in their ability to develop on the same pollen diet: evidence for physiological adaptations to digest pollen",
+      "authors": [
+        "Claudio Sedivy",
+        "Andreas Müller",
+        "Silvia Dorn"
+      ],
+      "year": 2011,
+      "journal": "Functional Ecology",
+      "volume": "25",
+      "issue": "3",
+      "pagesOrArticle": "718-725",
+      "doi": "10.1111/j.1365-2435.2010.01828.x",
+      "url": "https://doi.org/10.1111/j.1365-2435.2010.01828.x",
+      "whyRelevant": "Useful for explaining that broad pollen use still has physiological limits relevant to larval development."
+    }
+  ],
+  "sources": [
+    {
+      "label": "GBIF species match API",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/species/match?name=Osmia+bicornis&verbose=true&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+      "note": "Catalogue of Life checklist workflow used to resolve the accepted GBIF taxon key.",
+      "usedFor": [
+        "taxonomy",
+        "checklist workflow"
+      ]
+    },
+    {
+      "label": "GBIF species API",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/species/5039315",
+      "note": "Accepted taxon details, synonyms and vernacular names.",
+      "usedFor": [
+        "taxonomy",
+        "common name"
+      ]
+    },
+    {
+      "label": "GBIF occurrence search",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=5039315&basisOfRecord=HUMAN_OBSERVATION&basisOfRecord=MACHINE_OBSERVATION&year=2000%2C2026&occurrenceStatus=PRESENT&limit=0&facet=country&facetLimit=10",
+      "note": "Filtered observation layer used for counts, top countries and map configuration.",
+      "usedFor": [
+        "distribution",
+        "GBIF map"
+      ]
+    },
+    {
+      "label": "Artfakta taxon page",
+      "type": "Swedish species page",
+      "url": "https://artfakta.se/naturvard/taxon/osmia-bicornis-219422/",
+      "note": "Primary Swedish landing page for taxonomy and local species context.",
+      "usedFor": [
+        "Swedish context",
+        "Artfakta block"
+      ]
+    },
+    {
+      "label": "Dyntaxa taxon API",
+      "type": "API",
+      "url": "https://nos-api.artdatabanken.se/api/taxa/219422",
+      "note": "Official SLU taxon record used for accepted scientific, Swedish and English names.",
+      "usedFor": [
+        "Swedish context",
+        "common names"
+      ]
+    },
+    {
+      "label": "Local Swedish Red List 2025 workbook",
+      "type": "Local dataset",
+      "note": "Used data/Rodlistearbete_2025_alla_filer.xlsx for category LC, taxonId 219422, Swedish occurrence and immigration history.",
+      "usedFor": [
+        "Swedish Red List 2025"
+      ]
+    },
+    {
+      "label": "European Red List of Bees",
+      "type": "Regional conservation assessment",
+      "url": "https://doi.org/10.2779/51181",
+      "note": "Used the 2014 IUCN Europe / European Commission assessment table, where Osmia bicornis is listed as LC in Europe and EU.",
+      "usedFor": [
+        "international status"
+      ]
+    },
+    {
+      "label": "OpenAlex works API",
+      "type": "Literature discovery API",
+      "url": "https://api.openalex.org/works?search=Osmia%20bicornis",
+      "note": "Used to identify candidate literature before DOI validation.",
+      "usedFor": [
+        "literature discovery"
+      ]
+    },
+    {
+      "label": "Crossref works API",
+      "type": "DOI registry API",
+      "url": "https://api.crossref.org/works?query.title=Osmia%20bicornis",
+      "note": "Used to confirm DOI metadata for the listed literature items.",
+      "usedFor": [
+        "literature validation"
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/build_site_data.py",
-  "generatedAt": "2026-04-30T07:28:32.977278+00:00",
-  "count": 6,
+  "generatedAt": "2026-05-01T10:35:11.318329+00:00",
+  "count": 7,
   "species": [
     {
       "slug": "Aglais_io",
@@ -32,6 +32,16 @@
       "heroImage": "img/Maublancomyces_gigas_1.jpeg",
       "defaultPersonName": "Tobias Andermann",
       "group": "Fungi"
+    },
+    {
+      "slug": "Osmia_bicornis",
+      "file": "Osmia_bicornis.json",
+      "mainName": "Red Mason Bee",
+      "scientificName": "Osmia bicornis",
+      "swedishName": "rödmurarbi",
+      "heroImage": "img/Osmia_bicornis_1.jpeg",
+      "defaultPersonName": "Tobias Andermann",
+      "group": "Animalia"
     },
     {
       "slug": "Polygonia_c-album",
