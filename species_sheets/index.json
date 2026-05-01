@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/build_site_data.py",
-  "generatedAt": "2026-04-13T21:50:36.499095+00:00",
-  "count": 5,
+  "generatedAt": "2026-04-30T07:28:32.977278+00:00",
+  "count": 6,
   "species": [
     {
       "slug": "Aglais_io",
@@ -22,6 +22,16 @@
       "heroImage": "img/Gonepteryx_rhamni_1.jpeg",
       "defaultPersonName": "Tobias Andermann",
       "group": "Animalia"
+    },
+    {
+      "slug": "Maublancomyces_gigas",
+      "file": "Maublancomyces_gigas.json",
+      "mainName": "Snow False Morel",
+      "scientificName": "Maublancomyces gigas",
+      "swedishName": "blek stenmurkla",
+      "heroImage": "img/Maublancomyces_gigas_1.jpeg",
+      "defaultPersonName": "Tobias Andermann",
+      "group": "Fungi"
     },
     {
       "slug": "Polygonia_c-album",
