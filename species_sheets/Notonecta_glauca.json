@@ -1,0 +1,431 @@
+{
+  "schemaVersion": "1.3.0",
+  "defaults": {
+    "personName": "Tobias Andermann",
+    "country": "Sweden",
+    "language": "en"
+  },
+  "identity": {
+    "slug": "Notonecta_glauca",
+    "scientificName": "Notonecta glauca",
+    "mainName": "Common Backswimmer",
+    "commonNames": {
+      "en": [
+        "Common Backswimmer",
+        "Common Water-Boatman",
+        "Common Water-boatman"
+      ],
+      "sv": [
+        "allmän ryggsimmare"
+      ]
+    }
+  },
+  "summary": "A widespread predatory water bug that rows upside down under the surface, reads prey-generated ripples, and stays common in Sweden even though the GBIF map is dominated by recorder-rich countries.",
+  "byline": {
+    "pageAuthor": null,
+    "observer": null,
+    "photographer": null
+  },
+  "fieldRecord": {
+    "observer": null,
+    "date": "2026-04-30",
+    "time": "16:48:11",
+    "localityName": "Kåbo",
+    "municipality": "Uppsala kommun",
+    "county": "Uppsala län",
+    "country": "Sweden",
+    "decimalLatitude": 59.850028,
+    "decimalLongitude": 17.624692,
+    "coordinateUncertaintyMeters": 19.84,
+    "habitatNote": "The linked photos show a live adult photographed through a clear container, with the long oar-like hind legs and the pale, air-sheened body shape that fit a surface-hunting backswimmer from still freshwater.",
+    "observationNote": "EXIF-backed photo record from the linked image set. The first matched image provides the observation date, time and coordinates used here.",
+    "observedAtDate": "2026-04-30",
+    "observedAtTime": "16:48:11",
+    "siteName": "Kåbo",
+    "locationLabel": "Kåbo, Uppsala kommun, Uppsala län, Sverige",
+    "samplingMethod": "Field photography",
+    "notes": ""
+  },
+  "media": [
+    {
+      "file": "img/Notonecta_glauca_1.jpeg",
+      "caption": "Adult Common Backswimmer photographed in a clear container, showing the pale forewings, dark scutellar patch and long hind legs used as swimming oars.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-30",
+        "time": "16:48:11",
+        "localityName": "",
+        "decimalLatitude": 59.850028,
+        "decimalLongitude": 17.624692
+      }
+    },
+    {
+      "file": "img/Notonecta_glauca_2.jpeg",
+      "caption": "Another field view of Notonecta glauca with the upside-down hunting body plan and compact, boat-like outline visible from above.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-30",
+        "time": "16:41:32",
+        "localityName": "",
+        "decimalLatitude": 59.849869,
+        "decimalLongitude": 17.623631
+      }
+    },
+    {
+      "file": "img/Notonecta_glauca_3.jpeg",
+      "caption": "Close side view of the same adult, useful for connecting the shiny trapped-air effect and the streamlined backswimmer profile to its pond-surface lifestyle.",
+      "credit": null,
+      "photographer": null,
+      "capturedAt": {
+        "date": "2026-04-30",
+        "time": "16:41:39",
+        "localityName": "",
+        "decimalLatitude": 59.850014,
+        "decimalLongitude": 17.623556
+      }
+    }
+  ],
+  "hero": {
+    "lede": "Common Backswimmer is one of the best pond insects for noticing that the water surface is a hunting layer, not just a boundary. It hangs upside down below the film, carries a silvery air store over the body, and can detect the ripples made by struggling prey. It is a strong revisit species because small warm ponds and ditches change quickly through spring and summer, while the GBIF map mostly shows where aquatic-insect recorders and citizen-science platforms are strongest rather than where the bug is truly most abundant.",
+    "shortMorphology": "A pale olive-brown backswimmer with a dark central wing patch, large reddish eyes and long hair-fringed hind legs that work like oars; living adults often look silvery because air is trapped along the body."
+  },
+  "taxonomy": {
+    "source": "GBIF species match with Catalogue of Life checklistKey",
+    "sourceUrl": "https://www.gbif.org/species/2020522",
+    "acceptedTaxonKey": 2020522,
+    "acceptedScientificName": "Notonecta glauca Linnaeus, 1758",
+    "rank": "SPECIES",
+    "resolvedAgainstChecklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "resolvedAgainstDataset": "Catalogue of Life checklist via GBIF species/match?checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+    "classification": {
+      "kingdom": "Animalia",
+      "phylum": "Arthropoda",
+      "class": "Insecta",
+      "order": "Hemiptera",
+      "family": "Notonectidae",
+      "genus": "Notonecta",
+      "species": "Notonecta glauca"
+    },
+    "synonyms": [],
+    "commonNamesFromGbif": {
+      "en": [
+        "Common Backswimmer",
+        "Common Water-Boatman",
+        "Common Water-boatman"
+      ],
+      "sv": [
+        "allmän ryggsimmare"
+      ]
+    }
+  },
+  "quickFacts": [
+    {
+      "label": "Main English name",
+      "value": "Common Backswimmer"
+    },
+    {
+      "label": "Swedish name",
+      "value": "allmän ryggsimmare"
+    },
+    {
+      "label": "Global IUCN",
+      "value": "No separate assessment confirmed"
+    },
+    {
+      "label": "Swedish Red List 2025",
+      "value": "LC"
+    },
+    {
+      "label": "Main feeding mode",
+      "value": "Predatory surface hunter"
+    },
+    {
+      "label": "GBIF Sweden records since 2000",
+      "value": "673 filtered observations"
+    }
+  ],
+  "distribution": {
+    "globalSummary": "Reference sources such as the CABI Compendium treat Notonecta glauca as a widespread Palearctic backswimmer, but the filtered GBIF layer used here is only an observation surface, not a native-range map. In that layer the strongest post-2000 signal comes from western and northern Europe, especially the United Kingdom and the Netherlands.",
+    "swedenSummary": "In Sweden, allmän ryggsimmare is treated as resident and reproducing, with a 2025 Swedish Red List category of LC. Swedish GBIF coverage is modest compared with recorder-rich countries farther west, so the map is useful for broad context but not for reading local abundance directly.",
+    "globalGbifFilteredCount": 23857,
+    "swedenGbifFilteredCount": 673,
+    "topCountries": [
+      {
+        "country": "GB",
+        "count": 8087
+      },
+      {
+        "country": "NL",
+        "count": 7245
+      },
+      {
+        "country": "DE",
+        "count": 2254
+      },
+      {
+        "country": "DK",
+        "count": 1969
+      },
+      {
+        "country": "FR",
+        "count": 982
+      },
+      {
+        "country": "BE",
+        "count": 861
+      },
+      {
+        "country": "SE",
+        "count": 673
+      },
+      {
+        "country": "FI",
+        "count": 466
+      },
+      {
+        "country": "NO",
+        "count": 432
+      },
+      {
+        "country": "RU",
+        "count": 193
+      }
+    ],
+    "gbif": {
+      "provider": "GBIF Maps API v2",
+      "mapType": "hex-density",
+      "taxonKey": 2020522,
+      "tileStyle": "classic.poly",
+      "bin": "hex",
+      "hexPerTile": 57,
+      "srs": "EPSG:3857",
+      "filters": {
+        "basisOfRecord": [
+          "HUMAN_OBSERVATION",
+          "MACHINE_OBSERVATION"
+        ],
+        "occurrenceStatus": "PRESENT",
+        "yearFrom": 2000
+      },
+      "notes": [
+        "The map shows aggregated GBIF occurrence density rather than individual points.",
+        "Filters are restricted to HUMAN_OBSERVATION and MACHINE_OBSERVATION records from year 2000 onwards and to records with occurrenceStatus = PRESENT.",
+        "The webpage renders this layer as a hex summary map."
+      ]
+    },
+    "samplingBiasNote": "GBIF density here mainly reflects where aquatic-insect recorders, pond-focused citizen science and digitized national datasets are strongest. The United Kingdom and the Netherlands dominate the filtered layer, so dense hexes should not be read as a direct abundance gradient and sparse areas should not be treated as true scarcity."
+  },
+  "internationalContext": {
+    "summary": "Common Backswimmer is unusually good for explaining how an aquatic insect hunts at the air-water interface. DOI-backed studies show that it detects prey-generated ripples, changes prey choice with water depth and oxygen conditions, carries a persistent air layer on the body, and combines strong underwater and aerial visual performance. I did not confirm a separate global IUCN Red List assessment during this refresh.",
+    "status": {
+      "world": {
+        "system": "IUCN Red List",
+        "category": null,
+        "label": "No separate global assessment confirmed",
+        "note": "No global IUCN assessment was located during this refresh."
+      }
+    },
+    "ecology": [
+      "It can discriminate prey from non-prey by the frequency pattern of water-surface waves, which helps explain why the species spends so much time poised just under the surface film.",
+      "Prey choice changes with depth: shallow water makes benthic prey more profitable, while deeper water pushes foraging back toward surface prey because diving costs rise.",
+      "Dissolved oxygen and temperature change how long the insect can stay submerged and which prey types overlap most with its hunting zone.",
+      "The body surface is strongly superhydrophobic and retains a durable air layer, supporting both respiration and reduced wetting under water.",
+      "Its visual system is flexible enough for both submerged hunting and flight, which fits a species that must work in two optical environments."
+    ],
+    "threats": [
+      "This refresh did not confirm a global IUCN threat category; the species is more often treated as a common freshwater predator than as a current international red-list priority.",
+      "Even a widespread backswimmer depends on pond conditions that keep hunting profitable, because oxygen regime and water depth directly affect how it can use different prey layers.",
+      "Open-data maps can exaggerate security in heavily recorded countries and understate occupancy where freshwater insects are simply less often reported."
+    ],
+    "phenology": {
+      "northernEurope": "Adults are worth revisiting through the warmer part of the year in ponds, ditches and other still waters, especially when sunny conditions bring surface activity and dispersal between water bodies within reach of casual observation.",
+      "note": "The revisit cue here is field-oriented rather than drawn from a dedicated phenology dataset."
+    }
+  },
+  "swedishContext": {
+    "summary": "In Sweden, Artfakta/Dyntaxa treats Notonecta glauca as accepted and allmän ryggsimmare as the recommended Swedish name. The local 2025 Swedish Red List workbook keeps the species in LC, describes it as bofast och reproducerande, and lists immigration history as spontan. That makes it a useful Swedish teaching species: common enough to encounter, but still rich in behavior once you watch the water surface closely.",
+    "commonName": "allmän ryggsimmare",
+    "redList2025": {
+      "category": "LC",
+      "criterion": "n/a",
+      "taxonId": 226119,
+      "swedishOccurrence": "Bofast och reproducerande",
+      "immigrationHistory": "Spontan",
+      "documentation": "De skattade värdena som bedömningen baserar sig på ligger alla inom intervallet för kategorin Livskraftig (LC)."
+    },
+    "keyFacts": [
+      "Artfakta/Dyntaxa taxon 226119 treats Notonecta glauca as accepted and allmän ryggsimmare as the recommended Swedish name.",
+      "The Swedish Red List 2025 row classifies the species as LC rather than as a current Swedish conservation priority.",
+      "The same Swedish source describes the species as bofast och reproducerande, with immigration history spontan.",
+      "The linked Uppsala photos fit a species that should be searched for in ordinary still-water habitats rather than only in unusual specialist sites."
+    ],
+    "artfakta": {
+      "url": "https://artfakta.se/naturvard/taxon/notonecta-glauca-226119/",
+      "fallbackUrl": "https://artfakta.se/artbestamning/taxon/notonecta-glauca-226119",
+      "citation": "SLU Artdatabanken. Artfakta: allmän ryggsimmare (Notonecta glauca).",
+      "note": "Use Artfakta as the main Swedish species-information source when refreshing this page locally."
+    }
+  },
+  "literature": [
+    {
+      "title": "Surface wave discrimination between prey and nonprey by the back swimmer Notonecta glauca L. (Hemiptera, Heteroptera)",
+      "authors": [
+        "Horst H. Lang"
+      ],
+      "year": 1980,
+      "journal": "Behavioral Ecology and Sociobiology",
+      "volume": "6",
+      "issue": "3",
+      "pagesOrArticle": "233-246",
+      "doi": "10.1007/BF00569205",
+      "url": "https://doi.org/10.1007/BF00569205",
+      "whyRelevant": "Core evidence for the species' ability to read prey-generated ripples at the water surface."
+    },
+    {
+      "title": "Effects of water depth on choice of spatially separated prey by Notonecta glauca L.",
+      "authors": [
+        "Barbara J. Cockrell"
+      ],
+      "year": 1984,
+      "journal": "Oecologia",
+      "volume": "62",
+      "issue": "2",
+      "pagesOrArticle": "256-261",
+      "doi": "10.1007/BF00379023",
+      "url": "https://doi.org/10.1007/BF00379023",
+      "whyRelevant": "Shows how diving cost and water depth change the balance between surface and benthic prey."
+    },
+    {
+      "title": "Effects of Temperature and Oxygenation on Predator-Prey Overlap and Prey Choice of Notonecta glauca",
+      "authors": [
+        "Barbara J. Cockrell"
+      ],
+      "year": 1984,
+      "journal": "The Journal of Animal Ecology",
+      "volume": "53",
+      "issue": "2",
+      "pagesOrArticle": "519",
+      "doi": "10.2307/4531",
+      "url": "https://doi.org/10.2307/4531",
+      "whyRelevant": "Supports the claim that oxygen conditions and temperature affect submergence time and prey overlap."
+    },
+    {
+      "title": "Superhydrophobic surfaces of the water bug Notonecta glauca: a model for friction reduction and air retention",
+      "authors": [
+        "Petra Ditsche-Kuru",
+        "Erik S Schneider",
+        "Jan-Erik Melskotte",
+        "Martin Brede",
+        "Alfred Leder",
+        "Wilhelm Barthlott"
+      ],
+      "year": 2011,
+      "journal": "Beilstein Journal of Nanotechnology",
+      "volume": "2",
+      "issue": null,
+      "pagesOrArticle": "137-144",
+      "doi": "10.3762/BJNANO.2.17",
+      "url": "https://doi.org/10.3762/BJNANO.2.17",
+      "whyRelevant": "Explains the persistent air layer that makes the insect look silvery and function well under water."
+    },
+    {
+      "title": "Large variation among photoreceptors as the basis of visual flexibility in the common backswimmer",
+      "authors": [
+        "Esa-Ville Immonen",
+        "Irina Ignatova",
+        "Anna Gislen",
+        "Eric Warrant",
+        "Mikko Vähäsöyrinki",
+        "Matti Weckström",
+        "Roman Frolov"
+      ],
+      "year": 2014,
+      "journal": "Proceedings of the Royal Society B: Biological Sciences",
+      "volume": "281",
+      "issue": "1795",
+      "pagesOrArticle": "20141177",
+      "doi": "10.1098/rspb.2014.1177",
+      "url": "https://doi.org/10.1098/rspb.2014.1177",
+      "whyRelevant": "Supports the species' dual visual demands in water and in flight."
+    }
+  ],
+  "sources": [
+    {
+      "label": "GBIF species match API",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/species/match?name=Notonecta+glauca&verbose=true&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+      "note": "Catalogue of Life checklist workflow used to resolve the accepted GBIF taxon key.",
+      "usedFor": [
+        "taxonomy",
+        "checklist workflow"
+      ]
+    },
+    {
+      "label": "GBIF species API",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/species/2020522",
+      "note": "Accepted taxon details for the GBIF backbone usage that matched the Catalogue of Life checklist workflow.",
+      "usedFor": [
+        "taxonomy"
+      ]
+    },
+    {
+      "label": "GBIF vernacular names API",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/species/2020522/vernacularNames",
+      "note": "Used for the English and Swedish common-name list tied to the accepted GBIF taxon key.",
+      "usedFor": [
+        "common names"
+      ]
+    },
+    {
+      "label": "GBIF occurrence search",
+      "type": "API",
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=2020522&basisOfRecord=HUMAN_OBSERVATION&basisOfRecord=MACHINE_OBSERVATION&year=2000%2C2027&occurrenceStatus=PRESENT&limit=0&facet=country&facetLimit=20",
+      "note": "Filtered observation layer used for counts, top countries and map configuration.",
+      "usedFor": [
+        "distribution",
+        "GBIF map"
+      ]
+    },
+    {
+      "label": "Artfakta taxon page",
+      "type": "Swedish species page",
+      "url": "https://artfakta.se/naturvard/taxon/notonecta-glauca-226119/",
+      "note": "Primary Swedish landing page for taxonomy, conservation context and local maps.",
+      "usedFor": [
+        "Swedish context",
+        "Artfakta block"
+      ]
+    },
+    {
+      "label": "Dyntaxa taxon API",
+      "type": "API",
+      "url": "https://nos-api.artdatabanken.se/api/taxa/226119",
+      "note": "Official SLU taxon record used for the accepted Swedish and scientific names.",
+      "usedFor": [
+        "Swedish context",
+        "common names"
+      ]
+    },
+    {
+      "label": "Local Swedish Red List 2025 workbook",
+      "type": "Local dataset",
+      "note": "Used data/Rodlistearbete_2025_alla_filer.xlsx for category LC, taxonId 226119, Swedish occurrence and immigration history.",
+      "usedFor": [
+        "Swedish Red List 2025"
+      ]
+    },
+    {
+      "label": "CABI Compendium species entry",
+      "type": "DOI-backed species profile",
+      "url": "https://doi.org/10.1079/cabicompendium.36591",
+      "note": "Used as a range-context reference for describing the species as a widespread Palearctic backswimmer.",
+      "usedFor": [
+        "native range context"
+      ]
+    }
+  ]
+}

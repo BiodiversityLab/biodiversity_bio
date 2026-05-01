@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/build_site_data.py",
-  "generatedAt": "2026-05-01T10:35:11.318329+00:00",
-  "count": 7,
+  "generatedAt": "2026-05-01T11:03:26.616133+00:00",
+  "count": 8,
   "species": [
     {
       "slug": "Aglais_io",
@@ -32,6 +32,16 @@
       "heroImage": "img/Maublancomyces_gigas_1.jpeg",
       "defaultPersonName": "Tobias Andermann",
       "group": "Fungi"
+    },
+    {
+      "slug": "Notonecta_glauca",
+      "file": "Notonecta_glauca.json",
+      "mainName": "Common Backswimmer",
+      "scientificName": "Notonecta glauca",
+      "swedishName": "allmän ryggsimmare",
+      "heroImage": "img/Notonecta_glauca_1.jpeg",
+      "defaultPersonName": "Tobias Andermann",
+      "group": "Animalia"
     },
     {
       "slug": "Osmia_bicornis",
