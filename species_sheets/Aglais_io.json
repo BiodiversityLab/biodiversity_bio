@@ -18,7 +18,7 @@
       ]
     }
   },
-  "summary": "A bold, eyespotted butterfly that overwinters as an adult, breeds on nettles, and stays common in Sweden even though the GBIF map is dominated by recorder-rich countries rather than a direct abundance pattern.",
+  "summary": "A bold, eyespotted butterfly that overwinters as an adult, breeds on nettles, and is often among the first conspicuous butterflies to reappear on warm spring days.",
   "byline": {
     "pageAuthor": null,
     "observer": null,
@@ -86,7 +86,7 @@
     }
   ],
   "hero": {
-    "lede": "Peacock is one of the easiest butterflies to remember once you have seen the open wings, but the species becomes more interesting when the wings are closed: it is an adult overwinterer that can appear on the first warm spring days, survives cold through diapause, and turns up in open-data maps wherever butterfly recording is especially intense. It is a strong revisit species because first spring flights shift with weather and some western-European populations now show a partial second generation.",
+    "lede": "Peacock is one of the easiest butterflies to remember once you have seen the open wings, but the species becomes even more interesting when the wings are closed: it is an adult overwinterer that can appear on the first warm spring days, survives cold through diapause, and in some western European populations now shows a partial second generation.",
     "shortMorphology": "Deep red upperwings with bold eyespots on all four wings; the underside is much darker and more bark- or leaf-like when the butterfly is resting closed-winged."
   },
   "taxonomy": {
@@ -147,8 +147,8 @@
     }
   ],
   "distribution": {
-    "globalSummary": "Aglais io is widespread across Europe and recorded beyond Sweden, but the filtered GBIF layer used here is an observation surface rather than a native-range map. Western European countries with strong butterfly-recording networks dominate the map heavily, especially the United Kingdom and the Netherlands.",
-    "swedenSummary": "In Sweden the species is resident and reproducing, with a 2025 Swedish Red List category of LC. Swedish GBIF coverage is substantial, but the global pattern is still shaped far more by recorder density than by a simple biological concentration map.",
+    "globalSummary": "Aglais io is widespread across Europe and recorded beyond Sweden. The filtered GBIF layer is best read as a broad observation map, with especially dense coverage from countries such as the United Kingdom and the Netherlands.",
+    "swedenSummary": "In Sweden the species is resident and reproducing, with a 2025 Swedish Red List category of LC. Swedish GBIF coverage is strong enough to show the species broadly, but the map is mainly useful for regional context rather than for comparing abundance between countries.",
     "globalGbifFilteredCount": 2556021,
     "swedenGbifFilteredCount": 60888,
     "topCountries": [
@@ -203,7 +203,7 @@
         "The webpage renders this layer as a hex summary map."
       ]
     },
-    "samplingBiasNote": "GBIF density here mostly reflects where butterfly recorders, citizen-science platforms, and digitized datasets are strongest. The UK and the Netherlands dominate the filtered layer, so dense hexes should not be read as a direct abundance gradient and sparse areas should not be treated as true scarcity."
+    "samplingBiasNote": "The GBIF layer is especially dense in countries with long-running butterfly recording networks, particularly the United Kingdom and the Netherlands, so hex density mixes real distribution with reporting intensity."
   },
   "internationalContext": {
     "summary": "Peacock is a familiar butterfly, but the DOI-backed ecology behind it is strong: larval performance depends on nettle quality, adults need time to feed and accumulate lipids before overwintering, diapausing adults show distinct cold-hardiness physiology, and the wing eyespots genuinely function as predator intimidation. Conservation context is mixed by scale: the EUNIS/IUCN panel lists the species as not evaluated globally but Least Concern in Europe.",
@@ -250,8 +250,8 @@
     "keyFacts": [
       "Artfakta/Dyntaxa taxon 201059 treats Aglais io as accepted and påfågelöga as the recommended Swedish name.",
       "The Swedish Red List 2025 data classify the species as LC, but still mention an indication or suspicion of decline in reproductive individuals.",
-      "The local red-list data treat the species as bofast och reproducerande, with immigration history spontan.",
-      "Because adults overwinter, påfågelöga is one of the Swedish butterflies most worth revisiting on the first truly warm spring days."
+      "The local red-list data describe the species as resident and reproducing in Sweden.",
+      "Because adults overwinter, peacock can appear very early in spring, well before the main butterfly season."
     ],
     "artfakta": {
       "url": "https://artfakta.se/naturvard/taxon/aglais-io-201059/",

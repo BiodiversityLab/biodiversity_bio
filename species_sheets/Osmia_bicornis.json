@@ -18,7 +18,7 @@
       ]
     }
   },
-  "summary": "A widespread spring mason bee that nests in pre-existing cavities with mud partitions, pollinates orchard blossoms, and remains easy to find around people even though the GBIF map is dominated by recorder-rich countries.",
+  "summary": "A widespread spring mason bee that nests in pre-existing cavities with mud partitions and is often easy to find around gardens and orchards.",
   "byline": {
     "pageAuthor": null,
     "observer": null,
@@ -86,7 +86,7 @@
     }
   ],
   "hero": {
-    "lede": "Red Mason Bee is one of the best species for noticing how much solitary bee life happens right beside people. Females pack mud-walled brood cells into narrow cavities, provision them with mixed spring pollen, and can turn reeds, wall cracks and bee hotels into active nest sites. It is a strong revisit species because spring emergence and nesting activity shift quickly with weather, while the GBIF map mostly shows where recorder networks are strongest rather than where the bee is truly most abundant.",
+    "lede": "Red Mason Bee is one of the best species for noticing how much solitary bee life happens right beside people. Females pack mud-walled brood cells into narrow cavities, provision them with mixed spring pollen, and can turn reeds, wall cracks and bee hotels into active nest sites. That makes it easier than many solitary bees to connect everyday structures with nesting biology.",
     "shortMorphology": "A robust ginger-brown solitary bee with dark wings and a dark face; females have two small facial horns, while males are smaller, paler-faced and longer-antennate."
   },
   "taxonomy": {
@@ -155,8 +155,8 @@
     }
   ],
   "distribution": {
-    "globalSummary": "Osmia bicornis is a widespread western-Palearctic mason bee and is observed broadly across Europe in the filtered GBIF layer used here. That layer is an observation surface rather than a native-range map, and it is strongly dominated by countries with dense recorder networks, especially the Netherlands, Germany and the United Kingdom.",
-    "swedenSummary": "In Sweden, rödmurarbi is treated as resident and reproducing, with a 2025 Swedish Red List category of LC. Swedish GBIF coverage is solid for a solitary bee, but the international map pattern is still shaped more by recorder effort and digitized datasets than by a simple abundance gradient.",
+    "globalSummary": "Osmia bicornis is a widespread western-Palearctic mason bee and is observed broadly across Europe in the filtered GBIF layer used here. The strongest reporting comes from countries with extensive garden and pollinator recording, especially the Netherlands, Germany and the United Kingdom.",
+    "swedenSummary": "In Sweden, rödmurarbi is treated as resident and reproducing, with a 2025 Swedish Red List category of LC. Swedish GBIF coverage is solid for a solitary bee and mainly useful for showing broad occurrence rather than ranking abundance between countries.",
     "globalGbifFilteredCount": 87275,
     "swedenGbifFilteredCount": 4027,
     "topCountries": [
@@ -223,7 +223,7 @@
         "The webpage renders this layer as a hex summary map."
       ]
     },
-    "samplingBiasNote": "GBIF density here mainly reflects where bee recorders, garden and bee-hotel observations, and digitized national datasets are strongest. The Netherlands, Germany and the UK dominate the filtered layer, so dense hexes should not be read as a direct abundance gradient and sparse areas should not be treated as true scarcity."
+    "samplingBiasNote": "Records are especially dense where garden pollinators and bee hotels are frequently photographed and reported, particularly in the Netherlands, Germany and the United Kingdom."
   },
   "internationalContext": {
     "summary": "Internationally, Red Mason Bee is unusually well studied for a solitary bee because it nests readily in trap nests, orchard settings and other manageable cavities. That makes it a good species for linking spring phenology, pollen use, brood development and agricultural stressors into one visitor-friendly story. The 2014 European Red List of Bees treats the species as Least Concern in Europe, but I did not confirm a separate global IUCN assessment during this refresh.",
@@ -255,11 +255,11 @@
     ],
     "phenology": {
       "northernEurope": "Adults fly in spring, females provision nests through late spring and early summer, the new generation completes development over summer, and adults overwinter in cocoons before emerging the following spring.",
-      "note": "Warm springs can shift flowering and bee emergence by different amounts, so revisit timing matters."
+      "note": "Warm springs can shift flowering and bee emergence by different amounts."
     }
   },
   "swedishContext": {
-    "summary": "In Sweden, rödmurarbi is an accepted Artfakta/Dyntaxa species with a 2025 Swedish Red List category of LC and status bofast och reproducerande. It is a useful Swedish visitor species because it often appears around gardens, walls and bee hotels, making solitary-bee nesting easier to notice than in many ground-nesting species.",
+    "summary": "In Sweden, rödmurarbi is an accepted Artfakta/Dyntaxa species with a 2025 Swedish Red List category of LC and resident, reproducing status. It is a useful Swedish visitor species because it often appears around gardens, walls and bee hotels, making solitary-bee nesting easier to notice than in many ground-nesting species.",
     "commonName": "rödmurarbi",
     "redList2025": {
       "category": "LC",
@@ -272,8 +272,8 @@
     "keyFacts": [
       "Artfakta/Dyntaxa taxon 219422 treats Osmia bicornis as accepted and rödmurarbi as the recommended Swedish name.",
       "The Swedish Red List 2025 data classify the species as LC and note no signs of a significant population change.",
-      "The local red-list data treat the species as bofast och reproducerande, with immigration history spontan.",
-      "Because the bee nests in above-ground cavities sealed with mud, it is one of the easier solitary bees to revisit around Swedish gardens and buildings."
+      "The local red-list data describe the species as resident and reproducing in Sweden.",
+      "Because the bee nests in above-ground cavities sealed with mud, it is one of the easier solitary bees to observe around Swedish gardens and buildings."
     ],
     "artfakta": {
       "url": "https://artfakta.se/naturvard/taxon/osmia-bicornis-219422/",

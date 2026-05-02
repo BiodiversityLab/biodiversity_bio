@@ -20,7 +20,7 @@
       ]
     }
   },
-  "summary": "A widespread predatory water bug that rows upside down under the surface, reads prey-generated ripples, and stays common in Sweden even though the GBIF map is dominated by recorder-rich countries.",
+  "summary": "A widespread predatory water bug that rows upside down under the surface and detects prey-generated ripples.",
   "byline": {
     "pageAuthor": null,
     "observer": null,
@@ -88,7 +88,7 @@
     }
   ],
   "hero": {
-    "lede": "Common Backswimmer is one of the best pond insects for noticing that the water surface is a hunting layer, not just a boundary. It hangs upside down below the film, carries a silvery air store over the body, and can detect the ripples made by struggling prey. It is a strong revisit species because small warm ponds and ditches change quickly through spring and summer, while the GBIF map mostly shows where aquatic-insect recorders and citizen-science platforms are strongest rather than where the bug is truly most abundant.",
+    "lede": "Common Backswimmer is one of the best pond insects for noticing that the water surface is a hunting layer, not just a boundary. It hangs upside down below the film, carries a silvery air store over the body, and can detect the ripples made by struggling prey.",
     "shortMorphology": "A pale olive-brown backswimmer with a dark central wing patch, large reddish eyes and long hair-fringed hind legs that work like oars; living adults often look silvery because air is trapped along the body."
   },
   "taxonomy": {
@@ -148,7 +148,7 @@
   ],
   "distribution": {
     "globalSummary": "Reference sources such as the CABI Compendium treat Notonecta glauca as a widespread Palearctic backswimmer, but the filtered GBIF layer used here is only an observation surface, not a native-range map. In that layer the strongest post-2000 signal comes from western and northern Europe, especially the United Kingdom and the Netherlands.",
-    "swedenSummary": "In Sweden, allmän ryggsimmare is treated as resident and reproducing, with a 2025 Swedish Red List category of LC. Swedish GBIF coverage is modest compared with recorder-rich countries farther west, so the map is useful for broad context but not for reading local abundance directly.",
+    "swedenSummary": "In Sweden, allmän ryggsimmare is treated as resident and reproducing, with a 2025 Swedish Red List category of LC. Swedish GBIF coverage is modest but still useful for showing the species broadly.",
     "globalGbifFilteredCount": 23857,
     "swedenGbifFilteredCount": 673,
     "topCountries": [
@@ -215,7 +215,7 @@
         "The webpage renders this layer as a hex summary map."
       ]
     },
-    "samplingBiasNote": "GBIF density here mainly reflects where aquatic-insect recorders, pond-focused citizen science and digitized national datasets are strongest. The United Kingdom and the Netherlands dominate the filtered layer, so dense hexes should not be read as a direct abundance gradient and sparse areas should not be treated as true scarcity."
+    "samplingBiasNote": "The GBIF map is densest in the United Kingdom and the Netherlands, where pond insects are reported frequently, so it works best as a broad context map rather than as a direct abundance comparison."
   },
   "internationalContext": {
     "summary": "Common Backswimmer is unusually good for explaining how an aquatic insect hunts at the air-water interface. DOI-backed studies show that it detects prey-generated ripples, changes prey choice with water depth and oxygen conditions, carries a persistent air layer on the body, and combines strong underwater and aerial visual performance. I did not confirm a separate global IUCN Red List assessment during this refresh.",
@@ -240,12 +240,12 @@
       "Open-data maps can exaggerate security in heavily recorded countries and understate occupancy where freshwater insects are simply less often reported."
     ],
     "phenology": {
-      "northernEurope": "Adults are worth revisiting through the warmer part of the year in ponds, ditches and other still waters, especially when sunny conditions bring surface activity and dispersal between water bodies within reach of casual observation.",
-      "note": "The revisit cue here is field-oriented rather than drawn from a dedicated phenology dataset."
+      "northernEurope": "Adults are active through the warmer part of the year in ponds, ditches and other still waters, especially when sunny conditions bring them close to the surface and encourage dispersal between water bodies.",
+      "note": "Warm, bright weather often makes surface activity easiest to see."
     }
   },
   "swedishContext": {
-    "summary": "In Sweden, Artfakta/Dyntaxa treats Notonecta glauca as accepted and allmän ryggsimmare as the recommended Swedish name. The local 2025 Swedish Red List workbook keeps the species in LC, describes it as bofast och reproducerande, and lists immigration history as spontan. That makes it a useful Swedish teaching species: common enough to encounter, but still rich in behavior once you watch the water surface closely.",
+    "summary": "In Sweden, Artfakta/Dyntaxa treats Notonecta glauca as accepted and allmän ryggsimmare as the recommended Swedish name. The local 2025 Swedish Red List workbook keeps the species in LC and describes it as resident and reproducing. That makes it a useful Swedish teaching species: common enough to encounter, but still rich in behavior once you watch the water surface closely.",
     "commonName": "allmän ryggsimmare",
     "redList2025": {
       "category": "LC",
@@ -258,7 +258,7 @@
     "keyFacts": [
       "Artfakta/Dyntaxa taxon 226119 treats Notonecta glauca as accepted and allmän ryggsimmare as the recommended Swedish name.",
       "The Swedish Red List 2025 row classifies the species as LC rather than as a current Swedish conservation priority.",
-      "The same Swedish source describes the species as bofast och reproducerande, with immigration history spontan.",
+      "The same Swedish source describes the species as resident and reproducing in Sweden.",
       "The linked Uppsala photos fit a species that should be searched for in ordinary still-water habitats rather than only in unusual specialist sites."
     ],
     "artfakta": {

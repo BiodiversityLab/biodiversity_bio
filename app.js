@@ -458,6 +458,7 @@ function renderSheet(sheet) {
   const redList = swedish.redList2025 || {};
   const gbifTileTemplate = buildGbifHexTileTemplate(sheet);
   const artfaktaUrl = swedish?.artfakta?.url || swedish?.artfakta?.fallbackUrl;
+  const mapNote = sheet?.distribution?.samplingBiasNote || sheet?.distribution?.caveat || "";
 
   contentEl.innerHTML = `
     <article class="sheet">
@@ -493,7 +494,7 @@ function renderSheet(sheet) {
                 <span class="badge">Present only</span>
                 <span class="badge">Hex summary</span>
               </div>
-              <p class="section-text">${escapeHtml(sheet?.distribution?.samplingBiasNote || sheet?.distribution?.caveat || "")}</p>
+              ${mapNote ? `<p class="section-text">${escapeHtml(mapNote)}</p>` : ""}
             </div>
             <div class="info-card panel">
               <h3 class="section-title">Observation point</h3>

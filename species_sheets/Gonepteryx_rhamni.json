@@ -87,7 +87,7 @@
     }
   ],
   "hero": {
-    "lede": "Brimstone is one of the clearest Swedish examples of how a common butterfly can still tell a strong ecological story. It overwinters as an adult, depends on buckthorns for breeding, and can appear in spring long before many people expect butterflies to be active at all. This species is worth checking repeatedly through spring because overwintered adults can appear on the first warm days, while later in the season the same species shifts into a different habitat-use pattern.",
+    "lede": "Brimstone is one of the clearest Swedish examples of how a common butterfly can still tell a strong ecological story. It overwinters as an adult, depends on buckthorns for breeding, and can appear in spring long before many people expect butterflies to be active at all. Later in the season the same species shifts into a different habitat-use pattern as fresh adults move toward overwintering cover.",
     "shortMorphology": "Large pale-yellow to greenish-yellow butterfly with sharply pointed leaf-like wings; resting adults show a strong dead-leaf effect and a small orange discal spot on each wing."
   },
   "taxonomy": {
@@ -202,7 +202,7 @@
         "The webpage renders this layer as a hex summary map."
       ]
     },
-    "samplingBiasNote": "GBIF density here reflects recorder effort, digitization, and the strength of local butterfly-reporting systems as much as biological distribution. The UK and the Netherlands dominate the filtered layer, so dense hexes should not be read as a direct abundance gradient and sparse regions should not be treated as absence."
+    "samplingBiasNote": "The GBIF map is particularly dense in countries with very active butterfly recording, especially the United Kingdom and the Netherlands, so hex density reflects observation intensity as well as distribution."
   },
   "internationalContext": {
     "summary": "Internationally, Brimstone is a useful species because it is common enough to be familiar but structured enough to be ecologically informative: breeding depends on buckthorns, adults overwinter, and some populations use different parts of the landscape across the year. During this refresh, I confirmed a Europe-scale IUCN assessment of Least Concern from 2010 but did not locate a separate global IUCN Red List assessment to cite with the same confidence.",
@@ -232,7 +232,7 @@
     }
   },
   "swedishContext": {
-    "summary": "In Sweden, citronfjäril is a classic spring signal rather than a red-list concern. Artfakta and the local 2025 Swedish Red List data make that clear: the species is treated as accepted, resident and reproducing, with a national category of LC and an increasing population. That combination makes it a strong visitor-facing species because it links a familiar spring sighting to host-plant dependence, overwintering biology and observer bias in open biodiversity data.",
+    "summary": "In Sweden, citronfjäril is a classic spring signal rather than a red-list concern. Artfakta and the local 2025 Swedish Red List data treat the species as accepted, resident and reproducing, with a national category of LC and an increasing population. That makes it a strong Swedish example for linking a familiar sighting to host-plant dependence and overwintering biology.",
     "commonName": "citronfjäril",
     "redList2025": {
       "category": "LC",
@@ -245,8 +245,8 @@
     "keyFacts": [
       "Artfakta/Dyntaxa taxon 201051 treats Gonepteryx rhamni as an accepted species and citronfjäril as the recommended Swedish name.",
       "The Swedish Red List 2025 data classify the species as LC and state that the population is increasing.",
-      "The local red-list data also treat the species as bofast och reproducerande, with immigration history spontan.",
-      "Because adults overwinter, citronfjäril is one of the most useful Swedish butterflies for revisiting very early in spring."
+      "The local red-list data also describe the species as resident and reproducing in Sweden.",
+      "Because adults overwinter, citronfjäril can be active very early in spring."
     ],
     "artfakta": {
       "url": "https://artfakta.se/naturvard/taxon/gonepteryx-rhamni-201051/",

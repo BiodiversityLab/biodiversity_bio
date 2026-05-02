@@ -87,7 +87,7 @@
     }
   ],
   "hero": {
-    "lede": "The Comma is one of those species that becomes easy to love once you notice the silhouette: the wings look torn, the underside looks like a dead leaf, and the small white comma on the hindwing explains the English name immediately. It is also one of the more rewarding spring butterflies in Sweden because adults survive the winter and can fly on the first genuinely warm days. Check this species again on mild late-winter and spring days: overwintered adults can appear early, and later broods reveal the seasonal shift between summer and overwintering forms.",
+    "lede": "The Comma is one of those species that becomes easy to love once you notice the silhouette: the wings look torn, the underside looks like a dead leaf, and the small white comma on the hindwing explains the English name immediately. It is also one of the more rewarding spring butterflies in Sweden because adults survive the winter and can fly on the first genuinely warm days. Later broods reveal the seasonal shift between summer and overwintering forms.",
     "shortMorphology": "Bright orange upperwings marked with black patches, deeply scalloped wing edges, and a dark marbled underside carrying a small white comma-shaped mark on the hindwing."
   },
   "taxonomy": {
@@ -204,7 +204,7 @@
         "The webpage renders this layer as a hex summary map."
       ]
     },
-    "samplingBiasNote": "GBIF hex density here reflects reporting culture, observer effort, and dataset mobilization as much as biological distribution. The United Kingdom, Netherlands, Belgium and other recorder-rich countries strongly amplify the map, so sparse hexes should not be read as true scarcity or absence."
+    "samplingBiasNote": "The GBIF map is particularly dense in recorder-rich western Europe, especially the United Kingdom, Netherlands and Belgium, so it is best treated as an observation map rather than as a simple abundance surface."
   },
   "internationalContext": {
     "summary": "Polygonia c-album is a food-generalist nymphalid whose ecology combines host-plant flexibility with strong seasonal programming: some adults develop directly, while others enter reproductive diapause and overwinter. During source checking for this sheet, no separate global IUCN assessment was located; the accessible formal IUCN assessment is the Europe assessment, which lists the species as Least Concern in 2010.",
@@ -239,8 +239,8 @@
     "keyFacts": [
       "Artfakta/Dyntaxa taxon 201063 treats Polygonia c-album as an accepted species and vinbärsfuks as the recommended Swedish name.",
       "The Swedish Red List 2025 data used locally classify the species as LC and state that the population is increasing.",
-      "The same Swedish data list the species as bofast och reproducerande, with immigration history spontan.",
-      "Because adults overwinter, vinbärsfuks is worth revisiting very early in spring when relatively few other conspicuous butterflies are active."
+      "The same Swedish data list the species as resident and reproducing in Sweden.",
+      "Because adults overwinter, vinbärsfuks can be active very early in spring when few other conspicuous butterflies are flying."
     ],
     "artfakta": {
       "url": "https://artfakta.se/naturvard/taxon/polygonia-c-album-201063/",

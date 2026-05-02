@@ -236,7 +236,8 @@ Requirements for the new species sheet:
   - `year >= 2000`
   - `occurrenceStatus = PRESENT`
   - hex summary map style
-- Mention GBIF sampling bias explicitly
+- Add a short GBIF map caveat only when it materially affects interpretation
+- Write English prose in natural English; translate Swedish habitat or status terms instead of mixing languages, except for proper names and source labels
 - Fill the top-level `fieldRecord` block if I gave you date, time, locality or coordinates. If matching photos already carry EXIF date/GPS metadata, `python scripts/build_site_data.py` can backfill `observedAtDate`, `decimalLatitude`, and `decimalLongitude`.
 - Link any matching images from `img/` that follow the species slug pattern, e.g.:
   `img/Sarcosoma_globosum_1.jpeg`, `img/Sarcosoma_globosum_2.jpeg`

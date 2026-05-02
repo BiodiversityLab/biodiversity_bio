@@ -19,7 +19,7 @@
       ]
     }
   },
-  "summary": "A rare spring cup fungus of old spruce forests whose dark cauldron-like fruit bodies are unforgettable, but whose GBIF map still reflects targeted searching and dataset mobilization as much as biology.",
+  "summary": "A rare spring cup fungus of old spruce forests whose dark cauldron-like fruit bodies are unforgettable and whose Swedish conservation context is unusually strong.",
   "byline": {
     "pageAuthor": null,
     "observer": null,
@@ -87,7 +87,7 @@
     }
   ],
   "hero": {
-    "lede": "Witches Cauldron is the kind of fungus people remember after one encounter: a dark, thick-walled cup sitting low in moss and needle litter like a small vessel of black water. It fruits shortly after snowmelt, can vanish again before most people start looking for fungi, and is strongly tied to old forest structure, which makes it an excellent revisit species for early spring walks in spruce country.",
+    "lede": "Witches Cauldron is the kind of fungus people remember after one encounter: a dark, thick-walled cup sitting low in moss and needle litter like a small vessel of black water. It fruits shortly after snowmelt, can vanish again before most people start looking for fungi, and is strongly tied to old forest structure.",
     "shortMorphology": "Dark brown to black, gelatinous and urn- to cauldron-shaped fruit body with a smooth black inner disc and a thick wrinkled outer wall, usually emerging low in moss and conifer litter."
   },
   "taxonomy": {
@@ -219,7 +219,7 @@
         "The webpage renders this layer as a hex summary map."
       ]
     },
-    "samplingBiasNote": "GBIF hex density here reflects who is searching for rare fungi, which historical records have been digitized, and where specialist fungal observation culture is strongest. The recent Fungal Ecology analysis of this species specifically shows that rising observation totals can reflect observer culture and reporting effort, so dense or sparse hexes should not be treated as direct abundance."
+    "samplingBiasNote": "GBIF records for this species are strongly shaped by targeted searches for rare fungi and by which historical localities have been digitized; a recent Fungal Ecology analysis also shows that rising observation totals can partly reflect observer culture and reporting effort."
   },
   "internationalContext": {
     "summary": "Internationally, Sarcosoma globosum is a rare old-forest spring ascomycete with a published global IUCN status of Near Threatened from 2015. Its ecology is informative but not fully settled: recent studies describe the habitat well, yet the IUCN assessment still notes uncertainty over whether the species is strictly saprotrophic, mycorrhizal, or something more complicated.",
@@ -244,11 +244,11 @@
     ],
     "phenology": {
       "northernEurope": "Fruiting usually starts soon after snowmelt in early spring; the exact window shifts with weather and can close before the main autumn mushroom season begins.",
-      "note": "This is a strong revisit species for early spring forest walks rather than autumn forays."
+      "note": "Best searched soon after snowmelt rather than during the main autumn fungus season."
     }
   },
   "swedishContext": {
-    "summary": "In Sweden, bombmurkla is not just a curiosity but a conservation-responsibility species. Artfakta/Dyntaxa accepts Sarcosoma globosum and recommends bombmurkla as the Swedish name, while the local 2025 Red List workbook classifies it as Starkt hotad (EN) under criterion A3c. The Swedish documentation places it in older bilberry and meadow-spruce forests on sandy mixed soils, often near moraine ridges and brook depressions, and notes that Sweden holds a large share of the global population while bark beetle-driven spruce damage is worsening several sites.",
+    "summary": "In Sweden, bombmurkla is not just a curiosity but a conservation-responsibility species. Artfakta/Dyntaxa accepts Sarcosoma globosum and recommends bombmurkla as the Swedish name, while the local 2025 Red List workbook classifies it as Endangered (EN) under criterion A3c. The Swedish documentation places it in older bilberry and meadow-spruce forests on sandy mixed soils, often near moraine ridges and brook depressions, and notes that Sweden holds a large share of the global population while bark beetle-driven spruce damage is worsening several sites.",
     "commonName": "bombmurkla",
     "redList2025": {
       "category": "EN",
@@ -261,9 +261,9 @@
     "keyFacts": [
       "Artfakta/Dyntaxa taxon 1445 treats Sarcosoma globosum as accepted and bombmurkla as the recommended Swedish name.",
       "The Swedish Red List 2025 cache classifies the species as EN under criterion A3c.",
-      "The local workbook treats the species as bofast och reproducerande, with immigration history spontan.",
+      "The local workbook describes the species as resident and reproducing in Sweden.",
       "The Swedish red-list documentation notes many historical localities are gone and that recent spruce bark beetle outbreaks have worsened habitat quality in parts of the core area.",
-      "Because fruiting is early and irregular, revisiting known habitat soon after snowmelt is more useful than waiting for the main autumn fungus season."
+      "Fruiting is early and irregular, so most field observations come soon after snowmelt rather than in autumn."
     ],
     "artfakta": {
       "url": "https://artfakta.se/naturvard/taxon/sarcosoma-globosum-1445/",

@@ -88,7 +88,7 @@
     }
   ],
   "hero": {
-    "lede": "Snow False Morel is easy to miss if you look at the wrong time: it fruits in the first real spring window, when last year's leaf litter still dominates the ground and only the earliest woodland herbs are up. The focal name Maublancomyces gigas now resolves in GBIF's Catalogue of Life workflow to Gyromitra gigas, and that makes it a good revisit species for two reasons at once: it teaches early-season timing, and it rewards careful comparison with stenmurkla by showing a paler, bulkier fruit body whose cap edge is usually freer from the stem.",
+    "lede": "Snow False Morel is easy to miss if you look at the wrong time: it fruits in the first real spring window, when last year's leaf litter still dominates the ground and only the earliest woodland herbs are up. The focal name Maublancomyces gigas now resolves in GBIF's Catalogue of Life workflow to Gyromitra gigas, and the species rewards careful comparison by showing a paler, bulkier fruit body whose cap edge is usually freer from the stem.",
     "shortMorphology": "Large pale tan to ochre folded false morel with thick rounded lobes, a stout whitish stem and a cap edge that is usually not fully attached to the stem."
   },
   "taxonomy": {
@@ -214,7 +214,7 @@
         "The webpage renders this layer as a hex summary map."
       ]
     },
-    "samplingBiasNote": "GBIF density here reflects where spring fungi are actively searched for, where phone-camera observations get uploaded, and where legacy names in the Gyromitra gigas complex have already or not yet been updated. Sparse hexes can miss real populations, while dense hexes can partly reflect recorder culture and taxonomic lag rather than biology alone."
+    "samplingBiasNote": "GBIF records for this species are shaped by targeted spring-fungus searching, phone-camera uploads, and lingering use of legacy names in the Gyromitra gigas complex, so gaps and concentrations on the map need careful interpretation."
   },
   "internationalContext": {
     "summary": "Internationally, this species is best handled as Gyromitra gigas sensu stricto rather than as a stable old-name aggregate. Recent DOI-backed work shows that the G. gigas complex contains multiple close relatives, so range statements and older records need more caution than many familiar spring fungi do.",
@@ -238,11 +238,11 @@
     ],
     "phenology": {
       "northernEurope": "Fruiting is an early spring to early summer event, well before the main autumn mushroom season and often while the forest floor still looks winter-open.",
-      "note": "This is a strong revisit species for April to early June rather than for autumn foraging walks."
+      "note": "The main fruiting window is usually April to early June rather than the main autumn mushroom season."
     }
   },
   "swedishContext": {
-    "summary": "In Sweden, Artfakta/Dyntaxa accepts Gyromitra gigas and recommends blek stenmurkla as the Swedish name, while the local 2025 Red List workbook classifies it as Livskraftig (LC). The Swedish value of this species is therefore less about rarity than about timing and identification: it is an early spring storsvamp of sandy ground, skogsbryn and hyggen, and Swedish comparison sources emphasize that its cap edge is usually not fastväxt to the stem and that the odor is weak or absent compared with stenmurkla.",
+    "summary": "In Sweden, Artfakta/Dyntaxa accepts Gyromitra gigas and recommends blek stenmurkla as the Swedish name, while the local 2025 Red List workbook classifies it as Least Concern (LC). The Swedish value of this species is therefore less about rarity than about timing and identification: it is an early spring macrofungus of sandy ground, forest edges and clear-cuts, and Swedish comparison sources emphasize that its cap edge is usually free from the stem and that the odor is weak or absent compared with stenmurkla.",
     "commonName": "blek stenmurkla",
     "redList2025": {
       "category": "LC",
@@ -255,8 +255,8 @@
     "keyFacts": [
       "Artfakta/Dyntaxa taxon 3914 treats Gyromitra gigas as accepted and blek stenmurkla as the recommended Swedish name.",
       "The Swedish Red List 2025 workbook classifies the species as LC.",
-      "Swedish field material linked from Artfakta describes the species from sandy soil in skogsbryn and hyggen and stresses the usually free cap edge as a practical field mark.",
-      "For visitors, the main reason to return is seasonal: this fungus is easiest to catch during a short spring window when many people are not yet looking for fungi."
+      "Swedish field material linked from Artfakta describes the species from sandy soil in forest edges and clear-cuts and stresses the usually free cap edge as a practical field mark.",
+      "Most field records come from a short spring window rather than from the main autumn fungus season."
     ],
     "artfakta": {
       "url": "https://artfakta.se/naturvard/taxon/gyromitra-gigas-3914/",

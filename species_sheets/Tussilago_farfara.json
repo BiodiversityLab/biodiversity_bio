@@ -88,7 +88,7 @@
     }
   ],
   "hero": {
-    "lede": "Coltsfoot is one of the easiest spring plants to notice once you know the timing: bright yellow heads appear on woolly, scaly stems before the plant produces the hoof-shaped leaves that gave it both the English and Swedish names. It is also a useful reminder that very common species still have real ecological character, because this one combines early flowering, deep rhizomes, fast colonisation of open soil and strong sensitivity to disturbance. Revisit this species twice: first for the flower-only phase in very early spring, then later to compare how completely the broad leaves take over once flowering is finished.",
+    "lede": "Coltsfoot is one of the easiest spring plants to notice once you know the timing: bright yellow heads appear on woolly, scaly stems before the plant produces the hoof-shaped leaves that gave it both the English and Swedish names. It is also a useful reminder that very common species still have real ecological character, because this one combines early flowering, deep rhizomes, fast colonization of open soil and strong sensitivity to disturbance. One of its clearest field marks is the sequence itself: flowers first, broad leaves later.",
     "shortMorphology": "Yellow dandelion-like flower heads borne singly on short woolly scaly stems in early spring; the large hoof-shaped basal leaves appear later, after flowering."
   },
   "taxonomy": {
@@ -220,7 +220,7 @@
         "The webpage renders this layer as a hex summary map."
       ]
     },
-    "samplingBiasNote": "GBIF density here mostly reflects where observers, apps, digitisation projects and casual spring-photography habits are strongest. Common roadside and garden-edge plants can produce very dense hexes in recorder-rich countries, while equally established populations remain underrepresented where fewer observations are shared."
+    "samplingBiasNote": "As a conspicuous roadside and garden-edge plant, coltsfoot is photographed very frequently in spring, so GBIF hex density is heavily influenced by casual reporting."
   },
   "internationalContext": {
     "summary": "Internationally, Coltsfoot is best understood as a widespread temperate perennial with strong disturbance ecology rather than as a conservation-priority rarity. The main global story is its combination of early flowering, mixed sexual and clonal reproduction, and the ability to hold or regain ground through deep rhizomes on repeatedly opened soils.",
@@ -249,7 +249,7 @@
     }
   },
   "swedishContext": {
-    "summary": "In Sweden, the official Artfakta/Dyntaxa treatment accepts Tussilago farfara and recommends hästhov as the Swedish name. The local 2025 Red List workbook records it as bofast och reproducerande, spontaneous in origin and assessed as Livskraftig (LC), so the Swedish story here is not rarity but familiarity: a widespread native spring species that is easy to notice early, long before many other broad-leaved herbs have fully emerged.",
+    "summary": "In Sweden, the official Artfakta/Dyntaxa treatment accepts Tussilago farfara and recommends hästhov as the Swedish name. The local 2025 Red List workbook records it as resident and reproducing, with spontaneous occurrence, and assesses it as Least Concern (LC), so the Swedish story here is not rarity but familiarity: a widespread native spring species that is easy to notice early, long before many other broad-leaved herbs have fully emerged.",
     "commonName": "hästhov",
     "redList2025": {
       "category": "LC",
@@ -263,7 +263,7 @@
       "Artfakta/Dyntaxa taxon 220396 treats Tussilago farfara as accepted and hästhov as the recommended Swedish name.",
       "The Swedish Red List 2025 cache classifies the species as LC.",
       "The local workbook records the species as spontaneous, resident and reproducing in Sweden.",
-      "As a visitor-facing species, hästhov is worth revisiting because the flower-only stage is brief and easy to miss if you only look later when the large leaves dominate."
+      "A practical field point is that the flower-only stage comes first; the large leaves appear later."
     ],
     "artfakta": {
       "url": "https://artfakta.se/naturvard/taxon/tussilago-farfara-220396/",

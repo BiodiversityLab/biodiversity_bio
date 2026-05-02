@@ -81,6 +81,11 @@ img { display: block; max-width: 100%; }
 .sidebar {
   position: sticky;
   top: 106px;
+  align-self: start;
+  max-height: calc(100vh - 106px - 1.2rem);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  min-height: 0;
 }
 .sidebar-card,
 .panel,
@@ -106,6 +111,11 @@ img { display: block; max-width: 100%; }
 .species-list {
   display: grid;
   gap: 0.7rem;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 0.2rem;
+  scrollbar-gutter: stable;
 }
 .species-list button {
   width: 100%;
@@ -442,7 +452,15 @@ img { display: block; max-width: 100%; }
 
 @media (max-width: 1100px) {
   .layout { grid-template-columns: 1fr; }
-  .sidebar { position: static; }
+  .sidebar {
+    position: static;
+    max-height: none;
+    display: block;
+  }
+  .species-list {
+    overflow-y: visible;
+    padding-right: 0;
+  }
 }
 @media (max-width: 900px) {
   .site-header__inner,
