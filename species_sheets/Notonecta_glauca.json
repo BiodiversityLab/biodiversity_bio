@@ -38,7 +38,7 @@
     "decimalLongitude": 17.624692,
     "coordinateUncertaintyMeters": 19.84,
     "habitatNote": "The linked photos show a live adult photographed through a clear container, with the long oar-like hind legs and the pale, air-sheened body shape that fit a surface-hunting backswimmer from still freshwater.",
-    "observationNote": "EXIF-backed photo record from the linked image set. The first matched image provides the observation date, time and coordinates used here.",
+    "observationNote": "Photographic record linked to the accompanying image set, with date and location metadata retained when available.",
     "observedAtDate": "2026-04-30",
     "observedAtTime": "16:48:11",
     "siteName": "Kåbo",
@@ -212,19 +212,19 @@
       "notes": [
         "The map shows aggregated GBIF occurrence density rather than individual points.",
         "Filters are restricted to HUMAN_OBSERVATION and MACHINE_OBSERVATION records from year 2000 onwards and to records with occurrenceStatus = PRESENT.",
-        "The webpage renders this layer as a hex summary map."
+        "This layer is displayed as a hex-density summary rather than as individual records."
       ]
     },
     "samplingBiasNote": "The GBIF map is densest in the United Kingdom and the Netherlands, where pond insects are reported frequently, so it works best as a broad context map rather than as a direct abundance comparison."
   },
   "internationalContext": {
-    "summary": "Common Backswimmer is unusually good for explaining how an aquatic insect hunts at the air-water interface. DOI-backed studies show that it detects prey-generated ripples, changes prey choice with water depth and oxygen conditions, carries a persistent air layer on the body, and combines strong underwater and aerial visual performance. I did not confirm a separate global IUCN Red List assessment during this refresh.",
+    "summary": "Common Backswimmer is unusually good for explaining how an aquatic insect hunts at the air-water interface. DOI-backed studies show that it detects prey-generated ripples, changes prey choice with water depth and oxygen conditions, carries a persistent air layer on the body, and combines strong underwater and aerial visual performance. A separate global IUCN Red List assessment is not cited here.",
     "status": {
       "world": {
         "system": "IUCN Red List",
         "category": null,
-        "label": "No separate global assessment confirmed",
-        "note": "No global IUCN assessment was located during this refresh."
+        "label": "No separate global assessment cited",
+        "note": "A separate global IUCN assessment is not cited here."
       }
     },
     "ecology": [
@@ -235,7 +235,7 @@
       "Its visual system is flexible enough for both submerged hunting and flight, which fits a species that must work in two optical environments."
     ],
     "threats": [
-      "This refresh did not confirm a global IUCN threat category; the species is more often treated as a common freshwater predator than as a current international red-list priority.",
+      "No global IUCN threat category is cited here; the species is more often treated as a common freshwater predator than as a current international red-list priority.",
       "Even a widespread backswimmer depends on pond conditions that keep hunting profitable, because oxygen regime and water depth directly affect how it can use different prey layers.",
       "Open-data maps can exaggerate security in heavily recorded countries and understate occupancy where freshwater insects are simply less often reported."
     ],
@@ -265,7 +265,7 @@
       "url": "https://artfakta.se/naturvard/taxon/notonecta-glauca-226119/",
       "fallbackUrl": "https://artfakta.se/artbestamning/taxon/notonecta-glauca-226119",
       "citation": "SLU Artdatabanken. Artfakta: allmän ryggsimmare (Notonecta glauca).",
-      "note": "Use Artfakta as the main Swedish species-information source when refreshing this page locally."
+      "note": "Primary Swedish reference for taxonomy, ecology and conservation status."
     }
   },
   "literature": [
@@ -375,7 +375,7 @@
       "label": "GBIF vernacular names API",
       "type": "API",
       "url": "https://api.gbif.org/v1/species/2020522/vernacularNames",
-      "note": "Used for the English and Swedish common-name list tied to the accepted GBIF taxon key.",
+      "note": "Source for the English and Swedish common names tied to the accepted GBIF taxon key.",
       "usedFor": [
         "common names"
       ]
@@ -413,7 +413,7 @@
     {
       "label": "Local Swedish Red List 2025 workbook",
       "type": "Local dataset",
-      "note": "Used data/Rodlistearbete_2025_alla_filer.xlsx for category LC, taxonId 226119, Swedish occurrence and immigration history.",
+      "note": "Source for the Swedish Red List 2025 category, taxon ID, occurrence and immigration history cited on this page.",
       "usedFor": [
         "Swedish Red List 2025"
       ]
@@ -422,7 +422,7 @@
       "label": "CABI Compendium species entry",
       "type": "DOI-backed species profile",
       "url": "https://doi.org/10.1079/cabicompendium.36591",
-      "note": "Used as a range-context reference for describing the species as a widespread Palearctic backswimmer.",
+      "note": "Range-context source describing the species as a widespread Palearctic backswimmer.",
       "usedFor": [
         "native range context"
       ]

@@ -655,7 +655,7 @@ def ensure_defaults(sheet: Dict[str, Any], redlist_lookup: Dict[str, Dict[str, A
             artfakta["url"] = f"https://artfakta.se/naturvard/taxon/{slug_fragment}-{taxon_id}/"
             artfakta.setdefault("fallbackUrl", f"https://artfakta.se/artbestamning/taxon/{slug_fragment}-{taxon_id}")
             artfakta.setdefault("citation", f"SLU Artdatabanken. Artfakta: {rl.get('swedishName') or scientific_name}.")
-            artfakta.setdefault("note", "Use Artfakta as the main Swedish species-information source when refreshing this page locally.")
+            artfakta.setdefault("note", "Primary Swedish reference for taxonomy, ecology and conservation status.")
 
     ensure_media(sheet, slug, field_record, defaults.get("country", "Sweden"))
     ensure_reverse_geocoded_location(field_record, geocode_cache)

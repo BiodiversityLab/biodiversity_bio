@@ -201,15 +201,15 @@ async function loadIndex() {
     if (initialSlug) {
       setActiveSlug(initialSlug, false);
     } else {
-      contentEl.innerHTML = `<div class="empty-state"><h2>No species sheets found</h2><p>Add JSON files to <code>species_sheets/</code> and rebuild <code>species_sheets/index.json</code>.</p></div>`;
+      contentEl.innerHTML = `<div class="empty-state"><h2>No species sheets found</h2><p>No published species profiles are available yet.</p></div>`;
     }
   } catch (error) {
     contentEl.innerHTML = `
       <div class="empty-state">
         <p class="eyebrow">Load error</p>
         <h2>Could not load species index</h2>
-        <p>${escapeHtml(error.message || "Unknown error")}</p>
-        <p>Expected file: <code>species_sheets/index.json</code>.</p>
+        <p>Species information is temporarily unavailable.</p>
+        <p class="muted">${escapeHtml(error.message || "Unknown error")}</p>
       </div>
     `;
     speciesCountEl.textContent = "0 sheets";
@@ -352,9 +352,9 @@ function renderFieldRecord(sheet) {
   return `
     <div class="panel">
       <p class="eyebrow">Field record</p>
-      <h2 class="section-title">Quick entry block</h2>
+      <h2 class="section-title">Observation details</h2>
       <div class="meta-grid">${rows.join("")}</div>
-      <p class="footer-note">Edit this directly in each species JSON under <code>fieldRecord</code>, or use <code>python scripts/update_field_record.py ...</code>.</p>
+      <p class="footer-note">Dates, locality details and coordinates are shown when they are available from the record or linked media.</p>
     </div>
   `;
 }
@@ -362,7 +362,7 @@ function renderFieldRecord(sheet) {
 function renderMediaGallery(sheet) {
   const media = Array.isArray(sheet.media) ? sheet.media : [];
   if (!media.length) {
-    return `<div class="panel hero-media"><p class="muted">No images linked yet. Put photos in <code>img/</code> using the species slug prefix.</p></div>`;
+    return `<div class="panel hero-media"><p class="muted">No images are available for this species yet.</p></div>`;
   }
   const active = media[state.galleryIndex] || media[0];
   const thumbs = media.map((item, index) => {
@@ -522,7 +522,7 @@ function renderSheet(sheet) {
 
         <div class="panel">
           <p class="eyebrow">Swedish context</p>
-          <h2 class="section-title">Artfakta-led Swedish sheet</h2>
+          <h2 class="section-title">Swedish conservation context</h2>
           <p class="section-text">${escapeHtml(swedish.summary || swedish.overview || "")}</p>
           <div class="meta-grid">
             <div class="meta-row"><div class="meta-label">Swedish name</div><div>${escapeHtml(swedishName)}</div></div>

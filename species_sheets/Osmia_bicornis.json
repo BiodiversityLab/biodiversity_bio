@@ -36,7 +36,7 @@
     "decimalLongitude": 17.762153,
     "coordinateUncertaintyMeters": 4.15,
     "habitatNote": "The linked photos show an adult resting on a wall surface, which fits a species that often nests close to buildings, drilled holes, reeds and other pre-existing cavities.",
-    "observationNote": "EXIF-backed photo record from the linked image set. Running scripts/build_site_data.py will fill date, time and coordinates from the matching photos.",
+    "observationNote": "Photographic record linked to the accompanying image set, with date and location metadata retained when available.",
     "observedAtDate": "2026-04-30",
     "observedAtTime": "08:52:24",
     "siteName": "Gränlund",
@@ -220,18 +220,18 @@
       "notes": [
         "The map shows aggregated GBIF occurrence density rather than individual points.",
         "Filters are restricted to HUMAN_OBSERVATION and MACHINE_OBSERVATION records from year 2000 onwards and to records with occurrenceStatus = PRESENT.",
-        "The webpage renders this layer as a hex summary map."
+        "This layer is displayed as a hex-density summary rather than as individual records."
       ]
     },
     "samplingBiasNote": "Records are especially dense where garden pollinators and bee hotels are frequently photographed and reported, particularly in the Netherlands, Germany and the United Kingdom."
   },
   "internationalContext": {
-    "summary": "Internationally, Red Mason Bee is unusually well studied for a solitary bee because it nests readily in trap nests, orchard settings and other manageable cavities. That makes it a good species for linking spring phenology, pollen use, brood development and agricultural stressors into one visitor-friendly story. The 2014 European Red List of Bees treats the species as Least Concern in Europe, but I did not confirm a separate global IUCN assessment during this refresh.",
+    "summary": "Internationally, Red Mason Bee is unusually well studied for a solitary bee because it nests readily in trap nests, orchard settings and other manageable cavities. That makes it a good species for linking spring phenology, pollen use, brood development and agricultural stressors into one visitor-friendly story. The 2014 European Red List of Bees assessed the species as Least Concern in Europe, while a separate global IUCN assessment is not cited here.",
     "status": {
       "world": {
         "system": "IUCN Red List",
         "category": null,
-        "label": "No separate global assessment confirmed",
+        "label": "No separate global assessment cited",
         "note": "The conservation source used here is regional rather than global."
       },
       "europe": {
@@ -279,7 +279,7 @@
       "url": "https://artfakta.se/naturvard/taxon/osmia-bicornis-219422/",
       "fallbackUrl": "https://artfakta.se/artbestamning/taxon/osmia-bicornis-219422",
       "citation": "SLU Artdatabanken. Artfakta: rödmurarbi (Osmia bicornis).",
-      "note": "Use Artfakta as the main Swedish species-information source when refreshing this page locally."
+      "note": "Primary Swedish reference for taxonomy, ecology and conservation status."
     }
   },
   "literature": [
@@ -438,7 +438,7 @@
     {
       "label": "Local Swedish Red List 2025 workbook",
       "type": "Local dataset",
-      "note": "Used data/Rodlistearbete_2025_alla_filer.xlsx for category LC, taxonId 219422, Swedish occurrence and immigration history.",
+      "note": "Source for the Swedish Red List 2025 category, taxon ID, occurrence and immigration history cited on this page.",
       "usedFor": [
         "Swedish Red List 2025"
       ]
@@ -447,7 +447,7 @@
       "label": "European Red List of Bees",
       "type": "Regional conservation assessment",
       "url": "https://doi.org/10.2779/51181",
-      "note": "Used the 2014 IUCN Europe / European Commission assessment table, where Osmia bicornis is listed as LC in Europe and EU.",
+      "note": "Source for the 2014 Europe-wide Least Concern assessment cited on this page.",
       "usedFor": [
         "international status"
       ]
@@ -456,7 +456,7 @@
       "label": "OpenAlex works API",
       "type": "Literature discovery API",
       "url": "https://api.openalex.org/works?search=Osmia%20bicornis",
-      "note": "Used to identify candidate literature before DOI validation.",
+      "note": "Literature discovery source for peer-reviewed material on the species.",
       "usedFor": [
         "literature discovery"
       ]
@@ -465,7 +465,7 @@
       "label": "Crossref works API",
       "type": "DOI registry API",
       "url": "https://api.crossref.org/works?query.title=Osmia%20bicornis",
-      "note": "Used to confirm DOI metadata for the listed literature items.",
+      "note": "DOI registry used to verify metadata for the listed literature.",
       "usedFor": [
         "literature validation"
       ]

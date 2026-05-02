@@ -36,8 +36,8 @@
     "decimalLatitude": 59.830094,
     "decimalLongitude": 17.578633,
     "coordinateUncertaintyMeters": 4.75,
-    "habitatNote": "Adult photographed in April; add site notes if you want the page to describe the exact Swedish habitat and host plants at this locality.",
-    "observationNote": "EXIF-backed photo record from the linked image set. Running scripts/build_site_data.py will fill the date, time and coordinates from the matching photos.",
+    "habitatNote": "Adult photographed in April, consistent with the species' early spring activity after overwintering.",
+    "observationNote": "Photographic record linked to the accompanying image set, with date and location metadata retained when available.",
     "observedAtDate": "2026-04-11",
     "observedAtTime": "12:21:06",
     "siteName": "Håga",
@@ -201,13 +201,13 @@
       "notes": [
         "The map shows aggregated GBIF occurrence density rather than individual points.",
         "Filters are restricted to HUMAN_OBSERVATION and MACHINE_OBSERVATION records from year 2000 onwards and to records with occurrenceStatus = PRESENT.",
-        "The webpage renders this layer as a hex summary map."
+        "This layer is displayed as a hex-density summary rather than as individual records."
       ]
     },
     "samplingBiasNote": "The GBIF map is particularly dense in recorder-rich western Europe, especially the United Kingdom, Netherlands and Belgium, so it is best treated as an observation map rather than as a simple abundance surface."
   },
   "internationalContext": {
-    "summary": "Polygonia c-album is a food-generalist nymphalid whose ecology combines host-plant flexibility with strong seasonal programming: some adults develop directly, while others enter reproductive diapause and overwinter. During source checking for this sheet, no separate global IUCN assessment was located; the accessible formal IUCN assessment is the Europe assessment, which lists the species as Least Concern in 2010.",
+    "summary": "Polygonia c-album is a food-generalist nymphalid whose ecology combines host-plant flexibility with strong seasonal programming: some adults develop directly, while others enter reproductive diapause and overwinter. The formal IUCN assessment cited here is the Europe assessment, which listed the species as Least Concern in 2010; a separate global assessment is not cited on this page.",
     "ecology": [
       "Adults can enter reproductive diapause and overwinter, allowing spring flights well before fresh summer broods are on the wing.",
       "Seasonal morphs differ in wing underside appearance, and experiments support the idea that the leaf-like resting pattern functions as camouflage on different seasonal backgrounds.",
@@ -226,7 +226,7 @@
     }
   },
   "swedishContext": {
-    "summary": "In Sweden, vinbärsfuks is treated as a resident breeding butterfly with spontaneous occurrence, and the 2025 Swedish Red List assessment places it in LC. The local ArtDatabanken red-list documentation used here is brief but unusually clear: it states that the population is increasing, making this a good species for showing that a familiar butterfly can still be ecologically interesting without being nationally threatened.",
+    "summary": "In Sweden, vinbärsfuks is treated as a resident breeding butterfly with spontaneous occurrence, and the 2025 Swedish Red List assessment places it in LC. The ArtDatabanken red-list documentation is brief but unusually clear: it states that the population is increasing, making this a good species for showing that a familiar butterfly can still be ecologically interesting without being nationally threatened.",
     "commonName": "vinbärsfuks",
     "redList2025": {
       "category": "LC",
@@ -238,7 +238,7 @@
     },
     "keyFacts": [
       "Artfakta/Dyntaxa taxon 201063 treats Polygonia c-album as an accepted species and vinbärsfuks as the recommended Swedish name.",
-      "The Swedish Red List 2025 data used locally classify the species as LC and state that the population is increasing.",
+      "The Swedish Red List 2025 data classify the species as LC and state that the population is increasing.",
       "The same Swedish data list the species as resident and reproducing in Sweden.",
       "Because adults overwinter, vinbärsfuks can be active very early in spring when few other conspicuous butterflies are flying."
     ],
@@ -246,7 +246,7 @@
       "url": "https://artfakta.se/naturvard/taxon/polygonia-c-album-201063/",
       "fallbackUrl": "https://artfakta.se/artbestamning/taxon/polygonia-c-album-201063",
       "citation": "SLU Artdatabanken. Artfakta: vinbärsfuks (Polygonia c-album).",
-      "note": "Use Artfakta as the main Swedish species-information source when refreshing this page locally."
+      "note": "Primary Swedish reference for taxonomy, ecology and conservation status."
     }
   },
   "literature": [
@@ -386,7 +386,7 @@
     {
       "label": "Local Swedish Red List 2025 cache",
       "type": "Local dataset",
-      "note": "Used data/swedish_redlist_2025_index.json, generated from data/Rodlistearbete_2025_alla_filer.xlsx, for category LC, taxonId 201063, Swedish occurrence and immigration history.",
+      "note": "Source for the Swedish Red List 2025 category, taxon ID, occurrence and immigration history cited on this page.",
       "usedFor": [
         "Swedish Red List 2025"
       ]
@@ -395,7 +395,7 @@
       "label": "IUCN European Red List of Butterflies",
       "type": "PDF",
       "url": "https://portals.iucn.org/library/sites/library/files/documents/RL-4-011.pdf",
-      "note": "Used for the Europe regional Least Concern context; no separate global IUCN assessment was located during this source check.",
+      "note": "Source for the Europe-wide Least Concern assessment cited on this page.",
       "usedFor": [
         "regional conservation status"
       ]

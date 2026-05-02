@@ -36,7 +36,7 @@
     "decimalLongitude": 17.570369,
     "coordinateUncertaintyMeters": 4.75,
     "habitatNote": "The linked photos show an adult in early spring, matching the species' habit of overwintering as a butterfly and flying on the first warm days.",
-    "observationNote": "EXIF-backed photo record from the linked image set. Running scripts/build_site_data.py will fill date, time and coordinates from the matching photos.",
+    "observationNote": "Photographic record linked to the accompanying image set, with date and location metadata retained when available.",
     "observedAtDate": "2026-04-11",
     "observedAtTime": "12:55:17",
     "siteName": "Ekensberg",
@@ -200,7 +200,7 @@
       "notes": [
         "The map shows aggregated GBIF occurrence density rather than individual points.",
         "Filters are restricted to HUMAN_OBSERVATION and MACHINE_OBSERVATION records from year 2000 onwards and to records with occurrenceStatus = PRESENT.",
-        "The webpage renders this layer as a hex summary map."
+        "This layer is displayed as a hex-density summary rather than as individual records."
       ]
     },
     "samplingBiasNote": "The GBIF layer is especially dense in countries with long-running butterfly recording networks, particularly the United Kingdom and the Netherlands, so hex density mixes real distribution with reporting intensity."
@@ -257,7 +257,7 @@
       "url": "https://artfakta.se/naturvard/taxon/aglais-io-201059/",
       "fallbackUrl": "https://artfakta.se/artbestamning/taxon/aglais-io-201059",
       "citation": "SLU Artdatabanken. Artfakta: påfågelöga (Aglais io).",
-      "note": "Use Artfakta as the main Swedish species-information source when refreshing this page locally."
+      "note": "Primary Swedish reference for taxonomy, ecology and conservation status."
     }
   },
   "literature": [
@@ -410,7 +410,7 @@
     {
       "label": "Local Swedish Red List 2025 cache",
       "type": "Local dataset",
-      "note": "Used data/swedish_redlist_2025_index.json, generated from data/Rodlistearbete_2025_alla_filer.xlsx, for category LC, taxonId 201059, Swedish occurrence and immigration history.",
+      "note": "Source for the Swedish Red List 2025 category, taxon ID, occurrence and immigration history cited on this page.",
       "usedFor": [
         "Swedish Red List 2025"
       ]
@@ -419,7 +419,7 @@
       "label": "EUNIS species page",
       "type": "European conservation summary",
       "url": "https://eunis.eea.europa.eu/species/316692",
-      "note": "Used for the World = Not evaluated and Europe = Least Concern conservation panel.",
+      "note": "Source for the global and Europe conservation labels cited on this page.",
       "usedFor": [
         "international status"
       ]

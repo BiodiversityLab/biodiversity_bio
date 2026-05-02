@@ -37,7 +37,7 @@
     "decimalLongitude": 17.563386,
     "coordinateUncertaintyMeters": 3.53,
     "habitatNote": "The linked photos show a mature fruit body seated directly in moss and conifer litter, matching the species' typical spring appearance on the forest floor in spruce-dominated habitat.",
-    "observationNote": "EXIF-backed photo record from the linked image set. Running scripts/build_site_data.py will fill date, time and coordinates from the matching photos when metadata are present.",
+    "observationNote": "Photographic record linked to the accompanying image set, with date and location metadata retained when available.",
     "observedAtDate": "2026-04-11",
     "observedAtTime": "13:14:53",
     "siteName": "Ekensberg",
@@ -152,7 +152,7 @@
   ],
   "distribution": {
     "globalSummary": "IUCN treats Sarcosoma globosum as a circumpolar boreal to hemiboreal fungus with its main strongholds in northern Europe, especially Sweden, Finland and parts of Russia. The filtered GBIF layer used here adds 2,010 post-2000 human or machine observations, but that footprint mixes targeted fungal searches, mobilized legacy data and some eastern North American reports that the IUCN assessment says may include misidentified look-alikes, so it should be read as an observation surface rather than a clean native-range map.",
-    "swedenSummary": "Sweden has only 34 filtered GBIF observations under the project map settings, but the national conservation importance is much larger than that small open-data count suggests. The 2025 Swedish Red List classifies the species as EN, and the local red-list documentation explicitly notes that Sweden holds a large share of the global population.",
+    "swedenSummary": "Sweden has only 34 filtered GBIF observations under the current GBIF filters, but the national conservation importance is much larger than that small open-data count suggests. The 2025 Swedish Red List classifies the species as EN, and the local red-list documentation explicitly notes that Sweden holds a large share of the global population.",
     "globalGbifFilteredCount": 2010,
     "swedenGbifFilteredCount": 34,
     "topCountries": [
@@ -216,7 +216,7 @@
       "notes": [
         "The map shows aggregated GBIF occurrence density rather than individual points.",
         "Filters are restricted to HUMAN_OBSERVATION and MACHINE_OBSERVATION records from year 2000 onwards and to records with occurrenceStatus = PRESENT.",
-        "The webpage renders this layer as a hex summary map."
+        "This layer is displayed as a hex-density summary rather than as individual records."
       ]
     },
     "samplingBiasNote": "GBIF records for this species are strongly shaped by targeted searches for rare fungi and by which historical localities have been digitized; a recent Fungal Ecology analysis also shows that rising observation totals can partly reflect observer culture and reporting effort."
@@ -269,7 +269,7 @@
       "url": "https://artfakta.se/naturvard/taxon/sarcosoma-globosum-1445/",
       "fallbackUrl": "https://artfakta.se/artbestamning/taxon/sarcosoma-globosum-1445",
       "citation": "SLU Artdatabanken. Artfakta: bombmurkla (Sarcosoma globosum).",
-      "note": "Use Artfakta as the main Swedish species-information source when refreshing this page locally."
+      "note": "Primary Swedish reference for taxonomy, ecology and conservation status."
     }
   },
   "literature": [
@@ -361,7 +361,7 @@
       "label": "GBIF vernacular names API",
       "type": "API",
       "url": "https://api.gbif.org/v1/species/2593417/vernacularNames",
-      "note": "Used for English and Swedish common names; the IUCN-backed preferred English vernacular here is Witches Cauldron.",
+      "note": "Source for the English and Swedish common names, including the preferred English vernacular Witches Cauldron.",
       "usedFor": [
         "common names"
       ]
@@ -370,7 +370,7 @@
       "label": "GBIF synonyms API",
       "type": "API",
       "url": "https://api.gbif.org/v1/species/2593417/synonyms",
-      "note": "Used to capture GBIF synonymy while keeping the accepted taxonomy itself fully GBIF-based.",
+      "note": "Source for GBIF synonymy linked to the accepted taxonomy used on this page.",
       "usedFor": [
         "taxonomy",
         "synonyms"
@@ -419,7 +419,7 @@
     {
       "label": "Local Swedish Red List 2025 cache",
       "type": "Local dataset",
-      "note": "Used data/swedish_redlist_2025_index.json, generated from data/Rodlistearbete_2025_alla_filer.xlsx, for category EN, criterion A3c, taxonId 1445, Swedish occurrence, immigration history and documentation.",
+      "note": "Source for the Swedish Red List 2025 category, criterion, taxon ID, occurrence, immigration history and documentation cited on this page.",
       "usedFor": [
         "Swedish Red List 2025"
       ]
@@ -428,7 +428,7 @@
       "label": "Global Fungal Red List Initiative species page",
       "type": "Assessment mirror",
       "url": "https://redlist.info/iucn/species_view/120549/",
-      "note": "Used to read the published global IUCN assessment text. The page states that its content is fetched from the official IUCN Red List entry https://www.iucnredlist.org/species/58515314/58515381.",
+      "note": "Official global IUCN Red List assessment for the species.",
       "usedFor": [
         "global conservation status",
         "native range",

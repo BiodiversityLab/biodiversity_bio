@@ -238,6 +238,9 @@ Requirements for the new species sheet:
   - hex summary map style
 - Add a short GBIF map caveat only when it materially affects interpretation
 - Write English prose in natural English; translate Swedish habitat or status terms instead of mixing languages, except for proper names and source labels
+- All text intended for the public website must read as published public copy for a general audience
+- Do not mention the model, the prompt, JSON fields, local scripts, build steps, source checking, webpage rendering, or what was or was not "confirmed during this refresh"
+- When an assessment is unavailable, say so neutrally, for example: `No separate global IUCN assessment is cited here.`
 - Fill the top-level `fieldRecord` block if I gave you date, time, locality or coordinates. If matching photos already carry EXIF date/GPS metadata, `python scripts/build_site_data.py` can backfill `observedAtDate`, `decimalLatitude`, and `decimalLongitude`.
 - Link any matching images from `img/` that follow the species slug pattern, e.g.:
   `img/Sarcosoma_globosum_1.jpeg`, `img/Sarcosoma_globosum_2.jpeg`
@@ -257,7 +260,7 @@ After creating the JSON file:
    - the Artfakta URL
    - the linked photo filenames
 
-Focus on producing a complete, evidence-based, visitor-friendly species sheet rather than generic filler text.
+Focus on producing a complete, evidence-based, visitor-friendly species sheet with clean public-facing prose rather than generic filler text.
 ```
 
 ## Recommended workflow for adding a new species
